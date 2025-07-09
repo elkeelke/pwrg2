@@ -1,0 +1,30 @@
+---
+title: TBD
+subtitle: TBD
+author: Elke Michlmayr
+format:
+  html:
+    code-fold: true
+  pdf:
+    number-sections: true
+    include-in-header: titlepage.tex
+    keep-tex: true
+    mainfont: "Georgia"
+    sansfont: "Helvetica"
+    monofont: "Courier New"
+execute:
+  warning: false
+  message: false
+lang: en
+bibliography: bibliography.bib
+csl: apa-no-ampersand.csl
+---
+
+```{=latex}
+\section*{Abstract}
+TBD
+```
+
+# Introduction
+
+# References
