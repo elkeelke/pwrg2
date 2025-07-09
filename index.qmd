@@ -22,7 +22,9 @@ csl: apa-no-ampersand.csl
 
 ```{=latex}
 \section*{Abstract}
-TBD
+The aim of this work is to create a project proposal. In the first part of the paper, a literature study of the state of the art for using remote sensing generated data in life cycle assessments (LCAs) is performed. Based on that, my proposed project is developed in described in detail. The final part of the paper includes a project plan.
+
+The desired learning and contribution of this university class is to demonstrate  ability as a student to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and a project plan to tackle it. For this specific class, the topic should be related to LCA. In its simplest form the proprosal is about planning an LCA, but higher-level work is also appropriate.
 ```
 
 # Introduction
