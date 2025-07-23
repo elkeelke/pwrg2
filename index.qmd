@@ -43,7 +43,7 @@ At a high level, satellites can be categorized based on their orbital types, whi
 
 1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2.000 and below 35.000 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in [@3gppagnss], which rely on acquiring and decoding satellite signals to determine their position. 
 
-1. Geostationary Earth Orbit (GEO) satellites are located above the equator at  35.786 kilometers, which matches the Earth's rotation period, to provide continuous observation of a fixed region of the Earth. The data provided is often used for weather and broad climate monitoring.
+1. Geostationary Earth Orbit (GEO) satellites are located above the equator at 35.786 kilometers, which matches the Earth's rotation period, to provide continuous observation of a fixed region of the Earth. They are know for providing low resolution data with high update frequency. The data provided is often used for weather and broad climate monitoring.
 
 Each of these orbital types serves different observational and communication purposes based on their unique geometries. In this work, the focus is on observational data and its use cases for LCA. There are many use cases for satellites for communication, broadcasting, navigation, and military purposes, which will not be discussed.
 
@@ -64,7 +64,7 @@ Geostationary Earth Orbit satellites provide continuous, real-time monitoring of
 | Fengyun series (FY-2, FY-4)                    | CMA (China)          | Asia-Pacific region            | Restricted access for partners                |
 | Electro-L series                               | Russian Space Agency | Russia, Europe, parts of Asia  | Limited public access                         |
 
-The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornados, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
+The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
 
 They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides similar numbers of visible, near-infrared (NIR) and infrared (IR) channels:
 
@@ -74,17 +74,17 @@ They provide similar imaging capabilities: 16 spectral ranges of wavelengths, ca
 
 * Infrared bands, which are also invisible to the human eye, detect thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor.
 
+In summary, GEO satellites are most helpful for high-frequency monitoring of large-scale land and ocean processes, temperature, radiation, or atmospheric emissions.
+
 ## Low Earth Orbit (LEO) satellites
 
-There are far more LEO satellites than GEO satellites.
+There are far more LEO satellites than GEO satellites. The provide data at better resolution
 
 ## Tools and datasets
 
 GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file
 
 @neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
-
-
 
 # Literature study: Satellite data for LCA
 
@@ -93,6 +93,8 @@ Which aggregation levels are in use
 Existing estimates for environmental impact of satellites
 
 # Project proposal
+
+Forest loss and contrails 
 
 # Project plan
 
