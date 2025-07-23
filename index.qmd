@@ -41,7 +41,7 @@ At a high level, satellites can be categorized based on their orbital types, whi
 
 1. Low Earth Orbit (LEO) satellites orbit at altitudes between approximately 160 and 2,000 kilometers. They are known for their high resolution data. A subset of LEO, polar orbits, pass over the Earth's poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass. 
 
-1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2,000 and below 35,786 kilometers. They are typically used for navigation services. 
+1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2,000 and below 35,786 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in [@3gppagnss], which rely on acquiring and decoding satellite signals to determine their position. 
 
 1. Geostationary Earth Orbit (GEO) satellites are located above the equator at  35,786 kilometers, which matches the Earth's rotation period, to provide continuous observation of a fixed region of the Earth. The resulting atmospheric data is often used for weather and broad climate monitoring.
 
@@ -53,7 +53,13 @@ The satellite orbital types most useful for application in LCA are LEO and GEO s
 
 ## GEO
 
-## Tools
+## Tools and datasets
+
+GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file
+
+@neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
+
+
 
 # Literature study: Satellite data for LCA
 
