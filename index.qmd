@@ -39,19 +39,34 @@ The focus of this work is to explore how satellite data can be integrated into L
 
 At a high level, satellites can be categorized based on their orbital types, which determine their position and altitude, and consequently coverage and purpose. 
 
-1. Low Earth Orbit (LEO) satellites orbit at altitudes between approximately 160 and 2,000 kilometers. They are known for their high resolution data. A subset of LEO, polar orbits, pass over the Earth's poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass. 
+1. Low Earth Orbit (LEO) satellites orbit at altitudes between 160 and 2.000 kilometers. They are known for their high resolution data. A subset of them, polar orbits, pass over the Earth's poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass. 
 
-1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2,000 and below 35,786 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in [@3gppagnss], which rely on acquiring and decoding satellite signals to determine their position. 
+1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2.000 and below 35.000 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in [@3gppagnss], which rely on acquiring and decoding satellite signals to determine their position. 
 
-1. Geostationary Earth Orbit (GEO) satellites are located above the equator at  35,786 kilometers, which matches the Earth's rotation period, to provide continuous observation of a fixed region of the Earth. The resulting atmospheric data is often used for weather and broad climate monitoring.
+1. Geostationary Earth Orbit (GEO) satellites are located above the equator at  35.786 kilometers, which matches the Earth's rotation period, to provide continuous observation of a fixed region of the Earth. The data provided is often used for weather and broad climate monitoring.
 
 Each of these orbital types serves different observational and communication purposes based on their unique geometries. In this work, the focus is on observational data and its use cases for LCA. There are many use cases for satellites for communication, broadcasting, navigation, and military purposes, which will not be discussed.
 
-The satellite orbital types most useful for application in LCA are LEO and GEO satellites. In the following, an overview of available public domain and commercial satellite data that could be relevant for LCA is provided.
+The satellite orbital types most useful for application in LCA are low earth orbit and geostationary satellites. In the following, an overview of available public domain and commercial satellite data of these types that could be relevant for LCA is provided.
 
-## LEO
+## Geostationary Earth Orbit (GEO) satellites
 
-## GEO
+Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensation by providing high temporal resolution with images frequency between 5 and 15 minutes. @tbl-goes-satellites provides an overview of the existing GEO satellites, their operators, the regions covered, and the license the data is available under.
+
+::: {.table #tbl-goes-satellites caption="GOES satellite overview"}
+
+| Satellite / Series                             | Operator / Agency    | Region Covered                 | Licensing                                     |
+| ---------------------------------------------- | -------------------- | ------------------------------ |---------------------------------------------- |
+| GOES series (GOES-16, GOES-17, GOES-18)        | NOAA (USA)           | Americas                       | Most data available under NOAA's data policy  |
+| Meteosat (MSG series)                          | EUMETSAT (Europe)    | Europe, Africa, Atlantic Ocean | Open access under EUMETSAT’s data policy      |
+| Himawari series (8 and 9)                      | JMA (Japan)          | Asia-Pacific region            | Open access for research and public use       |
+| INSAT/GSAT series (INSAT-3D, INSAT-3DR)        | ISRO (India)         | Indian subcontinent            | Limited public access                         |
+| Fengyun series (FY-2, FY-4)                    | CMA (China)          | Asia-Pacific region            | Restricted access for partners                |
+| Electro-L series                               | Russian Space Agency | Russia, Europe, parts of Asia  | Limited public access                         |
+
+## Low Earth Orbit (LEO) satellites
+
+There are far more LEO satellites than GEO satellites.
 
 ## Tools and datasets
 
