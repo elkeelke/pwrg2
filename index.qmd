@@ -51,18 +51,22 @@ The satellite orbital types most useful for application in LCA are low earth orb
 
 ## Geostationary Earth Orbit (GEO) satellites
 
-Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensation by providing high temporal resolution with images frequency between 5 and 15 minutes. @tbl-goes-satellites provides an overview of the existing GEO satellites, their operators, the regions covered, and the license the data is available under.
+Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensation by providing high temporal resolution. @tbl-goes-satellites provides an overview of the existing GEO satellites, their operators, the regions covered, and the license the data is available under.
 
 ::: {.table #tbl-goes-satellites caption="GOES satellite overview"}
 
 | Satellite / Series                             | Operator / Agency    | Region Covered                 | Licensing                                     |
 | ---------------------------------------------- | -------------------- | ------------------------------ |---------------------------------------------- |
 | GOES series (GOES-16, GOES-17, GOES-18)        | NOAA (USA)           | Americas                       | Most data available under NOAA's data policy  |
-| Meteosat (MSG series)                          | EUMETSAT (Europe)    | Europe, Africa, Atlantic Ocean | Open access under EUMETSAT’s data policy      |
+| Meteosat (MSG and MTG series)                  | EUMETSAT (Europe)    | Europe, Africa, Atlantic Ocean | Open access under EUMETSAT’s data policy      |
 | Himawari series (8 and 9)                      | JMA (Japan)          | Asia-Pacific region            | Open access for research and public use       |
 | INSAT/GSAT series (INSAT-3D, INSAT-3DR)        | ISRO (India)         | Indian subcontinent            | Limited public access                         |
 | Fengyun series (FY-2, FY-4)                    | CMA (China)          | Asia-Pacific region            | Restricted access for partners                |
 | Electro-L series                               | Russian Space Agency | Russia, Europe, parts of Asia  | Limited public access                         |
+
+The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornados, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. 
+
+Each series provides similar numbers of visible, near-infrared (NIR) and infrared (IR) channels. Visible bands detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared bands are invisible to the human eye, strongly reflected by vegetation, and absorbed by water. This makes land cover, plant health, and boundaries between land and water easy to detect. Infrared bands are also invisible to the human eye. They detect thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night, for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor.
 
 ## Low Earth Orbit (LEO) satellites
 
