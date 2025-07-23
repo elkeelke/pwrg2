@@ -39,7 +39,7 @@ The focus of this work is to explore how satellite data can be integrated into L
 
 At a high level, satellites can be categorized based on their orbital types, which determine their position and altitude, and consequently coverage and purpose. 
 
-1. Low Earth Orbit (LEO) satellites orbit at altitudes between approximately 160 and 2,000 kilometers. They are known for their high resolution data. A subset of LEO, polar orbits, pass over the Earth's poles and provide global coverage as the planet rotates beneath them. Anoter subset are sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass. 
+1. Low Earth Orbit (LEO) satellites orbit at altitudes between approximately 160 and 2,000 kilometers. They are known for their high resolution data. A subset of LEO, polar orbits, pass over the Earth's poles and provide global coverage as the planet rotates beneath them. Another subset are sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass. 
 
 1. Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2,000 and below 35,786 kilometers. They are typically used for navigation services. 
 
