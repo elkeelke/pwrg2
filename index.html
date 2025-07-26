@@ -94,9 +94,9 @@ div.csl-indent {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Life Cycle Assessment (LCA) as defined in <span class="citation" data-cites="ISO14040">(<a href="#ref-ISO14040" role="doc-biblioref">International Organization for Standardization, 2006a</a>)</span> and <span class="citation" data-cites="ISO14044">(<a href="#ref-ISO14044" role="doc-biblioref">International Organization for Standardization, 2006b</a>)</span> is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service’s life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the quality and availability of data. Reliable data allows to quantify energy use, emissions, resource depletion, and other key metrics, making it possible to compare alternative options, and to support informed decision-making. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete.</p>
-<p>Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth’s surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite-derived data supports a wide range of applications, from climate modeling and disaster response to agricultural planning.</p>
-<p>The focus of this work is to explore how satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases, where accurate, detailed, and geographically specific information can improve the reliability of results. While remote sensing supplies the observational data, LCA offers the framework for quantifying and interpreting environmental impacts.</p>
+<p>Life Cycle Assessment (LCA) as defined in <span class="citation" data-cites="ISO14040">(<a href="#ref-ISO14040" role="doc-biblioref">International Organization for Standardization, 2006a</a>)</span> and <span class="citation" data-cites="ISO14044">(<a href="#ref-ISO14044" role="doc-biblioref">International Organization for Standardization, 2006b</a>)</span> is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service’s life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete.</p>
+<p>Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth’s surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived data supports a wide range of applications, from climate modeling and disaster response to agricultural planning.</p>
+<p>The focus of this work is to explore if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases, where accurate, detailed, and geographically specific information is essential. While remote sensing supplies the observational data, LCA offers the framework for quantifying and interpreting environmental impacts.</p>
 </section>
 <section id="satellite-data-types-use-cases-data-availability-and-tools" class="level1">
 <h1>Satellite data: types, use cases, data availability, and tools</h1>
@@ -104,19 +104,19 @@ div.csl-indent {
 <ol type="1">
 <li><p>Low Earth Orbit (LEO) satellites orbit at altitudes between 160 and 2.000 kilometers. They are known for their high resolution data. A subset of them, polar orbits, pass over the Earth’s poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass.</p></li>
 <li><p>Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2.000 and below 35.000 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in <span class="citation" data-cites="3gppagnss">(<a href="#ref-3gppagnss" role="doc-biblioref">3rd Generation Partnership Project (3GPP), 2019</a>)</span>, which rely on acquiring and decoding satellite signals to determine their position.</p></li>
-<li><p>Geostationary Earth Orbit (GEO) satellites are located above the equator at 35.786 kilometers, which matches the Earth’s rotation period, to provide continuous observation of a fixed region of the Earth. The data provided is often used for weather and broad climate monitoring.</p></li>
+<li><p>Geostationary Earth Orbit (GEO) satellites are located above the equator at 35.786 kilometers, which matches the Earth’s rotation period, to provide continuous observation of a fixed region of the Earth. They are know for providing low resolution data with high update frequency. The data provided is often used for weather and broad climate monitoring.</p></li>
 </ol>
-<p>Each of these orbital types serves different observational and communication purposes based on their unique geometries. In this work, the focus is on observational data and its use cases for LCA. There are many use cases for satellites for communication, broadcasting, navigation, and military purposes, which will not be discussed.</p>
-<p>The satellite orbital types most useful for application in LCA are low earth orbit and geostationary satellites. In the following, an overview of available public domain and commercial satellite data of these types that could be relevant for LCA is provided.</p>
+<p>Each of these orbital types serves different observational and communication purposes. In this work, the focus is on satellites that provide observational data. There are many other use cases for satellites in communication, broadcasting, navigation, and for military purposes, which will not be discussed.</p>
+<p>The satellite orbital types most useful for application in LCA are observational LEO and GEO satellites. In the following, an overview of available public domain and commercial observational satellite data of these types that could potentially be relevant for LCA is provided.</p>
 <section id="geostationary-earth-orbit-geo-satellites" class="level2">
 <h2 class="anchored" data-anchor-id="geostationary-earth-orbit-geo-satellites">Geostationary Earth Orbit (GEO) satellites</h2>
-<p>Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensation by providing high temporal resolution. <a href="#tbl-goes-satellites" class="quarto-xref">Table&nbsp;1</a> provides an overview of the existing GEO satellites, their operators, the regions covered, and the license the data is available under.</p>
-<div id="tbl-goes-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="GOES satellite overview">
+<p>Observational Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensation by providing high temporal resolution. <a href="#tbl-geo-satellites" class="quarto-xref">Table&nbsp;1</a> provides an overview of the existing GEO satellites, their operators, the regions covered, and the license the data is available under.</p>
+<div id="tbl-geo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="GEO satellite overview">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-goes-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-geo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1
 </figcaption>
-<div aria-describedby="tbl-goes-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-geo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 32%">
@@ -171,15 +171,196 @@ Table&nbsp;1
 </tr>
 </tbody>
 </table>
-<p>The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornados, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides similar numbers of visible, near-infrared (NIR) and infrared (IR) channels. Visible bands detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared bands are invisible to the human eye, strongly reflected by vegetation, and absorbed by water. This makes land cover, plant health, and boundaries between land and water easy to detect. Infrared bands are also invisible to the human eye. They detect thermal radiation, i.e.&nbsp;heat, emitted from the Earth and atmosphere at day and night, for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor.</p>
+</div>
+</figure>
+</div>
+<p>The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting).</p>
+<p>They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides similar numbers of visible, near-infrared (NIR) and infrared (IR) channels:</p>
+<ul>
+<li><p>Visible bands detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance.</p></li>
+<li><p>Near-infrared bands are invisible to the human eye, strongly reflected by vegetation, and absorbed by water. This makes land cover, plant health, and boundaries between land and water easy to detect.</p></li>
+<li><p>Infrared bands, which are also invisible to the human eye, detect thermal radiation, i.e.&nbsp;heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor.</p></li>
+</ul>
+<p>In summary, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes, temperature, radiation, or atmospheric emissions.</p>
+</section>
 <section id="low-earth-orbit-leo-satellites" class="level2">
 <h2 class="anchored" data-anchor-id="low-earth-orbit-leo-satellites">Low Earth Orbit (LEO) satellites</h2>
-<p>There are far more LEO satellites than GEO satellites.</p>
+<p>Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. <a href="#tbl-leo-satellites" class="quarto-xref">Table&nbsp;2</a> provides a listing of the most relevant ones and their resolution and revisit frequency.</p>
+<div id="tbl-leo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="LEO satellite overview">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-leo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2
+</figcaption>
+<div aria-describedby="tbl-leo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 13%">
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Satellite</th>
+<th>Access</th>
+<th>Resolution</th>
+<th>Revisit Frequency</th>
+<th>Region Covered &amp; Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Landsat 8 &amp; 9</td>
+<td>open</td>
+<td>15–30 m multispectral</td>
+<td>16 days</td>
+<td>Global coverage, land surface, long-term archive</td>
+</tr>
+<tr class="even">
+<td>Sentinel-1</td>
+<td>open</td>
+<td>5–20 m SAR</td>
+<td>6–12 days</td>
+<td>Global, all-weather radar imaging</td>
+</tr>
+<tr class="odd">
+<td>Sentinel-2</td>
+<td>open</td>
+<td>10–60 m multispectral</td>
+<td>5 days (with 2 satellites)</td>
+<td>Global, vegetation, land use, coastal zones</td>
+</tr>
+<tr class="even">
+<td>MODIS (Terra, Aqua)</td>
+<td>open</td>
+<td>250 m – 1 km multispectral</td>
+<td>Daily</td>
+<td>Global, atmosphere, land, ocean</td>
+</tr>
+<tr class="odd">
+<td>Biomass</td>
+<td>open</td>
+<td>~10 m P-band SAR</td>
+<td>15–16 orbits per day</td>
+<td>Global; forest biomass &amp; carbon content monitoring; launched 2025</td>
+</tr>
+<tr class="even">
+<td>Planet Labs (Dove, Pelican)</td>
+<td>commercial</td>
+<td>3–5 m optical</td>
+<td>Daily (global coverage)</td>
+<td>Global, frequent revisits, commercial use</td>
+</tr>
+<tr class="odd">
+<td>Maxar WorldView series</td>
+<td>commercial</td>
+<td>30–50 cm optical</td>
+<td>Daily to weekly</td>
+<td>High-resolution, commercial, detailed imaging</td>
+</tr>
+<tr class="even">
+<td>Airbus Pléiades</td>
+<td>commercial</td>
+<td>~50 cm optical</td>
+<td>1–3 days</td>
+<td>Global, high-resolution commercial imaging</td>
+</tr>
+<tr class="odd">
+<td>BlackSky</td>
+<td>commercial</td>
+<td>~90 cm optical</td>
+<td>Multiple times daily</td>
+<td>Global, rapid revisit, analytics platform</td>
+</tr>
+<tr class="even">
+<td>Iceye</td>
+<td>commercial</td>
+<td>~1 m SAR</td>
+<td>Daily (some areas)</td>
+<td>Global, all-weather radar, commercial SAR constellation</td>
+</tr>
+<tr class="odd">
+<td>Capella Space</td>
+<td>commercial</td>
+<td>~0.5 m SAR</td>
+<td>Daily to sub-daily</td>
+<td>Global, high-resolution SAR, commercial</td>
+</tr>
+<tr class="even">
+<td>FireSat</td>
+<td>commercial</td>
+<td>~5 m thermal infrared</td>
+<td>Every 20 minutes globally</td>
+<td>Global wildfire detection; launched 2025</td>
+</tr>
+<tr class="odd">
+<td>OroraTech</td>
+<td>commercial</td>
+<td>Variable thermal IR</td>
+<td>Near real-time</td>
+<td>Wildfire monitoring, rapid alerts</td>
+</tr>
+<tr class="even">
+<td>Satellogic</td>
+<td>commercial</td>
+<td>&lt;1 m multispectral</td>
+<td>Daily</td>
+<td>Global, medium-resolution multispectral</td>
+</tr>
+<tr class="odd">
+<td>GHGSat</td>
+<td>commercial</td>
+<td>Variable</td>
+<td>Variable</td>
+<td>Global methane and greenhouse gas monitoring</td>
+</tr>
+<tr class="even">
+<td>RapidEye</td>
+<td>commercial</td>
+<td>5 m multispectral</td>
+<td>Daily</td>
+<td>Global, medium-resolution multispectral</td>
+</tr>
+<tr class="odd">
+<td>Deimos-1 &amp; 2</td>
+<td>commercial</td>
+<td>22 m (D1), 75 cm (D2) optical</td>
+<td>1–3 days</td>
+<td>Global, commercial EO satellites</td>
+</tr>
+<tr class="even">
+<td>RISAT-1 &amp; 2</td>
+<td>restricted</td>
+<td>3–5 m SAR</td>
+<td>Weekly</td>
+<td>India region, radar imaging for agriculture and disaster monitoring</td>
+</tr>
+<tr class="odd">
+<td>ALOS-2</td>
+<td>restricted</td>
+<td>1–3 m SAR</td>
+<td>Weekly</td>
+<td>Asia-Pacific region, wide-area radar imaging</td>
+</tr>
+<tr class="even">
+<td>Cartosat series</td>
+<td>restricted</td>
+<td>0.8–2.5 m optical</td>
+<td>4–5 days</td>
+<td>India and global, high-res optical</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
 </section>
 <section id="tools-and-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="tools-and-datasets">Tools and datasets</h2>
 <p>GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file</p>
 <p><span class="citation" data-cites="neumann2025natural">Neumann et al. (<a href="#ref-neumann2025natural" role="doc-biblioref">2025</a>)</span> Forest stuff PhD student: https://github.com/SherryJYC</p>
+</section>
 </section>
 <section id="literature-study-satellite-data-for-lca" class="level1">
 <h1>Literature study: Satellite data for LCA</h1>
@@ -188,18 +369,14 @@ Table&nbsp;1
 </section>
 <section id="project-proposal" class="level1">
 <h1>Project proposal</h1>
+<p>Forest loss and contrails</p>
 </section>
 <section id="project-plan" class="level1">
 <h1>Project plan</h1>
 </section>
-<section id="references" class="level1">
-<h1>References</h1>
-</section>
-</div>
-</figure>
-</div>
+<section id="references" class="level1 unnumbered">
 
-</section>
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
