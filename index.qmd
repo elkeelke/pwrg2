@@ -115,18 +115,43 @@ GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-
 
 @neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
 
+Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Department of Agriculture's National Agricultural Statistics Service (NASS) that provides information about crop types across the United States.
+
 # Literature study: Satellite data for LCA
+
+Use cases: forest, water (?), contrails
 
 Which aggregation levels are in use
 
 (2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
 https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
+LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats.
+
+Quantifying the Environmental Impacts of Manufacturing Low Earth Orbit (LEO) Satellite Constellations 
+https://www.mdpi.com/2071-1050/16/21/9431
 
 Existing estimates for environmental impact of satellites
 
 International Journal of Applied Earth Observation and Geoinformation
 
 @zhao2022overview conduct a literature study of scientific article that reference EO satellite missions and find that their number is exponentially growing and that most of the work is based on the freely available data. TBD Worldview mentioned
+
+Contrail Cirrus Climate Impact: From Radiative Forcing to Surface
+Temperature Change
+https://journals.ametsoc.org/view/journals/clim/38/8/JCLI-D-24-0245.1.pdf
+
+Evidence for climate change in the satellite cloud record
+https://www.nature.com/articles/nature18273
+Clouds play a huge role in Earth's temperature by both reflecting sunlight back into space (a cooling effect) and trapping heat from the ground (a warming effect). How clouds will change due to global warming has been one of the biggest questions in climate science. Climate models and real-world observations didn't agree on how clouds have changed in recent decades. This is largely because the satellites used to monitor clouds were built for short-term weather forecasting, not for tracking subtle, long-term climate changes. The data from these older systems needed to be carefully corrected to be reliable. This study successfully corrected several independent satellite records from the 1980s to the 2000s. After correction, the data revealed large-scale cloud changes that match the predictions made by climate models. Both the real-world data and the computer models show the same patterns: Storm tracks are moving away from the equator and towards the poles. Subtropical dry zones are expanding. The highest cloud tops are getting even higher. The main causes for these changes are rising greenhouse gas concentrations and the planet warming up after the cooling effects of past volcanic eruptions. This research shows that the cloud changes long predicted by climate models are actually happening now.
+
+Earth’s long-term climate stabilized by clouds
+https://www.nature.com/articles/s41561-021-00691-7?fromPaywallRec=true
+Billions of years ago, the Sun was much dimmer than it is today. ☀️ Logically, Earth should have been a frozen ice ball, but evidence shows it had liquid water. This mystery is called the "faint young Sun problem."
+For a long time, scientists thought the solution was a much stronger greenhouse effect. The idea was that early Earth's atmosphere was filled with extra greenhouse gases (like CO₂), which trapped the Sun's faint heat and kept the planet warm enough for liquid water.
+This study suggests a different key factor: clouds.
+Researchers used climate models to look back in time. They found that with a dimmer sun and more CO₂, early Earth had far fewer low-level clouds than it does today.
+Fewer clouds meant less sunlight was reflected away from the planet's surface. Think of it like a dark t-shirt absorbing more sunlight than a white one. By absorbing more of the Sun's faint energy, the planet stayed warm. This cloud effect was incredibly powerful, providing about 40% of the warming needed to solve the problem.
+
 
 # Project proposal
 
