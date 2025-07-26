@@ -21,10 +21,10 @@ csl: apa-no-ampersand.csl
 ---
 
 ```{=latex}
-\section*{Abstract}
-The aim of this work is to create a project proposal to demonstrate ability as a student to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and a project plan to tackle it. 
+\section*{Project proposal}
+The aim of this university assignment is to create a project proposal to demonstrate ability to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and outline a project plan to address it. Grading consists of the following parts: Scientific Publication: 50%, Supporting Material 15%, Oral Presentation 25%, Work Process / Project Management: 10%
 
-The chosen topic is using remote sensing, in particular satellite data, for life cycle assessments (LCAs). In the first part of the paper, a literature study of the state of the art is performed. As the outcome of this study, a research gap is identified. Based on that, a proposed project to close the gap will be developed and described in detail. The final part of the paper includes a project plan.
+The chosen research field is the use of remote sensing, in particular satellite data, for life cycle assessments (LCAs). In the first part of the scientific publication, a literature review of the current state of the art will be performed. One of the outcomes of the literature study will be the identification of a research gap. A proposed research project aimed at addressing this gap will then be developed and described in detail. The final part of the publication will present a project plan for conducting the suggested research.
 ```
 
 # Introduction
