@@ -22,7 +22,7 @@ csl: apa-no-ampersand.csl
 
 ```{=latex}
 \section*{Project proposal}
-The aim of this university assignment is to create a project proposal to demonstrate ability to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and outline a project plan to address it. Grading consists of the following parts: Scientific Publication: 50%, Supporting Material 15%, Oral Presentation 25%, Work Process / Project Management: 10%
+The aim of this university assignment is to create a project proposal to demonstrate ability to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and outline a project plan to address it. Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 
 The chosen research field is the use of remote sensing, in particular satellite data, for life cycle assessments (LCAs). In the first part of the scientific publication, a literature review of the current state of the art will be performed. One of the outcomes of the literature study will be the identification of a research gap. A proposed research project aimed at addressing this gap will then be developed and described in detail. The final part of the publication will present a project plan for conducting the suggested research.
 ```
@@ -63,6 +63,7 @@ Geostationary Earth Orbit satellites provide continuous, real-time monitoring of
 | INSAT/GSAT series (INSAT-3D, INSAT-3DR)        | ISRO (India)         | Indian subcontinent            | Limited public access                         |
 | Fengyun series (FY-2, FY-4)                    | CMA (China)          | Asia-Pacific region            | Restricted access for partners                |
 | Electro-L series                               | Russian Space Agency | Russia, Europe, parts of Asia  | Limited public access                         |
+:::
 
 The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
 
