@@ -24,7 +24,7 @@ csl: apa-no-ampersand.csl
 \section*{Project proposal}
 The aim of this university assignment is to create a project proposal to demonstrate ability to get an overview of a research field, summarize the findings, identify a gap in the existing knowledge, define a research question, and outline a project plan to address it. Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 
-The chosen research field is the use of remote sensing, in particular satellite data, for life cycle assessments (LCAs). In the first part of the scientific publication, a literature review of the current state of the art will be performed. One of the outcomes of the literature study will be the identification of a research gap. A proposed research project aimed at addressing this gap will then be developed and described in detail. The final part of the publication will present a project plan for conducting the suggested research.
+The chosen research field is the use of remote sensing, in particular satellite data, for life cycle assessments (LCAs). In the first part of the scientific publication, an introduction to the topic aimed at reader who are not familiar with LCA or Earth Observation with satellites will be provided. After that, a literature review of the current state of the art in satellite data for LCA will be performed, and an overview of relevant tools and dataset will be provided. The outcomes of the literature study and the data and tools review will be the identification of a research or data/tooling gap. A research question will be defined based on these insights. A proposed research project aimed at addressing the research question will then be developed and described in detail. The final part of the publication will present a project plan for conducting the suggested research.
 ```
 
 # Introduction
@@ -39,15 +39,15 @@ The focus of this work is to explore if and how observational satellite data can
 
 The focus of this work is on satellites that provide observational data of the Earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed. 
 
-There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in @tbl-methods. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method providing grayscale interpretable radar data that works at night and through clouds, unlike the other methods. 
+There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in @tbl-methods. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.
 
 ::: {.table #tbl-methods caption="Methods for sensing"}
 
-| Method                                 | Approach | Key Feature                                   | Works at Night | Cloud-Penetrating |
-| -------------------------------------- | -------- | --------------------------------------------- | -------------- | ----------------- |
-| Optical (including Near-Infrared, NIR) | Passive  | Reflects sunlight                             | No             | No                |
-| Thermal Infrared (IR)                  | Passive  | Detects heat                                  | Yes            | No                |
-| Synthetic Aperture Radar (SAR)         | Active   | Uses radar for surface structure and moisture | Yes            | Yes               |
+| Method                                 | Approach    | Key feature           | Works at night | Cloud penetrating |
+| -------------------------------------- | ----------- | --------------------- | -------------- | ----------------- |
+| Optical (including Near-Infrared, NIR) | Passive     | Reflects sunlight     | No             | No                |
+| Thermal Infrared (IR)                  | Passive     | Detects heat          | Yes            | No                |
+| Synthetic Aperture Radar (SAR)         | Active      | Uses radar            | Yes            | Yes               |
 
 :::
 
@@ -78,11 +78,11 @@ Observational Geostationary Earth Orbit satellites provide continuous, real-time
 
 :::
 
-The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
+The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides comparable numbers of optical, near-infrared and infrared channels.
 
-They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides comparable numbers of optical, near-infrared and infrared channels.
+They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
 
-In summary, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes, temperature, radiation, or atmospheric emissions.
+To summarize, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes, temperature, radiation, or atmospheric emissions.
 
 ## Low Earth Orbit (LEO) satellites
 
@@ -112,16 +112,7 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 
 :::
 
-## Tools and datasets
-
-GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file
-
-@neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
-
-Remote sensing agriculture: Bruno Basso
-https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
-
-Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Department of Agriculture's National Agricultural Statistics Service (NASS) that provides information about crop types across the United States.
+TBD describe
 
 # Literature study: Satellite data for LCA
 
@@ -165,6 +156,16 @@ This study suggests a different key factor: clouds.
 Researchers used climate models to look back in time. They found that with a dimmer sun and more CO₂, early Earth had far fewer low-level clouds than it does today.
 Fewer clouds meant less sunlight was reflected away from the planet's surface. Think of it like a dark t-shirt absorbing more sunlight than a white one. By absorbing more of the Sun's faint energy, the planet stayed warm. This cloud effect was incredibly powerful, providing about 40% of the warming needed to solve the problem.
 
+# Tools and datasets
+
+GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file
+
+@neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
+
+Remote sensing agriculture: Bruno Basso
+https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
+
+Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Department of Agriculture's National Agricultural Statistics Service (NASS) that provides information about crop types across the United States.
 
 # Project proposal
 
