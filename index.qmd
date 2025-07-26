@@ -124,6 +124,8 @@ Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Dep
 
 Use cases: forest, water (?), contrails
 
+https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=2&q=forest+loss+life+cycle+assessment&qst=bl
+
 Amazon often full with clouds, gets exploited by loggers
 
 Which aggregation levels are in use
