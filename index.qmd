@@ -80,7 +80,7 @@ In summary, GEO satellites for Earth observation are most helpful for high-frequ
 
 ## Low Earth Orbit (LEO) satellites
 
-Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a listing of the most relevant ones and their resolution and revisit frequency.
+Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant ones and their resolution and revisit frequency.
 
 ::: {.table #tbl-leo-satellites caption="LEO satellite overview"}
 
@@ -119,11 +119,19 @@ GlobalBuildingAtlas: https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-
 
 Which aggregation levels are in use
 
+(2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
+https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
+
 Existing estimates for environmental impact of satellites
+
+International Journal of Applied Earth Observation and Geoinformation
+
+@zhao2022overview conduct a literature study of scientific article that reference EO satellite missions and find that their number is exponentially growing and that most of the work is based on the freely available data. TBD Worldview mentioned
 
 # Project proposal
 
-Forest loss and contrails 
+Ideas:
+- Use Biomass satellite for LCA for forest loss
 
 # Project plan
 
