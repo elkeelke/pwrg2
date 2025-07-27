@@ -45,11 +45,11 @@ There are several different types of methods to sense the data: optical, thermal
 
 ::: {.table #tbl-methods caption="Methods for sensing"}
 
-| Method                                 | Approach    | Key feature           | Works at night | Cloud penetrating |
-| -------------------------------------- | ----------- | --------------------- | -------------- | ----------------- |
-| Optical (including Near-Infrared, NIR) | Passive     | Reflects sunlight     | No             | No                |
-| Thermal Infrared (IR)                  | Passive     | Detects heat          | Yes            | No                |
-| Synthetic Aperture Radar (SAR)         | Active      | Uses radar            | Yes            | Yes               |
+| Method                                 | Key feature           | Works at night | Cloud penetrating |
+| -------------------------------------- | --------------------- | -------------- | ----------------- |
+| Optical (including Near-Infrared, NIR) | Reflects sunlight     | No             | No                |
+| Thermal Infrared (IR)                  | Detects heat          | Yes            | No                |
+| Synthetic Aperture Radar (SAR)         | Uses radar            | Yes            | Yes               |
 
 :::
 
@@ -84,23 +84,23 @@ The three satellite series where data that is accessible under open licenses off
 
 They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting). 
 
-To summarize, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes, temperature, radiation, or atmospheric emissions.
+To summarize, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes.
 
 ## Low Earth Orbit (LEO) satellites
 
-Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.
+Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. Note that some providers have more than one satellite on offer. In these cases only the one with the highest resolution and revisit frequency is listed. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.
 
 ::: {.table #tbl-leo-satellites caption="LEO satellites overview"}
 
-| Satellite                   | Access     | Resolution                    | Revisit Frequency          |
+| Satellite / provider        | Access     | Resolution                    | Revisit Frequency          |
 | --------------------------- | -----------| ----------------------------- | -------------------------- |
-| Landsat 8 & 9               | open       | 15–30 m multispectral         | 8 days (combined)          |
-| Sentinel-1 (A & B/C)        | open       | 5–20 m SAR                    | 6 days (combined)          |
-| Sentinel-2 (A, B & C)       | open       | 10–60 m multispectral         | 5 days (combined)          |
+| Landsat 8 & 9               | open       | 15 – 30 m multispectral       | 8 days (combined)          |
+| Sentinel-1 (A & B/C)        | open       | 5 – 20 m SAR                  | 6 days (combined)          |
+| Sentinel-2 (A, B & C)       | open       | 10 – 60 m multispectral       | 5 days (combined)          |
 | MODIS (Terra, Aqua)         | open       | 250 m – 1 km multispectral    | Daily                      |
-| Biomass                     | open (*)   | 10 m P-band SAR               | 15–16 orbits per day       |
-| Planet Labs                 | commercial | 3–5 m optical                 | Daily                      |
-| Maxar WorldView series      | commercial | 30–50 cm optical              | Up to 15 orbits per day    |
+| Biomass                     | open (*)   | 10 m P-band SAR               | Up to 16 orbits/day        |
+| Planet Labs                 | commercial | 3 – 5 m optical               | Daily                      |
+| Maxar WorldView             | commercial | 30 – 50 cm optical            | Up to 15 orbits/day       |
 | Airbus                      | commercial | 30 cm optical                 | 1–3 days                   |
 | Iceye                       | commercial | 0.5 m SAR                     | Daily to sub-daily         |
 | Capella Space               | commercial | 0.5 m SAR                     | Daily to sub-daily         |
@@ -110,6 +110,8 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 
 :::
 
+To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data, many different commercial options are on the market.
+
 <!-- 
 | RapidEye                    | commercial | 5 m multispectral             | Daily                      | medium-resolution multispectral                             |
 | Deimos-1 & 2                | commercial | 22 m (D1), 75 cm (D2) optical | 1–3 days                   | commercial EO satellites                                    |
@@ -118,7 +120,6 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 -->
 
 
-TBD describe
 
 # Literature study: Satellite data for LCA
 
