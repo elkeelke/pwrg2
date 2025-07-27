@@ -88,31 +88,35 @@ To summarize, GEO satellites for Earth observation are most helpful for high-fre
 
 ## Low Earth Orbit (LEO) satellites
 
-Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant ones and their resolution and revisit frequency.
+Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.
 
 ::: {.table #tbl-leo-satellites caption="LEO satellites overview"}
 
-| Satellite                   | Access      | Resolution       | Revisit Frequency          | Region Covered & Notes                                              |
-| --------------------------- | ----------------------- | ----------------------------- | -------------------------- | ------------------------------------------------------------------- |
-| Landsat 8 & 9               | open       | 15–30 m multispectral         | 16 days                    | Global coverage, land surface, long-term archive                    |
-| Sentinel-1                  | open       | 5–20 m SAR                    | 6–12 days                  | Global, all-weather radar imaging                                   |
-| Sentinel-2                  | open       | 10–60 m multispectral         | 5 days (with 2 satellites) | Global, vegetation, land use, coastal zones                         |
-| MODIS (Terra, Aqua)         | open       | 250 m – 1 km multispectral    | Daily                      | Global, atmosphere, land, ocean                                     |
-| Biomass                     | open (later)       | \~10 m P-band SAR             | 15–16 orbits per day       | Global; forest biomass & carbon content monitoring; launched 2025   |
-| Planet Labs                 | commercial | 3–5 m optical                 | Daily (global coverage)    | Global, frequent revisits, commercial use                           |
-| Maxar WorldView series      | commercial | 30–50 cm optical              | Daily to weekly            | High-resolution, commercial, detailed imaging                       |
-| Airbus Pléiades             | commercial | \~50 cm optical               | 1–3 days                   | Global, high-resolution commercial imaging                          |
-| BlackSky                    | commercial | \~90 cm optical               | Multiple times daily       | Global, rapid revisit, analytics platform                           |
-| Iceye                       | commercial | \~1 m SAR                     | Daily (some areas)         | Global, all-weather radar, commercial SAR constellation             |
-| Capella Space               | commercial | \~0.5 m SAR                   | Daily to sub-daily         | Global, high-resolution SAR, commercial                             |
-| FireSat                     | commercial | \~5 m thermal IR              | Every 20 minutes globally  | Global wildfire detection; launched 2025                            |
-| OroraTech                   | commercial | Variable thermal IR           | Near real-time             | Wildfire monitoring, rapid alerts                                   |
-| Satellogic                  | commercial | <1 m multispectral            | Daily                      | Global, medium-resolution multispectral                             |
-| GHGSat                      | commercial | Variable                      | Variable                   | Global methane and greenhouse gas monitoring                        |
-| RapidEye                    | commercial | 5 m multispectral             | Daily                      | Global, medium-resolution multispectral                             |
-| Deimos-1 & 2                | commercial | 22 m (D1), 75 cm (D2) optical | 1–3 days                   | Global, commercial EO satellites                                    |
+| Satellite                   | Access     | Resolution                    | Revisit Frequency          |
+| --------------------------- | -----------| ----------------------------- | -------------------------- |
+| Landsat 8 & 9               | open       | 15–30 m multispectral         | 8 days (combined)          |
+| Sentinel-1 (A & B/C)        | open       | 5–20 m SAR                    | 6 days (combined)          |
+| Sentinel-2 (A, B & C)       | open       | 10–60 m multispectral         | 5 days (combined)          |
+| MODIS (Terra, Aqua)         | open       | 250 m – 1 km multispectral    | Daily                      |
+| Biomass                     | open (*)   | 10 m P-band SAR               | 15–16 orbits per day       |
+| Planet Labs                 | commercial | 3–5 m optical                 | Daily                      |
+| Maxar WorldView series      | commercial | 30–50 cm optical              | Up to 15 orbits per day    |
+| Airbus                      | commercial | 30 cm optical                 | 1–3 days                   |
+| Iceye                       | commercial | 0.5 m SAR                     | Daily to sub-daily         |
+| Capella Space               | commercial | 0.5 m SAR                     | Daily to sub-daily         |
+| GHGSat                      | commercial | 25 m                          | Variable                   |
+| FireSat                     | commercial | 5 m thermal IR                | 30 minutes (*)             |
+| OroraTech                   | commercial | Variable thermal IR           | 30 minutes (*)             |
 
 :::
+
+<!-- 
+| RapidEye                    | commercial | 5 m multispectral             | Daily                      | medium-resolution multispectral                             |
+| Deimos-1 & 2                | commercial | 22 m (D1), 75 cm (D2) optical | 1–3 days                   | commercial EO satellites                                    |
+| Satellogic                  | commercial | <1 m multispectral            | Daily                      | medium-resolution multispectral                             |
+| BlackSky                    | commercial | \~90 cm optical               | Multiple times daily       | rapid revisit, analytics platform                           |
+-->
+
 
 TBD describe
 
