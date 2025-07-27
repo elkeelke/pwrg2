@@ -47,7 +47,7 @@ There are several different types of methods to sense the data: optical, thermal
 
 | Method                                 | Key feature           | Works at night | Cloud penetrating |
 | -------------------------------------- | --------------------- | -------------- | ----------------- |
-| Optical (including Near-Infrared, NIR) | Reflects sunlight     | No             | No                |
+| Optical (incl. Near-Infrared, NIR)     | Reflects sunlight     | No             | No                |
 | Thermal Infrared (IR)                  | Detects heat          | Yes            | No                |
 | Synthetic Aperture Radar (SAR)         | Uses radar            | Yes            | Yes               |
 
@@ -118,8 +118,6 @@ To summarize, LEO satellites play a crucial role in Earth observation, particula
 | Satellogic                  | commercial | <1 m multispectral            | Daily                      | medium-resolution multispectral                             |
 | BlackSky                    | commercial | \~90 cm optical               | Multiple times daily       | rapid revisit, analytics platform                           |
 -->
-
-
 
 # Literature study: Satellite data for LCA
 
