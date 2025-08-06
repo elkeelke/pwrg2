@@ -125,8 +125,6 @@ While a few public providers offer open-access data with comparatively low resol
 
 # Literature study: Satellite data for LCA
 
-Which aggregation levels are in use?
-
 (2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
 https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
 LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats.
@@ -155,6 +153,9 @@ https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
 
 Problems:
 Amazon often full with clouds, gets exploited by loggers
+
+Open questions:
+Which aggregation levels are in use?
 
 Use cases: 
 forest https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=2&q=forest+loss+life+cycle+assessment&qst=bl
