@@ -110,8 +110,6 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 
 :::
 
-To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist, e.g. under the NASA-led Commercial Satellite Data Acquisition Program @csda_nasa.
-
 <!-- 
 | RapidEye                    | commercial | 5 m multispectral             | Daily                      | medium-resolution multispectral                             |
 | Deimos-1 & 2                | commercial | 22 m (D1), 75 cm (D2) optical | 1–3 days                   | commercial EO satellites                                    |
@@ -119,10 +117,39 @@ To summarize, LEO satellites play a crucial role in Earth observation, particula
 | BlackSky                    | commercial | \~90 cm optical               | Multiple times daily       | rapid revisit, analytics platform                           |
 -->
 
+To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. 
+
+## Data availability for research purposes
+
+While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist. The NASA-led Commercial Satellite Data Acquisition Program @csda_nasa provides access to some of the data for research purposes, most notably for the Maxar WorldView data. It has been used in a number of scientific articles as assessed by @zhao2022overview who conducted a literature study of scientific articles referencing EO satellite missions and found that their number is exponentially growing, and while some cite commercial sources, most of the work is based on the freely available data. In this project, the focus will be on data that is available for research purposes.
+
 # Literature study: Satellite data for LCA
 
 (2023) Life-cycle assessment to guide solutions for the triple planetary crisis
 https://www.nature.com/articles/s43017-023-00449-2
+
+(2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
+https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
+
+(2017) Life cycle assessment in road infrastructure planning using spatial geological data
+https://link.springer.com/article/10.1007/s11367-016-1241-3
+
+(2010) Coupling GIS and LCA for biodiversity assessments of land use
+https://link.springer.com/article/10.1007/s11367-010-0199-9
+
+Groups:
+https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
+
+Journals:
+International Journal of Applied Earth Observation and Geoinformation
+
+People:
+Remote sensing agriculture: Bruno Basso
+https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
+
+Problems:
+Amazon often full with clouds, gets exploited by loggers
+
 
 Use cases: forest, water (?), contrails (??)
 
@@ -130,10 +157,6 @@ https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=2&q=forest+loss+life+cyc
 
 @neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
 
-Remote sensing agriculture: Bruno Basso
-https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
-
-Amazon often full with clouds, gets exploited by loggers
 
 Dieser Schweizer Bauer hat ein Wassersystem für die Zukunft gebaut
 https://www.tagesanzeiger.ch/katzhof-richenthal-der-klimaresistenteste-hof-der-schweiz-526267449775
@@ -148,13 +171,12 @@ Quantifying the Environmental Impacts of Manufacturing Low Earth Orbit (LEO) Sat
 https://www.mdpi.com/2071-1050/16/21/9431
 
 Existing estimates for environmental impact of satellites
+https://pre-sustainability.com/customer-cases/environmental-impacts-satellite-mission/
 
-International Journal of Applied Earth Observation and Geoinformation
 
-@zhao2022overview conduct a literature study of scientific articles that reference EO satellite missions and find that their number is exponentially growing and that most of the work is based on the freely available data. TBD Worldview mentioned
 
-Contrail Cirrus Climate Impact: From Radiative Forcing to Surface
-Temperature Change
+
+Contrail Cirrus Climate Impact: From Radiative Forcing to Surface Temperature Change
 https://journals.ametsoc.org/view/journals/clim/38/8/JCLI-D-24-0245.1.pdf
 
 Evidence for climate change in the satellite cloud record
