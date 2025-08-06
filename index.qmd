@@ -110,7 +110,7 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 
 :::
 
-To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data, many different commercial options are on the market.
+To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data, many different commercial options are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist, e.g. under the NASA-led Commercial Satellite Data Acquisition Program @csda_nasa.
 
 <!-- 
 | RapidEye                    | commercial | 5 m multispectral             | Daily                      | medium-resolution multispectral                             |
