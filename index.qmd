@@ -125,21 +125,24 @@ While a few public providers offer open-access data with comparatively low resol
 
 # Literature study: Satellite data for LCA
 
+(2010) Coupling GIS and LCA for biodiversity assessments of land use
+https://link.springer.com/article/10.1007/s11367-010-0199-9
+
 (2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
 https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
 LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats.
 
-(2023) Life-cycle assessment to guide solutions for the triple planetary crisis
-https://www.nature.com/articles/s43017-023-00449-2
-
-(2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
-https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
-
 (2017) Life cycle assessment in road infrastructure planning using spatial geological data
 https://link.springer.com/article/10.1007/s11367-016-1241-3
 
-(2010) Coupling GIS and LCA for biodiversity assessments of land use
-https://link.springer.com/article/10.1007/s11367-010-0199-9
+(2023) Life-cycle assessment to guide solutions for the triple planetary crisis
+https://www.nature.com/articles/s43017-023-00449-2
+
+(2023) Remote sensing based data products for large scale life cycle inventory models
+https://digitalcollection.zhaw.ch/items/ba006c7b-fe04-4d58-9cb7-02679789079
+
+(2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
+https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
 
 Groups:
 https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
@@ -163,6 +166,15 @@ water (?)
 contrails (??)
 
 ## Environmental impact of satellites
+
+(2024) A life cycle assessment study of European Space Agency's space tracking terminal
+https://pubs.rsc.org/en/content/articlehtml/2024/va/d4va00070f
+
+(2024) Life Cycle Assessment for Varying Design Lifetime Mission Architecture for Low Earth Orbit Constellation Satellites with Starlink as a Case Study
+https://www.researchgate.net/publication/384634078_Life_Cycle_Assessment_for_Varying_Design_Lifetime_Mission_Architecture_for_Low_Earth_Orbit_Constellation_Satellites_with_Starlink_as_a_Case_Study
+
+(2025) Greenhouse Gas (GHG) Emissions Poised to Rocket: Modeling the Environmental Impact of LEO Satellite Constellations
+https://arxiv.org/abs/2504.15291
 
 Quantifying the Environmental Impacts of Manufacturing Low Earth Orbit (LEO) Satellite Constellations 
 https://www.mdpi.com/2071-1050/16/21/9431
