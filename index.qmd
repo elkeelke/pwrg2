@@ -110,7 +110,7 @@ Far more LEO satellites for Earth observation than GEO satellites exist: around 
 
 :::
 
-To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data, many different commercial options are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist, e.g. under the NASA-led Commercial Satellite Data Acquisition Program @csda_nasa.
+To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems. While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist, e.g. under the NASA-led Commercial Satellite Data Acquisition Program @csda_nasa.
 
 <!-- 
 | RapidEye                    | commercial | 5 m multispectral             | Daily                      | medium-resolution multispectral                             |
@@ -127,6 +127,11 @@ https://www.nature.com/articles/s43017-023-00449-2
 Use cases: forest, water (?), contrails (??)
 
 https://scholar.google.com/scholar?hl=en&as_sdt=0,5&qsp=2&q=forest+loss+life+cycle+assessment&qst=bl
+
+@neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
+
+Remote sensing agriculture: Bruno Basso
+https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
 
 Amazon often full with clouds, gets exploited by loggers
 
@@ -146,7 +151,7 @@ Existing estimates for environmental impact of satellites
 
 International Journal of Applied Earth Observation and Geoinformation
 
-@zhao2022overview conduct a literature study of scientific article that reference EO satellite missions and find that their number is exponentially growing and that most of the work is based on the freely available data. TBD Worldview mentioned
+@zhao2022overview conduct a literature study of scientific articles that reference EO satellite missions and find that their number is exponentially growing and that most of the work is based on the freely available data. TBD Worldview mentioned
 
 Contrail Cirrus Climate Impact: From Radiative Forcing to Surface
 Temperature Change
@@ -188,10 +193,7 @@ https://planetarycomputer.microsoft.com/
 
 https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file
 
-@neumann2025natural Forest stuff PhD student: https://github.com/SherryJYC
-
-Remote sensing agriculture: Bruno Basso
-https://scholar.google.com/citations?user=EItklH0AAAAJ&hl=en
+## Cropland Data Layer
 
 Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Department of Agriculture's National Agricultural Statistics Service (NASS) that provides information about crop types across the United States.
 
@@ -199,13 +201,11 @@ Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Dep
 
 Ideas:
 
-* Use ESA Biomass satellite for LCA for forest loss (planning only, since data not yet in the public domain)
+* Plan a project to use ESA Biomass satellite for LCA for forest loss (data not yet in the public domain)
 
-* LCA to assess the environmental impact of satellites in comparison to their benefits (how to assess the environmental impact of a large wildfire?)
+* Plan some kind of LCA project based on AlphaEarth Foundations (could use data within Google Earth Engine for analysis and visualization for research or educational use. Downloading, redistributing, or incorporating the data into other software is not permitted.)
 
-* ML for LCA? 
-
-* Modelling with Python?
+* LCA to assess the environmental impact of satellites in comparison to their benefits (How to assess the environmental impact of a large wildfire? How to assess the total benefits of all the use cases for a satellite?)
 
 # Project plan
 
