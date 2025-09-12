@@ -192,6 +192,8 @@ An embedding field model for accurate and efficient global mapping from sparse l
 
 https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/
 
+https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL?hl=de
+
 @brown2025alphaearthfoundationsembeddingfield
 
 10x10 meter
@@ -220,6 +222,14 @@ Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Dep
 (2025) Natural forests of the world-a 2020 baseline for deforestation and degradation monitoring @neumann2025natural 
 Forest stuff PhD student: https://github.com/SherryJYC
 
+## MethaneSAT
+
+https://developers.google.com/earth-engine/datasets/catalog/projects_edf-methanesat-ee_assets_public-preview_L4area?hl=de
+
+https://showcase.earthengine.app/view/methanesat
+
+https://blog.google/outreach-initiatives/sustainability/how-satellites-algorithms-and-ai-can-help-map-and-trace-methane-sources/
+
 # Project proposal
 
 Ideas:
@@ -232,14 +242,17 @@ Ideas:
 
 * LCA to assess the environmental impact of satellites in comparison to their benefits (How to assess the environmental impact of a large wildfire? How to assess the total benefits of all the use cases for a satellite?)
 
+Matthias:
+
+* Albedo / PV
+
 René:
+
 * Landwirtschaft mit Fokus auf eine spezifische Commodity (Kaffee, Soja, Kakao, Reis, oder andere)
 * Mining mit Fokus auf spezifische Commodity (Kupfer, Gold, Nickel, Silber, Aluminium, Eisen, Kohle, Lithium, Uran)
 * Öl und Gas mit Fokus auf spezifische Commodity (Erdgas, Rohlöl oder Fracking)
 * Energiesektor mit Fokus auf spezifische Kraftwerke (Kohle, Gas, Wasserkraft, Windkraft oder PV)
 
-Matthias
-* Albedo: 
 
 
 # Project plan
