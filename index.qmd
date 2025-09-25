@@ -26,7 +26,7 @@ The aim of this university assignment is to create a project proposal to demonst
 
 The chosen research field is the use of remote sensing, in particular satellite data, for life cycle assessments (LCAs). First, an introduction to the topic aimed at readers who are not familiar with LCA or Earth Observation with satellites will be provided. After that, a literature review of the current state of the art for employing satellite data in LCAs will be performed, and an overview of relevant tools and datasets that are publicly available and potentially applicable will be provided. 
 
-Then the research question will be presented. The chosen topic is to investigate the effects of lower reflectivity of PV panels compared to natural surfaces, which reduces surface albedo. The research questions are defined as: (1) How can remote sensing data be used for assessing the effect of changes in albedo caused by PV installation? (2) How can the resulting data authoratively be used in LCA so that it can be credibly integrated into environmental impact assessments of solar panels?
+The chosen topic is to investigate the effects of lower reflectivity of PV panels compared to natural surfaces, which reduces surface albedo. The research questions are defined as: (1) How can remote sensing data be used for assessing the effect of changes in albedo caused by PV installation? (2) How can the resulting data authoratively be used in LCA so that it can be credibly integrated into environmental impact assessments of solar panels?
 
 The main contribution will be the design of research project aimed at addressing the research questions. It will present a project plan for conducting the suggested research.
 
