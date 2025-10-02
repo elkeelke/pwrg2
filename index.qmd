@@ -22,11 +22,13 @@ csl: apa-no-ampersand.csl
 
 ```{=latex}
 \section*{Abstract (Research proposal)}
-Remote sensing, in particular satellite-based Earth Observation, provides access to extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. One area where such data might be used is in the evaluation of changes in surface reflectivity associated with the installation of photovoltaic (PV) panels. While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental effect in comparison to the environmental benefits of solar power over non-renewable energy sources, its effect remains measurable and can potentially be quantified and incorporated into LCAs.
+Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. 
 
-This work serves as a case study for exploring how remote sensing data can be integrated into LCA frameworks. It is guided by two main research questions. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authorative use in environmental impact assessments of solar energy systems?
+A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a siginificantly smaller environmental impact than the the environmental benefits of solar power over non-renewable energy sources, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-The structure of the study is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a research approach aimed at addressing the defined questions. The final section will present a detailed plan for carrying out this research, including methodological steps and project milestones.
+This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authorative use in environmental impact assessments of solar energy systems?
+
+The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a research approach aimed at addressing the defined questions. The final section will present a detailed plan for carrying out this research, including methodological steps and project milestones.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -37,9 +39,9 @@ Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a stand
 
 Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived data supports a wide range of applications, from climate modeling and disaster response to agricultural planning.
 
-While [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as surface radiative forcing (RF). This absence of prescriptive methods allows for the integration of data sources such Earth Observation (EO) data. The focus of this work is to explore if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. 
+While [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as surface radiative forcing (RF). This absence of prescriptive methods allows for the integration of data sources such Earth Observation (EO) data. 
 
-The example is PV xxx
+
 
 # Overview: Satellite data for earth observation
 
