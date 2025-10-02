@@ -239,7 +239,7 @@ https://blog.google/outreach-initiatives/sustainability/how-satellites-algorithm
 
 # Project proposal
 
-The lower reflectivity of PV panels reduces surface albedo. Plan a project to quantify this effect 
+The lower reflectivity of PV panels reduces surface albedo. Plan a project to quantify this effect
 
 * Inclusion of Albedo-Induced Climate Impacts of Land Use in Planetary Boundaries-based Life Cycle Assessment (from the authors of the talk that Matthias saw)
 https://setac.confex.com/setac/europe2025/meetingapp.cgi/Paper/29137
@@ -252,7 +252,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
 * Studies have found that the avoided emissions effect is far greater than the warming effect from albedo reduction, e.g.
 https://pubs.acs.org/doi/10.1021/es801747c#:~:text=This%20analysis%20uses%20a%20series,forcing%20due%20to%20albedo%20modification.
 
-* Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference.
+* Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference. Ein Paper in dem die von PV verursachte Albedoänderung für Delft abgeschätzt wird (unter der Annahme dass alle passenden Dächer PV Anlage hätten) und das dann mit Hilfe von Satellitendaten validiert wird.
 https://www.sciencedirect.com/science/article/pii/S0306261925012747?via%3Dihub
 https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:~:text=This%20albedo%20reduction%20increases%20Earth's,deployment%20using%20a%20novel%20workflow.
 
