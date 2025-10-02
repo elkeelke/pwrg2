@@ -41,7 +41,7 @@ Remote sensing, particularly through satellites, provides vast amounts of data. 
 
 While [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as surface radiative forcing (RF). This absence of prescriptive methods allows for the integration of data sources such Earth Observation (EO) data. 
 
-
+Albedo is the ratio of solar radiation reflected by a surface to the amount incident upon it. It is a primary regulator of the energy balance and climate. Since PV installations typically replace natural high-albedo surfaces with much darker PV modules, this results in a net decrease in surface reflectivity. Earth Observation data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location.
 
 # Overview: Satellite data for earth observation
 
