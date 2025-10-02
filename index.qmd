@@ -24,11 +24,11 @@ csl: apa-no-ampersand.csl
 \section*{Abstract (Research proposal)}
 Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. 
 
-A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a siginificantly smaller environmental impact than the the environmental benefits of solar power over non-renewable energy sources, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
+A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact than the environmental benefits of solar power over non-renewable energy sources, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authorative use in environmental impact assessments of solar energy systems?
+This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
 
-The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a research approach aimed at addressing the defined questions. The final section will present a detailed plan for carrying out this research, including methodological steps and project milestones.
+The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a research approach aimed at addressing the defined questions. The final section will present a detailed plan for carrying out this research, including methodological steps, project milestones, and a time plan.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -41,7 +41,7 @@ Remote sensing, particularly through satellites, provides vast amounts of data. 
 
 While [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as surface radiative forcing (RF). This absence of prescriptive methods allows for the integration of data sources such Earth Observation (EO) data. 
 
-Albedo is the ratio of solar radiation reflected by a surface to the amount incident upon it. It is a primary regulator of the energy balance and climate. Since PV installations typically replace natural high-albedo surfaces with much darker PV modules, this results in a net decrease in surface reflectivity. Earth Observation data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location.
+Albedo is the ratio of solar energy reflected by a surface. The energy that is not reflected is absorbed by the Earth's surface and converted into heat. This absorbed heat is energy that drives weather patterns, surface temperatures, and consequently, the climate system. Since PV installations typically replace natural high-albedo surfaces with much darker PV modules, this results in a net decrease in surface reflectivity and, in turn, higher energy balance. Earth Observation data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location.
 
 # Overview: Satellite data for earth observation
 
@@ -284,6 +284,7 @@ https://www.youtube.com/watch?v=_OmkNfcO7VU (https://opengeoai.org/)
 
 # Project plan
 
+<!--
 Topics:
 
 1. Literature study (based on initial work in previous chapter)
@@ -297,7 +298,7 @@ Topics:
 1. Trust in data
 
 Time and resources plan:
+-->
 
-xxx
 
 # References
