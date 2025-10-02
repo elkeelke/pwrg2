@@ -1,6 +1,6 @@
 ---
-title: Remote Sensing Data for Life Cycle Assessment
-subtitle: Project proposal
+title: Integrating Earth Observation Data into Life Cycle Assessment
+subtitle: Project proposal for a Case Study on quantifying Albedo Change from Photovoltaic Systems
 author: Elke Michlmayr
 format:
   html:
@@ -28,7 +28,7 @@ A promising area where such data might be applied is for the evaluation of chang
 
 This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
 
-The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a research approach aimed at addressing the defined questions. The final section will present a detailed plan for carrying out this research, including methodological steps, project milestones, and a time plan.
+The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a detailed research project plan aimed at addressing the defined questions and carrying out this research, including methodological steps, project milestones, and a time plan.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -37,11 +37,11 @@ Grading consists of the following parts: Scientific Publication: 50\%, Supportin
 
 Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service's life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach.
 
-Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived data supports a wide range of applications, from climate modeling and disaster response to agricultural planning.
-
-While [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as surface radiative forcing (RF). This absence of prescriptive methods allows for the integration of data sources such Earth Observation (EO) data. Earth Observation data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location.
+Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived Earth Observation (EO) data supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location.
 
 Albedo is the ratio of solar energy reflected by a surface. The energy that is not reflected is absorbed by the Earth's surface and converted into heat. This absorbed heat is energy that drives weather patterns, surface temperatures, and consequently, the climate system. Since PV installations typically replace natural high-albedo surfaces with much darker PV modules, this results in a net decrease in surface reflectivity and, in turn, higher energy balance. 
+
+While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the Albedo effect. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs. 
 
 # Overview: Satellite data for earth observation
 
@@ -129,7 +129,7 @@ To summarize, LEO satellites play a crucial role in Earth observation, particula
 
 While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist. The NASA-led Commercial Satellite Data Acquisition Program @csda_nasa provides access to some of the data for research purposes, most notably for the Maxar WorldView data. It has been used in a number of scientific articles as assessed by @zhao2022overview who conducted a literature study of scientific articles referencing EO satellite missions and found that their number is exponentially growing, and while some cite commercial sources, most of the work is based on the freely available data. In this project, the focus will be on data that is available for research purposes.
 
-# Literature study: Satellite data for LCA
+# Literature study: EO data for LCA
 
 Key term: Spatially Explicit LCA
 
