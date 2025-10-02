@@ -22,13 +22,13 @@ csl: apa-no-ampersand.csl
 
 ```{=latex}
 \section*{Abstract (Research proposal)}
-Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. 
+Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. 
 
 A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact than the environmental benefits of solar power over non-renewable energy sources, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
+Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
 
-The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a detailed research project plan aimed at addressing the defined questions and carrying out this research, including methodological steps, project milestones, and a time plan.
+The structure of the project work is as follows. It will start out with introductory overviews of both life cycle assessment and satellite-based Earth Observation to establish a common foundation. This will be followed by a review of existing literature on the use of remote sensing data in LCA contexts. The central contribution of the work will be the design of a detailed research project plan aimed at addressing the defined questions and at carrying out this research, including methodological steps, project milestones, and a time plan.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -47,8 +47,6 @@ While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refra
 
 This chapter provides an introduction to satellites that provide observational data of the Earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed. 
 
-There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in @tbl-methods. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.
-
 ::: {.table #tbl-methods caption="Methods for sensing"}
 
 | Method                                 | Key feature           | Works at night | Cloud penetrating |
@@ -58,6 +56,8 @@ There are several different types of methods to sense the data: optical, thermal
 | Synthetic Aperture Radar (SAR)         | Uses radar            | Yes            | Yes               |
 
 :::
+
+There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in @tbl-methods. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e. heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.
 
 At a high level, satellites can be categorized based on their orbital types, which determine their position and altitude, and consequently coverage and purpose: 
 
