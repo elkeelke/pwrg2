@@ -24,7 +24,9 @@ csl: apa-no-ampersand.csl
 \section*{Abstract (Research proposal)}
 Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. 
 
-A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). While the reduction in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact than the environmental benefits of solar power over non-renewable energy sources, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
+A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV) which can be assessed from the relevant satellite data before and after the installation of the PV sites under study. There might be a net positive, neutral, or net negative effect. For most cases a net positive effect is expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it still constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
+
+I would expect a different outcome here. PV will replace either naturally high or naturally low albedo surfaces depending on the site of installation. For buildings the integration of PV panels i would expect a neutral effect with the Albedo of building roof being similar to the Albedo of PV panels. There might be special cases e.g. where the building roofs a painted white, but for most cases the difference should not very relevant.
 
 Two main research questions are explored. First, how can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations? Second, how can such data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
 
@@ -40,13 +42,11 @@ I would expect very different Albedo changes for open ground PV compared to buil
 
 Albedo changes for building mounted PV might be very minor (as the finding of the delft study shows), a change of -0.0306 will not cause a relevant change in the energy balance.
 
-I would expect a different outcome here. PV will replace either naturally high or naturally low albedo surfaces depending on the site of installation. For buildings the integration of PV panels i would expect a neutral effect with the Albedo of building roof being similar to the Albedo of PV panels. There might be special cases e.g. where the building roofs a painted white, but for most cases the difference should not very relevant.
-
 For open ground installations of PV, I would expect an increase in Albedo and accordingly a reinforcing positive impact. PV panel convert some of the sunlight to electricity and reflect more light than e.g. grasslands or forests.
 
-In general, it will be crucial to compare the before installation and after installation albedo for the PV sites under study. Depending on this comparison there might be a net positive, neutral of net negative effect. However for most of the cases a net positive effect is expected.
+The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing–based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan aimed at addressing the defined research questions and at carrying out this research, including methodological steps, project milestones, and a time plan.
 
-The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing–based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan aimed at addressing the defined questions and at carrying out this research, including methodological steps, project milestones, and a time plan.
+
 
 The appendix will provide introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
 
