@@ -24,9 +24,9 @@ csl: apa-no-ampersand.csl
 \section*{Abstract (Research proposal)}
 Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. 
 
-A promising area where such data might be applied is for the evaluation of changes in surface reflectivity associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV and open ground PV installed in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
+A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV and open ground PV installed in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing–based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. The appendix will provide introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
+The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. The appendix will provide introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -35,13 +35,13 @@ Grading consists of the following parts: Scientific Publication: 50\%, Supportin
 
 Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service's life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach.
 
-Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived Earth Observation (EO) data supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is covered by a solar panel, and (2) measure the reflectivity in that location. TBD: Since EO data is continuously collected and available in archives (?), it is possible to go back in time and measure the reflectivity before the solar panel installation as a comparison point.
+Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived Earth Observation (EO) data is continuously collected and supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. 
 
-Albedo is the ratio of solar energy reflected by a surface. The energy that is not reflected is absorbed by the Earth's surface and converted into heat. This absorbed heat is energy that drives weather patterns, surface temperatures, and consequently, the climate system. 
+Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g. snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of Earth’s surface or atmosphere changes, the planet’s energy balance is altered. The change in the balance between incoming and outgoing energy is known as radiative forcing. This effect drives weather patterns, surface temperatures, and consequently, the climate system.
 
-TBD: Since PV installations typically replace natural high-albedo surfaces with much darker PV modules, this results in a net decrease in surface reflectivity and, in turn, higher energy balance. 
+Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance. The aim of this project is to quantify the impact of albedo changes associated with PV installations and to integrate this effect into life cycle assessments (LCAs) of photovoltaic systems.
 
-While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the Albedo effect. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs. 
+While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs. 
 
 # Literature study: EO data for LCA
 
@@ -157,6 +157,12 @@ https://blog.google/outreach-initiatives/sustainability/how-satellites-algorithm
 
 Reflectivity of PV panels impacts surface albedo. Plan a project to quantify this effect.
 
+Comparison of Albedo before and after the installation of PV systems
+
+Analysis for building mounted PV systems
+
+Analysis for open ground PV systems
+
 ## Research questions
 
 The PV panels will replace either naturally high or naturally low albedo surfaces depending on the site of installation. 
@@ -214,11 +220,6 @@ https://www.youtube.com/watch?v=_OmkNfcO7VU (https://opengeoai.org/)
 
 # Project plan
 
-Comparison of Albedo before and after the installation of PV systems
-
-Analysis for building mounted PV systems
-
-Analysis for open ground PV systems
 <!--
 Topics:
 
