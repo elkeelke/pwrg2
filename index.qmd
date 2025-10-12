@@ -72,7 +72,7 @@ https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
 Journals:
 International Journal of Applied Earth Observation and Geoinformation
 
-## Albedo abd LCA
+## Albedo and LCA
 
 * Inclusion of Albedo-Induced Climate Impacts of Land Use in Planetary Boundaries-based Life Cycle Assessment (from the authors of the talk that Matthias saw)
 https://setac.confex.com/setac/europe2025/meetingapp.cgi/Paper/29137
@@ -180,27 +180,13 @@ Reflectivity of PV panels impacts surface albedo. Plan a project to quantify thi
 
 ## Research questions
 
-Two main research questions are explored: 
+Three main research questions are explored: 
 
-1.   How can satellite-derived remote sensing data be applied to assess changes in albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is appropriate? Which issues can be anticipated when working with the data? 
+1.   How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data? The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g. due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
 
-1.   How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?
+1.   How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
 
-
-Analysis for building mounted PV systems
-
-Analysis for open ground PV systems
-
-The PV panels will replace either naturally high or naturally low albedo surfaces depending on the site of installation. 
-
-For buildings the integration of PV panels i would expect a neutral effect with the Albedo of building roof being similar to the Albedo of PV panels. There might be special cases e.g. where the building roofs a painted white, but for most cases the difference should not very relevant.
-
-Albedo changes for building mounted PV might be very minor (as the finding of the delft study shows), a change of -0.0306 will not cause a relevant change in the energy balance.
-
-For open ground installations of PV, I would expect an increase in Albedo and accordingly a reinforcing positive impact. PV panel convert some of the sunlight to electricity and reflect more light than e.g. grasslands or forests.
-
-Seasonality (snow)
-
+1.   How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
 
 <!--
 
@@ -221,6 +207,12 @@ Seasonality (snow)
 -->
 
 # Project plan
+
+* Find out if we can get the relevant satellite data before and after the agri-PV installation at Campus Grüntal.
+
+* Find out if we can do it in an automated way for a larger amount of data.
+
+## Resources
 
 * GeoAI Tutorial 13: Train a Deep Learning Model for Detecting Solar Panels
 https://www.youtube.com/watch?v=_OmkNfcO7VU (https://opengeoai.org/)
