@@ -92,6 +92,8 @@ https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:
 * Weisses Solarmodul: alternative Farbgebung drückt die Effizienz der Solarpanele nach unten (von 18% auf 10% Wirkungsgrad)
 https://www.solarbranche.de/news/nachrichten/artikel-27449-weltweit-erstes-weisses-solarmodul-schweizer-lsen-problem-der-lichtreflektion
 
+* Assessing the Potential of Geostationary Satellites for Aerosol Remote Sensing Based on Critical Surface Albedo
+https://pdfs.semanticscholar.org/c399/6d16448856870b29a49558b7d123754c7dd4.pdf
 
 <!--
 
