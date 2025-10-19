@@ -72,15 +72,12 @@ https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
 Journals:
 International Journal of Applied Earth Observation and Geoinformation
 
-## Albedo and LCA
+## Albedo and PV and LCA
 
-Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
+Some reseach on the surface albedo change effects from PV installations exists in literature. @nemet2009net found that the avoided emissions effect from PV generated energy is far greater than the warming effect from the related albedo reduction.
 
 * Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs
 https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
-
-* Studies have found that the avoided emissions effect is far greater than the warming effect from albedo reduction, e.g.
-https://pubs.acs.org/doi/10.1021/es801747c#:~:text=This%20analysis%20uses%20a%20series,forcing%20due%20to%20albedo%20modification.
 
 * Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference. Ein Paper in dem die von PV verursachte Albedoänderung für Delft abgeschätzt wird (unter der Annahme dass alle passenden Dächer PV Anlage hätten) und das dann mit Hilfe von Satellitendaten validiert wird.
 https://www.sciencedirect.com/science/article/pii/S0306261925012747?via%3Dihub
@@ -89,8 +86,9 @@ https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:
 * Weisses Solarmodul: alternative Farbgebung drückt die Effizienz der Solarpanele nach unten (von 18% auf 10% Wirkungsgrad)
 https://www.solarbranche.de/news/nachrichten/artikel-27449-weltweit-erstes-weisses-solarmodul-schweizer-lsen-problem-der-lichtreflektion
 
-* Assessing the Potential of Geostationary Satellites for Aerosol Remote Sensing Based on Critical Surface Albedo
-https://pdfs.semanticscholar.org/c399/6d16448856870b29a49558b7d123754c7dd4.pdf
+## Albedo and land use and LCA
+
+Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
 
 <!--
 
@@ -175,7 +173,7 @@ https://blog.google/outreach-initiatives/sustainability/how-satellites-algorithm
 
 # Project proposal
 
-This section defines the research questions then plans a research project to address them.
+This section defines the research questions and plans a research project to address them.
 
 ## Research questions
 
