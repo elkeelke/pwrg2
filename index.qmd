@@ -37,7 +37,7 @@ Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a stand
 
 Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived Earth Observation (EO) data is continuously collected and supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. 
 
-Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g. snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of Earth’s surface or atmosphere changes, the planet’s energy balance is altered. The planetary boundaries framework @richardson2023earth lists surface albedo changes after greenhouse gases and aerosols as the third key anthropogenic driver in the climate change category, which is measured in (1) atmospheric CO₂ concentration and (2) energy imbalance at the top of the atmosphere. The change in the balance between incoming and outgoing energy is known as radiative forcing. This effect drives weather patterns, surface temperatures, and consequently, the climate system.  
+Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g. snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of Earth’s surface or atmosphere changes, the planet’s energy balance is altered. The planetary boundaries framework @richardson2023earth lists surface albedo changes after greenhouse gases and aerosols as the third key anthropogenic driver in the climate change category, which is measured in (1) atmospheric CO₂ concentration and (2) energy imbalance at the top of the atmosphere. The change in the balance between incoming and outgoing energy is known as radiative forcing (RF). This effect drives weather patterns, surface temperatures, and consequently, the climate system.  
 
 Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance. The aim of this project is to quantify the impact of albedo changes associated with PV installations and to integrate this effect into life cycle assessments (LCAs) of photovoltaic systems.
 
@@ -47,21 +47,13 @@ While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refra
 
 ## Albedo and LCA
 
-@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluate their theoretical findings derived with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs shows that the high surface albedo plays a crucial role in offsetting radiative forcings. 
+@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluate their theoretical findings derived with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs shows that the high surface albedo plays a crucial role in offsetting RF. 
 
 ## Albedo and PV and LCA
 
-Several studies on the surface albedo change effects from PV installations exist in literature. @nemet2009net found that the avoided emissions effect from PV generated energy is far greater than the observed warming effect from the related albedo reduction.
+Several studies on the surface albedo change effects from PV installations exist in literature. @nemet2009net estimated the effects of covering Earth with dark-colored and sunlight-absorbing panels on a large scale and therefore reducing the Earth’s albedo. They found that the avoided emissions effect from PV generated energy is far greater than the observed warming effect from the related albedo reduction. @zhou2025assessing used a LiDAR-based workflow to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels. The results were that it would yield 485.72 GWh of electric energy per year while it would lower the city’s albedo minimally and impose 3.53 * $10^{-8}W/m^2$ positive RF. The albedo results were validated with MODIS satellite observations. 
 
-* Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs
-https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
-
-* Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference. Ein Paper in dem die von PV verursachte Albedoänderung für Delft abgeschätzt wird (unter der Annahme dass alle passenden Dächer PV Anlage hätten) und das dann mit Hilfe von Satellitendaten validiert wird.
-https://www.sciencedirect.com/science/article/pii/S0306261925012747?via%3Dihub
-https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:~:text=This%20albedo%20reduction%20increases%20Earth's,deployment%20using%20a%20novel%20workflow.
-
-* Weisses Solarmodul: alternative Farbgebung drückt die Effizienz der Solarpanele nach unten (von 18% auf 10% Wirkungsgrad)
-https://www.solarbranche.de/news/nachrichten/artikel-27449-weltweit-erstes-weisses-solarmodul-schweizer-lsen-problem-der-lichtreflektion
+Note that solar panels can be produced in colors other than dark colors, but lighter shades typically reduce their efficiency. Efforts to improve the performance of colored panels, such as those described by @ji2019vivid, are ongoing and may take time to reach practical application.
 
 ## Albedo and land use and LCA
 
@@ -228,7 +220,7 @@ Topics:
 
 1. Functional unit definition
 
-1. Albedo measurement and radiative forcing
+1. Albedo measurement and tive forcing
 
 1. Radiative forcing and environmental impact
 
