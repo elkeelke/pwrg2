@@ -24,7 +24,7 @@ csl: apa-no-ampersand.csl
 \section*{Abstract}
 Remote sensing, in particular satellite-based Earth Observation, provides extensive datasets that hold potential for supporting life cycle assessments (LCAs) to evaluate environmental impacts across a product or service life cycle. This project work performs a case study for integrating remote sensing data in LCA to determine if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases. 
 
-A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV and open ground PV installed in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
+A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV panels and open ground PV installations in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
 The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. For the interested reader, the appendix provides introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
 
@@ -43,7 +43,29 @@ Solar panels convert sunlight into both electrical energy and heat. Since PV ins
 
 While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs. 
 
-# Literature study: EO data for LCA
+# Literature study
+
+## Albedo and LCA
+
+@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluate their theoretical findings derived with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs shows that the high surface albedo plays a crucial role in offsetting radiative forcings. 
+
+## Albedo and PV and LCA
+
+Several studies on the surface albedo change effects from PV installations exist in literature. @nemet2009net found that the avoided emissions effect from PV generated energy is far greater than the observed warming effect from the related albedo reduction.
+
+* Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs
+https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
+
+* Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference. Ein Paper in dem die von PV verursachte Albedoänderung für Delft abgeschätzt wird (unter der Annahme dass alle passenden Dächer PV Anlage hätten) und das dann mit Hilfe von Satellitendaten validiert wird.
+https://www.sciencedirect.com/science/article/pii/S0306261925012747?via%3Dihub
+https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:~:text=This%20albedo%20reduction%20increases%20Earth's,deployment%20using%20a%20novel%20workflow.
+
+* Weisses Solarmodul: alternative Farbgebung drückt die Effizienz der Solarpanele nach unten (von 18% auf 10% Wirkungsgrad)
+https://www.solarbranche.de/news/nachrichten/artikel-27449-weltweit-erstes-weisses-solarmodul-schweizer-lsen-problem-der-lichtreflektion
+
+## Albedo and land use and LCA
+
+Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
 
 ## Spatially Explicit LCA
 
@@ -72,23 +94,6 @@ https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
 Journals:
 International Journal of Applied Earth Observation and Geoinformation
 
-## Albedo and PV and LCA
-
-Some reseach on the surface albedo change effects from PV installations exists in literature. @nemet2009net found that the avoided emissions effect from PV generated energy is far greater than the warming effect from the related albedo reduction.
-
-* Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs
-https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
-
-* Roof PV in Delft lowers the city’s albedo (minimal −0.0306) while Roof PV in Delft yields 485.72 GWh/year. Albedo results are validated with MODIS observations, showing 6.12 % absolute difference. Ein Paper in dem die von PV verursachte Albedoänderung für Delft abgeschätzt wird (unter der Annahme dass alle passenden Dächer PV Anlage hätten) und das dann mit Hilfe von Satellitendaten validiert wird.
-https://www.sciencedirect.com/science/article/pii/S0306261925012747?via%3Dihub
-https://repository.tudelft.nl/record/uuid:9123ed81-8104-4c1b-ac63-c1b52a5cc357#:~:text=This%20albedo%20reduction%20increases%20Earth's,deployment%20using%20a%20novel%20workflow.
-
-* Weisses Solarmodul: alternative Farbgebung drückt die Effizienz der Solarpanele nach unten (von 18% auf 10% Wirkungsgrad)
-https://www.solarbranche.de/news/nachrichten/artikel-27449-weltweit-erstes-weisses-solarmodul-schweizer-lsen-problem-der-lichtreflektion
-
-## Albedo and land use and LCA
-
-Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
 
 <!--
 
@@ -181,7 +186,7 @@ Three main research questions are explored:
 
 1.   How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data? The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g. due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
 
-1.   How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
+1.   How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
 
 1.   How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
 
