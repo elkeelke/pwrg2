@@ -26,7 +26,7 @@ Remote sensing, in particular satellite-based Earth Observation, provides extens
 
 A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV and open ground PV installed in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. The appendix will provide introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
+The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. For the interested reader, the appendix provides introductory overviews of life cycle assessment and satellite-based Earth observation for readers seeking background information on these topics.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -37,7 +37,7 @@ Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a stand
 
 Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived Earth Observation (EO) data is continuously collected and supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. 
 
-Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g. snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of Earth’s surface or atmosphere changes, the planet’s energy balance is altered. The change in the balance between incoming and outgoing energy is known as radiative forcing. This effect drives weather patterns, surface temperatures, and consequently, the climate system.
+Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g. snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of Earth’s surface or atmosphere changes, the planet’s energy balance is altered. The planetary boundaries framework @richardson2023earth lists surface albedo changes after greenhouse gases and aerosols as the third key anthropogenic driver in the climate change category, which is measured in (1) atmospheric CO₂ concentration and (2) energy imbalance at the top of the atmosphere. The change in the balance between incoming and outgoing energy is known as radiative forcing. This effect drives weather patterns, surface temperatures, and consequently, the climate system.  
 
 Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance. The aim of this project is to quantify the impact of albedo changes associated with PV installations and to integrate this effect into life cycle assessments (LCAs) of photovoltaic systems.
 
@@ -74,10 +74,7 @@ International Journal of Applied Earth Observation and Geoinformation
 
 ## Albedo and LCA
 
-* Inclusion of Albedo-Induced Climate Impacts of Land Use in Planetary Boundaries-based Life Cycle Assessment (from the authors of the talk that Matthias saw)
-https://setac.confex.com/setac/europe2025/meetingapp.cgi/Paper/29137
-
-* Accounting for albedo change to identify climate-positive tree cover restoration https://www.nature.com/articles/s41467-024-46577-1
+Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
 
 * Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs
 https://www.sciencedirect.com/science/article/abs/pii/S0269749111006762
@@ -178,7 +175,7 @@ https://blog.google/outreach-initiatives/sustainability/how-satellites-algorithm
 
 # Project proposal
 
-Reflectivity of PV panels impacts surface albedo. Plan a project to quantify this effect.
+This section defines the research questions then plans a research project to address them.
 
 ## Research questions
 
@@ -209,6 +206,8 @@ Three main research questions are explored:
 -->
 
 # Project plan
+
+The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan.
 
 * Find out if we can get the relevant satellite data before and after the agri-PV installation at Campus Grüntal.
 
