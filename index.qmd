@@ -45,13 +45,25 @@ The aim of this work is to devise a project plan to (1) quantify the impact of a
 
 # Literature study
 
-@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluate their theoretical findings derived with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs shows that the high surface albedo plays a crucial role in offsetting RF. 
+@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs showed that the high surface albedo played a crucial role in offsetting RF. 
 
-Several studies on the surface albedo change effects from dark-colored PV installations exist in literature. @nemet2009net estimated the effects of covering Earth with sunlight absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose 3.53 * $10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
+While many scientific publications on PV and LCA overlook the effects of surface albedo change (such as @gerbinet2014life, @ferrara2024life, @gomez2024agile), only a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA. @nemet2009net estimated the effects of covering Earth with sunlight absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. @wei2024small confirmed these results based on global satellite data showing that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
+
+@zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose 3.53 * $10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
+
+@li2022comparative identified the impacts of PV panels on surface radiation, this paper conducted a comparative study on the surface radiation and surface albedo characteristics between the PV site and reference site in the Gobi area in Xinjiang, China in the summer of 2020. The results show that, the upward long-wave radiation at the PV site was significantly lower than that at the reference site in the night, while the two were basically the same during the daytime. The average surface albedo at the PV site (0.14) was 39.1% lower than that at the reference site (0.23). Net radiation was higher at the PV site than that at the reference site throughout the whole day. The average net radiation of the underlying surface at the PV site was 30.7% more than that at the reference site, 75% of which was contributed by lower upward shortwave radiation and 25% was due to nocturnal lower upward longwave radiation at the PV site.
+
+Environmental impacts of pastoral‑integrated photovoltaic power plant in an alpine meadow on the eastern Tibetan Plateau (2025)
+
+Physical analysis of the environmental impacts of fishery complementary photovoltaic power plant (Environmental Science and Pollution Research, 2022)
 
 ## Albedo and land use and LCA
 
 Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
+
+Climate impacts of bioenergy: Inclusion of carbon cycle and albedo dynamics in life cycle impact assessment (Cherubini & Strømman, 2012)
+
+Consideration of land use change‑induced surface albedo effects in life‑cycle analysis of biofuels (Cai et al., 2016)
 
 ## Spatially Explicit LCA
 
