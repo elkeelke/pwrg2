@@ -45,7 +45,9 @@ The aim of this work is to devise a project plan to (1) quantify the impact of a
 
 # Literature study
 
-@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs showed that the white high surface albedo played a crucial role in offsetting RF. 
+Several research areas relate to this topic, including the albedo effects of photovoltaic (PV) systems, albedo considerations in life cycle assessment (LCA), and remote sensing applications for location-specific LCAs. This chapter provides an overview of existing studies in these fields that are relevant to the present work.
+
+## PV and albedo change
 
 While many scientific publications on PV and LCA overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:
 
@@ -53,7 +55,11 @@ While many scientific publications on PV and LCA overlook the effects of surface
 
 *   @wei2024small confirmed these results based on global satellite data showing that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
 
-Other studies investigated the impact of PV on radiative forcing without considering LCA on several different PC installation sites such as city roofs, deserts, alpine locations, and lakes:
+## Albedo change per original surface
+
+@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs showed that the white high surface albedo played a crucial role in offsetting RF.
+
+Other studies investigated the impact of PV on radiative forcing on several different installation sites such as city roofs, deserts, alpine locations, and lakes:
 
 *   @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
 
@@ -63,7 +69,11 @@ Other studies investigated the impact of PV on radiative forcing without conside
 
 *  @li2022physical examined fishery complementary PV plants (FPV) using a physical model to reveal their microclimatic effects. FPV deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by an water–air vapor pressure deficit. Also, the FPV panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.
 
-The conclusion is that on each of these surfaces, impacts on albedo caused by the PV installations could be observed. Several studies from the LCA research community have suggested to include these effects into LCAs: 
+The conclusion is that on each of these surfaces, impacts on albedo caused by the PV installations could be observed that could potentially be included in an LCA.
+
+## Albedo change in LCAs
+
+Several studies from the LCA research community have suggested to include these effects into LCAs: 
 
 *  @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land.
 
@@ -71,9 +81,11 @@ The conclusion is that on each of these surfaces, impacts on albedo caused by th
 
 *  Consideration of land use change‑induced surface albedo effects in life‑cycle analysis of biofuels (Cai et al., 2016)
 
+## Spatially explicit LCAs
+
 Other researchers explored the topic from the angle of Earth Observation and have suggested to create spatially explicit LCAs:
 
-*  @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account. Restoring tree cover changes albedo, which is the fraction of sunlight reflected from the Earth’s surface. In most locations, these changes in albedo offset or even negate the carbon removal benefits with the latter leading to global warming. Previous efforts to quantify the global climate mitigation benefit of restoring tree cover have not accounted robustly for albedo given a lack of spatially explicit data. Here we produce maps that show that carbon-only estimates may be up to 81% too high. While dryland and boreal settings have especially severe albedo offsets, it is possible to find places that provide net-positive climate mitigation benefits in all biomes. We further find that on-the-ground projects are concentrated in these more climate-positive locations, but that the majority still face at least a 20% albedo offset. Thus, strategically deploying restoration of tree cover for maximum climate benefit requires accounting for albedo change and we provide the tools to do so.
+*  @hasler2024accounting finds that maximizing the climate benefits of tree-cover restoration requires accounting for albedo effects since they often offset or even reverse carbon removal gains, especially in dryland and boreal regions. Using spatial data, the study shows that carbon-only estimates may be up to 81% too high. While many projects target more climate-positive areas, most still face at least a 20% albedo offset. The study offers tools to identify where restoration delivers true net climate benefits.
 
 *  (2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
 https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
