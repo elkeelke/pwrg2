@@ -47,53 +47,59 @@ The aim of this work is to devise a project plan to (1) quantify the impact of a
 
 @susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the time frames of 50 and 100 years. The comparative life cycle impact assessment of the two roofs showed that the white high surface albedo played a crucial role in offsetting RF. 
 
-While many scientific publications on PV and LCA overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA. @nemet2009net estimated the effects of covering Earth with sunlight absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. @wei2024small confirmed these results based on global satellite data showing that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
+While many scientific publications on PV and LCA overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:
 
-@zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
+*   @nemet2009net estimated the effects of covering Earth with sunlight absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. 
 
-@li2022comparative identified the impacts of PV panels on surface radiation, this paper conducted a comparative study on the surface radiation and surface albedo characteristics between the PV site and reference site in the Gobi area in Xinjiang, China in the summer of 2020. The results show that, the upward long-wave radiation at the PV site was significantly lower than that at the reference site in the night, while the two were basically the same during the daytime. The average surface albedo at the PV site (0.14) was 39.1% lower than that at the reference site (0.23). Net radiation was higher at the PV site than that at the reference site throughout the whole day. The average net radiation of the underlying surface at the PV site was 30.7% more than that at the reference site, 75% of which was contributed by lower upward shortwave radiation and 25% was due to nocturnal lower upward longwave radiation at the PV site.
+*   @wei2024small confirmed these results based on global satellite data showing that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
 
-Environmental impacts of pastoral‑integrated photovoltaic power plant in an alpine meadow on the eastern Tibetan Plateau (2025): @wang2025environmental: Rising global energy demand and the transition to low-carbon sources have driven the rapid expansion of photovoltaic (PV) power plants, introducing significant land-use changes with largely unexplored ecological consequences. This study examined the microclimatic and soil hydrothermal impacts of a pastoral-integrated PV power plant in an alpine meadow ecosystem on the eastern Tibetan Plateau. Year-round observations from two 10 m towers, located inside and outside the PV power plant, revealed that PV installations increased annual net radiation by 28.9 %, while reducing albedo and wind speed by 31.6 % and 36.2 %, respectively. Air temperature responses were highly asymmetrical, with daytime and summer warming but nighttime and winter cooling. The PV power plant induced strong spatial heterogeneity in soil temperature and moisture: At 5 cm depth, PV array gaps exhibited cold and moist conditions, whereas areas beneath the panels were cold and dry. These changes extended the soil frozen period by approximately 50 d and reduced the soil moisture depletion rate by 1.3 to 3.5 times compared to the reference site. These findings indicate that the PV power plant can alter local energy and water balances in ways that may buffer ecosystem responses to climate warming. However, further multi-year studies are needed to evaluate their long-term impacts on vegetation dynamics, carbon fluxes, and permafrost processes.
+Other studies investigated the impact of PV on radiative forcing without considering LCA on several different PC installation sites such as city roofs, deserts, alpine locations, and lakes:
 
-Physical analysis of the environmental impacts of fishery complementary photovoltaic power plant (Environmental Science and Pollution Research, 2022): @li2022physical: Photovoltaic (PV) power plants have shown rapid development in the renewable sector, but the research areas have mainly included land installations, and the study of fishery complementary photovoltaic (FPV) power plants has been comparatively less. Moreover, the mechanism of local microclimate changes caused by FPV panels has not been reported. This work revealed this mechanism using a physical model to illustrate the impact of FPV power plants in a lake on the environment. The results indicated that the lake becomes a heat sink after deploying the PV panel on water. The comprehensive albedo (0.082) decreased by 18.8% relative to the free water surface (0.101). The water energy change was dominated by the water–air vapor pressure deficit. In addition, the FPV panels had a heating effect on the ambient environment; however, the range of this effect was related to the water depth. The installation had an obvious heating effect on surface water.
+*   @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
 
-## Albedo and land use and LCA
+*  @li2022comparative examined the effects of PV panels on surface radiation through a comparative study between a PV site and a reference site in the Gobi area of Xinjiang, China in summer 2020. The results showed that nighttime outgoing long wave radiation (OLR) was lower at the PV site, while daytime values were similar. The PV site’s surface albedo (0.14) was 39.1% lower than the reference site’s (0.23). Overall, net radiation was 30.7% higher at the PV site: 75% due to reduced upward short wave radiation, and 25% to lower nocturnal long wave radiation.
 
-Recent research has investigated the effects of surface albedo changes related to land use change. @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land. @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account.
+*  @wang2025environmental studies PV installations in an alpine meadow on the eastern Tibetan Plateau and found an increased net radiation, by 28.9%, but reduced albedo and wind speed, by 31.6% and 36.2%. Air temperature rose in daytime and summer, but dropped at night and in winter. Soil under panels was colder and drier, while gaps were colder and wetter, extending the frozen period by ~50 days and slowing moisture loss up to 3.5×. These shifts alter local energy and water balances and may moderate climate warming impacts, warranting longer-term multi-year studies to evaluate the long-term impacts on vegetation dynamics and permafrost processes.
 
-Climate impacts of bioenergy: Inclusion of carbon cycle and albedo dynamics in life cycle impact assessment (Cherubini & Strømman, 2012)
+*  @li2022physical examined fishery complementary PV plants (FPV) using a physical model to reveal their microclimatic effects. FPV deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by an water–air vapor pressure deficit. Also, the FPV panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.
 
-Consideration of land use change‑induced surface albedo effects in life‑cycle analysis of biofuels (Cai et al., 2016)
+The conclusion is that on each of these surfaces, impacts on albedo caused by the PV installations could be observed. Several studies from the LCA research community have suggested to include these effects into LCAs: 
 
-## Spatially Explicit LCA
+*  @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land.
 
-(2010) Coupling GIS and LCA for biodiversity assessments of land use
-https://link.springer.com/article/10.1007/s11367-010-0199-9
+*  Climate impacts of bioenergy: Inclusion of carbon cycle and albedo dynamics in life cycle impact assessment (Cherubini & Strømman, 2012)
 
-(2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
+*  Consideration of land use change‑induced surface albedo effects in life‑cycle analysis of biofuels (Cai et al., 2016)
+
+Other researchers explored the topic from the angle of Earth Observation and have suggested to create spatially explicit LCAs:
+
+*  @hasler2024accounting concludes that strategically deploying restoration of tree cover for maximum climate benefit requires taking the albedo change of the restoration into account. Restoring tree cover changes albedo, which is the fraction of sunlight reflected from the Earth’s surface. In most locations, these changes in albedo offset or even negate the carbon removal benefits with the latter leading to global warming. Previous efforts to quantify the global climate mitigation benefit of restoring tree cover have not accounted robustly for albedo given a lack of spatially explicit data. Here we produce maps that show that carbon-only estimates may be up to 81% too high. While dryland and boreal settings have especially severe albedo offsets, it is possible to find places that provide net-positive climate mitigation benefits in all biomes. We further find that on-the-ground projects are concentrated in these more climate-positive locations, but that the majority still face at least a 20% albedo offset. Thus, strategically deploying restoration of tree cover for maximum climate benefit requires accounting for albedo change and we provide the tools to do so.
+
+*  (2014) Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
 https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709
 LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats.
 
-(2017) Life cycle assessment in road infrastructure planning using spatial geological data
+*  (2010) Coupling GIS and LCA for biodiversity assessments of land use
+https://link.springer.com/article/10.1007/s11367-010-0199-9
+
+*  (2017) Life cycle assessment in road infrastructure planning using spatial geological data
 https://link.springer.com/article/10.1007/s11367-016-1241-3
 
-(2023) Life-cycle assessment to guide solutions for the triple planetary crisis
+*  (2023) Life-cycle assessment to guide solutions for the triple planetary crisis
 https://www.nature.com/articles/s43017-023-00449-2
 
-(2023) Remote sensing based data products for large scale life cycle inventory models
+*  (2023) Remote sensing based data products for large scale life cycle inventory models
 https://digitalcollection.zhaw.ch/items/ba006c7b-fe04-4d58-9cb7-02679789079
 
-(2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
+*  (2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
 https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
 
+<!-- 
 Groups:
 https://en.wikipedia.org/wiki/Space_for_Climate_Observatory
 
 Journals:
 International Journal of Applied Earth Observation and Geoinformation
-
-
-<!--
 
 People:
 Remote sensing agriculture: Bruno Basso
