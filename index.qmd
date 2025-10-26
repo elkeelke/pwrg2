@@ -79,9 +79,11 @@ The conclusion is that on each of these surfaces, impacts on albedo caused by th
 
 ## Albedo effects in LCAs
 
-Several studies from the LCA research community have suggested to include these effects into LCAs: 
+Several studies from the LCA research community have attempted to quantify albedo related effects for inclusion in LCAs: 
 
 *  @david2025 assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land.
+
+*  @jungbluth2012life presents collected data on the albedo effects from various surfaces including PV panels. While the direct impact on global radiative forcing is considered minimal, local albedo changes induced by large PV installations could have minor implications for nearby ecosystems and microclimates. 
 
 *  @bright2012climate examines two key dynamic factors affecting bioenergy’s climate impact: temporary changes in the terrestrial carbon cycle, and land surface albedo. The paper proposes ways to integrate these factors into LCA. Using a case study of transportation biofuel from managed boreal forests in northern Europe, the authors develop global warming potential (GWP) indices for different land management scenarios, highlighting the need for region-specific characterization factors and discussing related uncertainties.
 
@@ -89,15 +91,12 @@ Several studies from the LCA research community have suggested to include these 
 
 ## Spatially explicit LCAs
 
-Other researchers explored the topic from the angle of Earth Observation and have suggested to create spatially explicit LCAs:
+Other researchers explored the topic from the angle of Earth Observation with the aim of creating spatially explicit LCAs:
+
+*  @itten2023remote explored how remote sensing data from satellites can support and partly replace company provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary researcher group identified remote sensing data sources for agriculture, mining, and energy sectors. The satellite images must be processed to extract usable LCA information, such as land use change or transport distances. Commercial providers already offer relevant ESG oriented remote sensing based data products. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
 *  (2017) Life cycle assessment in road infrastructure planning using spatial geological data
 https://link.springer.com/article/10.1007/s11367-016-1241-3
-
-*  (2023) Life-cycle assessment to guide solutions for the triple planetary crisis
-https://www.nature.com/articles/s43017-023-00449-2
-
-*  (2023) @itten2023remote explored how remote sensing data from satellites can support and partly replace company provided data for scope 3 reporting to improve transparency and enable comparisons. Working with geoinformation experts, the researchers identified remote sensing data sources for agriculture, mining, and energy sectors. The satellite images must be processed to extract usable LCA information, such as land use change or transport distances. Commercial providers already offer relevant ESG oriented remote sensing based data products. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
 *  (2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
 https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
