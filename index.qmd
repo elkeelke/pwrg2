@@ -59,7 +59,9 @@ While many scientific publications on PV and LCA overlook the effects of surface
 
 *   @nemet2009net estimated the effects of covering Earth with sunlight absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. 
 
-*   @wei2024small confirmed these results based on global satellite data showing that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
+*   @wei2024small confirmed these results based on global satellite data, and also showed that albedo induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.
+
+*  @xu2024global performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter. 
 
 ## Albedo effects of PV installation per original surface
 
@@ -75,7 +77,7 @@ Other studies investigated the impact of PV on radiative forcing on several diff
 
 The conclusion is that on each of these surfaces, impacts on albedo caused by the PV installations could be observed that could potentially be included in an LCA.
 
-## Albedo change in LCAs
+## Albedo effects in LCAs
 
 Several studies from the LCA research community have suggested to include these effects into LCAs: 
 
@@ -89,23 +91,13 @@ Several studies from the LCA research community have suggested to include these 
 
 Other researchers explored the topic from the angle of Earth Observation and have suggested to create spatially explicit LCAs:
 
-*  (2024) @xu2024global: A global assessment of the effects of solar farms on albedo, vegetation, and land surface temperature using remote sensing: The rapid development of solar energy worldwide has attracted increasing attention due to its climatic and environmental impacts. Using MODIS data, we quantified the effects of solar farms (SFs) on albedo, vegetation (using enhanced vegetation index (EVI) as a proxy), and land surface temperature (LST) based on 116 large SFs across the world. The results show that the installation of SFs decreased the annual mean surface shortwave albedo by 0.016 ± 0.009 (mean ± 1 STD) and reduced the EVI by 0.015 ± 0.019 relative to the surrounding areas. SFs produced a strong cooling effect of −0.49 ± 0.43 K in the annual mean land surface temperature during the daytime and a weaker cooling effect of −0.21 ± 0.25 K during the nighttime. The greatest impacts on albedo and daytime LST were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact was observed at high latitudes in winter on albedo, at mid-latitudes in summer on vegetation, and at low latitudes in spring–summer transitions on daytime LST. Correlation analysis showed that the albedo and LST impacts were enhanced over large SFs with high capacity. The vegetation and LST impacts were both correlated with geographic and climatic factors and dependent on the type of SF (photovoltaic or concentrating solar power). Our global assessment provides observational evidence for the effects of SF construction on the environment and local climate, which can help the sustainable development of solar energy.
-
-*  (2015) @souza2015assessing Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet?
-Ecosystems are under increasing pressure from human activities, with land use and land-use change at the forefront of the drivers that provoke global and regional biodiversity loss. The first step in addressing the challenge of how to reverse the negative outlook for the coming years starts with measuring environmental loss rates and assigning responsibilities. Pinpointing the global pressures on biodiversity is a task best addressed using holistic models such as Life Cycle Assessment (LCA). LCA is the leading method for calculating cradle-to-grave environmental impacts of products and services; it is actively promoted by many public policies, and integrated as part of environmental information systems within private companies. LCA already deals with the potential biodiversity impacts of land use, but there are significant obstacles to overcome before its models grasp the full reach of the phenomena involved. In this review, we discuss some pressing issues that need to be addressed. LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats. To identify the main areas for improvement, we systematically reviewed LCA studies on land use that had findings related to global change and conservation ecology. We provide suggestion as to how to address some of the issues raised. Our overall objective was to encourage companies to monitor and take concrete steps to address the impacts of land use on biodiversity on a broader geographical scale and along increasingly globalized supply chains.
-
-*  (2010) @geyer2010coupling1: Coupling GIS and LCA for biodiversity assessments of land use (part 1: inventory) 
-
-*  @geyer2010coupling2 Part 2: Impact assessment
-
 *  (2017) Life cycle assessment in road infrastructure planning using spatial geological data
 https://link.springer.com/article/10.1007/s11367-016-1241-3
 
 *  (2023) Life-cycle assessment to guide solutions for the triple planetary crisis
 https://www.nature.com/articles/s43017-023-00449-2
 
-*  (2023) Remote sensing based data products for large scale life cycle inventory models
-https://digitalcollection.zhaw.ch/items/ba006c7b-fe04-4d58-9cb7-02679789079
+*  (2023) @itten2023remote explored how remote sensing data from satellites can support and partly replace company provided data for scope 3 reporting to improve transparency and enable comparisons. Working with geoinformation experts, the researchers identified remote sensing data sources for agriculture, mining, and energy sectors. The satellite images must be processed to extract usable LCA information, such as land use change or transport distances. Commercial providers already offer relevant ESG oriented remote sensing based data products. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
 *  (2022) Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management
 https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en
