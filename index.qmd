@@ -65,7 +65,7 @@ While many scientific publications on PV and LCA overlook the effects of surface
 
 *  @xu2024global performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter. 
 
-## Albedo effects of PV installation per original surface
+## Albedo effects of PV installations per original surface
 
 Other studies investigated the impact of PV on radiative forcing on several different installation sites such as city roofs, deserts, alpine locations, and lakes:
 
@@ -95,13 +95,19 @@ Several studies from the LCA research community have attempted to quantify albed
 
 Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geographical and location-specific information into the assessment of environmental impacts. The key difference is the use of location specific inventory data for different purposes, such as for example road infrastructure planning as described by @karlsson2017. Geographic Information Systems (GIS) and remote sensing are often used to map and quantify regional effects. 
 
-@itten2023remote explored how remote sensing data from satellites can support and partly replace company provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary researcher group identified remote sensing data sources for agriculture, mining, and energy sectors. The satellite images must be processed to extract usable LCA information, such as land use change or transport distances. Commercial providers already offer relevant ESG oriented remote sensing based data products. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
+@li2021spatializing provide a meta study of 105 publications on GIS-based LCAs and propose a universal methodology framework to address the following issues: (1) setting up a geographically referenced system in the goal and scope definition phase; (2) spatializing lifecycle data and integrating and computing foreground and background data in the inventory analysis phase; (3) developing spatialized characterization factors with different requirements on resolution and data availability in the impact assessment phase; and (4) harmonizing the contribution analysis of different zones, unit processes, and elementary flows to visualize spatialized environmental footprint in the interpretation phase.
 
-@li2021spatializing provide a meta study of 105 publications on GIS-based LCAs and propose a universal methodology framework to address the following issues: (1) how to set up a geographically referenced system in the goal and scope definition phase; (2) how to spatialize lifecycle data and integrate and compute foreground and background data in the inventory analysis phase; (3) how to develop spatialized characterization factors with different requirements on resolution and data availability in the impact assessment phase; and (4) how to uniform the contribution analysis of different zones, unit processes, and elementary flows to visualize spatialized environmental footprint in the interpretation phase. 
+@itten2023remote explored how remote sensing data from satellites can support and partly replace company provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG oriented remote sensing based data products based on processed satellite imagery. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
-@paris2023accuracy discusses issues caused by inconsistencies between the actual data and the information derived from satellite data that can be attributed to factors such as differences in viewpoint perspectives, i.e., aerial versus ground views, or spatial resolution of the satellite images versus the extent of the land cover (LC) present in the scene. TBD many such issues exist.
+The accuracy of satellite-derived data is crucial. Many scientific publications are focused on accurately assessing accuracy levels and understanding the reasons for discrepancies:
 
-Real time?
+*   @gruber2020validation propose good practice guidelines for the validation of global coarse-scale satellite soil moisture data sets and practical recommendations on data preprocessing and presentation of statistical results together with a recommended validation protocol and an example validation.
+
+*   @langsdale2025challenges review key challenges in validating satellite ECVs across terrestrial, oceanic, and atmospheric domains. They focus on issues with reference data, their use in validation, and comparison methods and provide recommendations for improving uncertainty modeling, transparency about data limitations, metadata management, and best practices for validation methodologies.
+
+*   @paris2023accuracy discuss issues caused by inconsistencies between the actual data and the information derived from satellite data that can be attributed to factors such as differences in viewpoint perspectives, i.e., aerial versus ground views, or spatial resolution of the satellite images versus the extent of the land cover (LC) present in the scene. 
+
+*   @tran2023uncertainty reviewed 676 papers (2011–2021) on uncertainty assessment of remote sensing-based evapotranspiration (RS-ET), categorizing them by methods, context, and reporting metrics. They found that assessments are inconsistent in methodology, reference data, geographic coverage, and uncertainty reporting. The study recommends that future work should clearly document validation context, reference data uncertainties, spatial and temporal mismatches, and report multiple performance metrics.
 
 <!-- 
 Groups:
