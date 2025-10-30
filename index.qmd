@@ -45,7 +45,7 @@ The aim of this work is to devise a project plan to (1) quantify the impact of a
 
 # Literature study
 
-Several research areas relate to this topic, including the albedo effects in general, albedo effects of photovoltaic (PV) systems, albedo effects inclusion in life cycle assessment (LCA), and remote sensing applications for location-specific LCAs. This chapter provides an overview of existing studies in these fields that are relevant to the present work.
+Several research areas relate to this topic, including albedo effects in general, albedo effects of photovoltaic (PV) systems, albedo effects inclusion in life cycle assessment (LCA), and remote sensing applications for location-specific LCAs. This chapter provides an overview of existing studies in these fields that are relevant to the present work.
 
 ## Albedo effects compared between surfaces
 
@@ -53,7 +53,7 @@ Several research areas relate to this topic, including the albedo effects in gen
 
 @hasler2024accounting find that maximizing the climate benefits of tree cover restoration requires accounting for albedo effects since they often offset or even reverse carbon removal gains, especially in dryland and boreal regions. Using spatial data, the study shows that while many restoration projects target  climate-positive areas, many face an albedo offset of at least 20%. The study suggests to roll out large-scale tools to identify where restoration delivers true net climate benefits.
 
-@Loeb2025Emerging uses 24 years of satellite observations to show that the difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR) is small but measurable. The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation. Understanding how clouds respond to this developing imbalance is critical for predicting future climate evolution.
+@loeb2025emerging uses 24 years of satellite observations to show that the difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR) is small but measurable. The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation. Understanding how clouds respond to this developing imbalance is critical for predicting future climate evolution.
 
 ## PV installations and albedo effects
 
