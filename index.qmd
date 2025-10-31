@@ -57,7 +57,7 @@ Several research areas relate to this topic, including albedo effects in general
 
 ## PV installations and albedo effects
 
-While many scientific publications on PV and LCA overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:
+One of the earliest studies examining the environmental impacts of photovoltaic (PV) installations is @fthenakis2008emissions, and since then, numerous scientific publications have investigated PV systems through LCA approaches. While most of them overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:
 
 *   @nemet2009net estimated the effects of covering Earth with sunlight-absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction. 
 
