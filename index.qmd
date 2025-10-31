@@ -49,7 +49,7 @@ Several research areas relate to this topic, including albedo effects in general
 
 ## Albedo effects compared between surfaces
 
-@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the timeframes of 50 and 100 years. The comparative life cycle impact assessment of the two roofs showed that the high surface albedo of the white roof played a crucial role in offsetting RF.
+@susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the timeframes of 50 and 100 years. The comparative LCA of the two roofs showed that the high surface albedo of the white roof played a crucial role in offsetting RF.
 
 @hasler2024accounting find that maximizing the climate benefits of tree cover restoration requires accounting for albedo effects since they often offset or even reverse carbon removal gains, especially in dryland and boreal regions. Using spatial data, the study shows that while many restoration projects target  climate-positive areas, many face an albedo offset of at least 20%. The study suggests rolling out large-scale tools to identify where restoration delivers true net climate benefits.
 
@@ -77,7 +77,9 @@ Other studies investigated the impact of PV on radiative forcing at several diff
 
 *  @wang2025environmental studies PV installations in an alpine meadow on the eastern Tibetan Plateau and found an increased net radiation, by 28.9%, but reduced albedo and wind speed, by 31.6% and 36.2%. Air temperature rose in daytime and summer, but dropped at night and in winter. Soil under panels was colder and drier, while gaps were colder and wetter, extending the frozen period by roughly 50 days and slowing moisture loss up to 3.5×. These shifts alter local energy and water balances and may moderate climate warming impacts, warranting longer-term studies to evaluate the long-term impacts on vegetation dynamics and permafrost processes.
 
-*  @li2022physical examined fishery complementary PV plants (FPV) using a physical model to reveal their microclimatic effects. FPV deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by an water/air vapor pressure deficit. Also, the FPV panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.
+*  @li2022physical examined fishery complementary PV plants using a physical model to reveal their microclimatic effects. Deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by an water/air vapor pressure deficit. Also, the panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.
+
+*  @cosgun2024investigating explored the performance of floating PV modules installed over water surfaces, focusing on their efficiency and environmental benefits. A 1 MW PV system was simulated with two types of PV modules, bifacial and monofacial, both mounted 1 meter above the water. Results showed that bifacial modules generated more energy annually than monofacial ones due to enhanced albedo reflection from the water surface.
 
 In conclusion, impacts on albedo caused by PV installations were observed on all these surfaces, and these impacts could potentially be included in an LCA.
 
