@@ -65,6 +65,8 @@ While many scientific publications on PV and LCA overlook the effects of surface
 
 *  @xu2024global performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter. 
 
+*  @gul2018enhancement examine the effects of the surfaces around PV installation and find that these have a small effects on the performance. It's preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
+
 ## Albedo effects of PV installations per original surface
 
 Other studies investigated the impact of PV on radiative forcing at several different installation sites such as city roofs, deserts, alpine locations, and lakes:
