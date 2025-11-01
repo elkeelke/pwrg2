@@ -117,6 +117,8 @@ Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geog
 
 @itten2023remote explored how remote sensing data from satellites can support and partly replace company-provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use change (most recently by @jian2025highly), biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
+### Relevant datasets for surface albedo
+
 @roccetti2024hamster provide a dataset for surface albedo based on the MODIS Surface Reflectance Black-Sky Albedo dataset (see @schaaf2021modis) and principal component analysis (PCA) as described by @hotelling1933pca.
 
 @riihela2024four present CLARA-A3 surface albedo data as the third edition of the CM SAF cLoud, Albedo and surface Radiation (CLARA) data record family. The temporal coverage of this edition is extended from 1979 until the near-present day. The core algorithms and data format remain unchanged from previous editions, but now white- and blue-sky albedo estimates are also available for the first time in CLARA data.
