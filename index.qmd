@@ -47,13 +47,17 @@ The aim of this work is to devise a project plan to (1) quantify the impact of a
 
 Several research areas relate to this topic, including albedo effects in general, albedo effects of photovoltaic (PV) systems, the inclusion of albedo effects in life cycle assessment (LCA), and remote sensing applications for location-specific LCAs. This chapter provides an overview of existing studies in these fields that are relevant to the present work.
 
-## Albedo effects compared between surfaces
+## Albedo effects compared between surfaces and on the hemisphere level
 
 @susca2012enhancement proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the timeframes of 50 and 100 years. The comparative LCA of the two roofs showed that the high surface albedo of the white roof played a crucial role in offsetting RF.
 
 @hasler2024accounting find that maximizing the climate benefits of tree cover restoration requires accounting for albedo effects since they often offset or even reverse carbon removal gains, especially in dryland and boreal regions. Using spatial data, the study shows that while many restoration projects target  climate-positive areas, many face an albedo offset of at least 20%. The study suggests rolling out large-scale tools to identify where restoration delivers true net climate benefits.
 
-@loeb2025emerging use 24 years of satellite observations to show that the difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR) is small but measurable. The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation.  The assumption so far was that changes in cloud cover would balance the differences between the hemispheres (see @datseris2021earth), but this study suggests that this compensating effect is not completely effective. Understanding how the clouds respond to the developing imbalance is critical for predicting future climate evolution.
+@zhu2024changes indicate the significant impacts of climate change and human disturbances on East Asia grassland ecosystems from the perspective of altered albedo. Changes in vegetation greenness and soil properties have a substantial impact on albedo.
+
+@wu2024satellite estimate a 30-m-resolution annual surface albedo dataset for more than 3000 large cities  worldwide for the period from 1986 to 2020 from the Landsat surface reflectance product (see @usgs_landsat_sr) and find an overall decreasing trend of albedo during the 35-year evaluation period, which is robust accounting for uncertainties from training sample representativeness, data uncertainty, seasonal variation, and snow-cover contamination.
+
+@loeb2025emerging use 24 years of satellite observations to show that there is a small measurable difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR). The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation.  The assumption so far was that changes in cloud cover would balance the differences between the hemispheres (see @datseris2021earth), but this study suggests that this compensating effect is not completely effective. Understanding how the clouds respond to the developing imbalance is critical for predicting future climate evolution. @diamond2024testing follow up on this line of research by decomposing the hemispheric albedo symmetry into components associated with the surface, clear-sky atmosphere, and different cloud types as defined by cloud effective pressure and optical thickness. 
 
 ## PV installations and albedo effects
 
@@ -65,13 +69,17 @@ One of the earliest studies examining the environmental impacts of photovoltaic 
 
 *  @xu2024global performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter. 
 
-*  @gul2018enhancement examine the effects of the surfaces around PV installation and find that these have a small effects on the performance. It's preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
+Two related aspects are worth mentioning:
+
+*  @gul2018enhancement examine the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
+
+*  @coimbra2025energy focus on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.
 
 ## Albedo effects of PV installations per original surface
 
 Other studies investigated the impact of PV on radiative forcing at several different installation sites such as city roofs, deserts, alpine locations, and lakes:
 
-*   @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
+*  @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
 
 *  @li2022comparative examined the effects of PV panels on surface radiation through a comparative study between a PV site and a reference site in the Gobi area of Xinjiang, China in summer 2020. The results showed that nighttime outgoing longwave radiation (OLR) was lower at the PV site, while daytime values were similar. The PV site’s surface albedo (0.14) was 39.1% lower than the reference site’s (0.23). Overall, net radiation was 30.7% higher at the PV site: 75% due to reduced upward shortwave radiation, and 25% to lower nocturnal longwave radiation.
 
@@ -79,9 +87,15 @@ Other studies investigated the impact of PV on radiative forcing at several diff
 
 *  @li2022physical examined fishery complementary PV plants using a physical model to reveal their microclimatic effects. Deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by an water/air vapor pressure deficit. Also, the panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.
 
+In conclusion, impacts on albedo caused by PV installations were observed on all these surfaces, and these impacts could potentially be included in an LCA.
+
+## Albedo effects of the surroundings of PV installations
+
+Some studies looked at the Albedo effects of the surroundings of PV installations:
+
 *  @cosgun2024investigating explored the performance of floating PV modules installed over water surfaces, focusing on their efficiency and environmental benefits. A 1 MW PV system was simulated with two types of PV modules, bifacial and monofacial, both mounted 1 meter above the water. Results showed that bifacial modules generated more energy annually than monofacial ones due to enhanced albedo reflection from the water surface.
 
-In conclusion, impacts on albedo caused by PV installations were observed on all these surfaces, and these impacts could potentially be included in an LCA.
+*  @lavaert2023influence investigated how different ground cloths affect the electricity production of two agrivoltaic systems: fixed vertical bifacial panels and horizontal single-axis trackers. The study aimed to determine whether reflective ground covers, such as white cloths, could enhance light capture and energy generation. Simulations suggested that the white ground cloth could increase the incident irradiance on the vertical bifacial panels by about 8%, but real-world measurements over 5.5 months showed no significant difference between ground covers. In contrast, for the horizontal single-axis tracker system, there was a clear benefit with the white ground cloth leading to higher yields.
 
 ## Albedo effects in LCAs
 
@@ -101,7 +115,13 @@ Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geog
 
 @li2021spatializing provide a meta study of 105 publications on GIS-based LCAs and propose a universal methodology framework to address the following issues: (1) setting up a geographically referenced system in the goal and scope definition phase; (2) spatializing life-cycle data and integrating and computing foreground and background data in the inventory analysis phase; (3) developing spatialized characterization factors with different requirements on resolution and data availability in the impact assessment phase; and (4) harmonizing the contribution analysis of different zones, unit processes, and elementary flows to visualize the spatialized environmental footprint in the interpretation phase.
 
-@itten2023remote explored how remote sensing data from satellites can support and partly replace company-provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use, biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
+@itten2023remote explored how remote sensing data from satellites can support and partly replace company-provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use change (most recently by @jian2025highly), biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
+
+@roccetti2024hamster provide a dataset for surface albedo based on the MODIS Surface Reflectance Black-Sky Albedo dataset (see @schaaf2021modis) and principal component analysis (PCA) as described by @hotelling1933pca.
+
+@riihela2024four present CLARA-A3 surface albedo data as the third edition of the CM SAF cLoud, Albedo and surface Radiation (CLARA) data record family. The temporal coverage of this edition is extended from 1979 until the near-present day. The core algorithms and data format remain unchanged from previous editions, but now white- and blue-sky albedo estimates are also available for the first time in CLARA data.
+
+## Accuracy of satellite-derived data
 
 The accuracy of satellite-derived data is crucial. Many scientific publications are focused on assessing accuracy levels and understanding the reasons for discrepancies:
 
@@ -112,6 +132,8 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 *   @paris2023accuracy discuss issues caused by inconsistencies between the actual data and the information derived from satellite data that can be attributed to factors such as differences in viewpoint perspectives, i.e., aerial versus ground views, or spatial resolution of the satellite images versus the extent of the land cover (LC) present in the scene. 
 
 *   @tran2023uncertainty reviewed 676 papers (2011–2021) on uncertainty assessment of remote sensing-based evapotranspiration (RS-ET), categorizing them by methods, context, and reporting metrics. They found that assessments are inconsistent in methodology, reference data, geographic coverage, and uncertainty reporting. The study recommends that future work should clearly document validation context, reference data uncertainties, spatial and temporal mismatches, and report multiple performance metrics.
+
+*   @manninen2022cloud describes a new method for cloud-correcting observations of black-sky surface albedo derived using the Advanced Very High Resolution Radiometer (AVHRR). Cloud cover constitutes a major challenge for surface albedo estimation using AVHRR data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.
 
 <!-- 
 Groups:
