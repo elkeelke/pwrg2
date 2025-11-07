@@ -253,7 +253,7 @@ Three main research questions are explored:
 
 # Research plan
 
-The goal is to address the research questions defined in @sec-research-questions.
+The goal of the research plan presented in this section is to address the research questions defined in @sec-research-questions.
 
 ## Methodology (research question 1)
 
@@ -267,7 +267,7 @@ The hypothesis is that the inherent noise found in satellite-derived remote sens
 
 ### Seasonality
 
-Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? 
+Is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? 
 
 ## Original surface related considerations (research question 2)
 
@@ -303,6 +303,8 @@ Validation
 
 * Find out if we can get the relevant satellite data before and after the agri-PV installation at Campus Grüntal.
 
+* Functional unit definition
+
 * Lay out if and how we can do it in an automated way for a larger amount of data.
 
 ## Resources
@@ -317,7 +319,7 @@ Topics:
 
 1. Functional unit definition
 
-1. Albedo measurement and tive forcing
+1. Albedo measurement and radiative forcing
 
 1. Radiative forcing and environmental impact
 
