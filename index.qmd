@@ -259,6 +259,13 @@ The goal of the research plan presented in this section is to address the resear
 
 How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation?
 
+
+### Albedo measurement 
+
+Relationship to radiative forcing
+
+Albedo/Radiative forcing and environmental impact
+
 ### Spatial and temporal data aggregation
 
 What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data?
@@ -285,27 +292,33 @@ Is it possible to assess and quantify the albedo change by original surface type
 
 How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? 
 
+### Trust in data sources
+
 The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
 
-# Project plan
+### Dealing with uncertainty
 
-In this section, a detailed research project plan with project milestones and a time plan will be presented.
+# Project plan for case study
 
-## Project milestones and time plan
-
-Data acquisition
-Methodology definition
-Evaluation
-Aggregation scales (temporal and spatial)
-Validation
-
-# Implementation (Case study)
+In this section, a detailed research project plan for the suggested case study will be presented, together with project milestones and a time plan.
 
 * Find out if we can get the relevant satellite data before and after the agri-PV installation at Campus Grüntal.
 
 * Functional unit definition
 
 * Lay out if and how we can do it in an automated way for a larger amount of data.
+
+## Project milestones and time plan
+
+* Methodology definition
+
+* Data acquisition
+
+* Data aggregation
+
+* Evaluation
+
+* Validation
 
 ## Resources
 
@@ -315,17 +328,7 @@ https://www.youtube.com/watch?v=_OmkNfcO7VU (https://opengeoai.org/)
 <!--
 Topics:
 
-1. Literature study (based on initial work in previous chapter)
 
-1. Functional unit definition
-
-1. Albedo measurement and radiative forcing
-
-1. Radiative forcing and environmental impact
-
-1. Trust in data
-
-Time and resources plan:
 -->
 
 # Appendix
