@@ -267,15 +267,34 @@ Albedo is defined as the ratio of reflected to incoming solar radiation: $\alpha
 
 It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Ground-based albedo can be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage. Satellite remote sensing provides a spatially continuous means of estimating surface albedo. In this case, multi-spectral sensors record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared), and albedo can then be derived by applying weighted linear combinations of these reflectance values.
 
-Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling).
+Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report @IPCC_AR6_WGI_Chapter7_2021 assessed the contributions as presented in @tbl-ipcc below:
+
+::: {#tbl-ipcc}
+| Category                                | Radiative Forcing (2019 vs. 1750) |
+| --------------------------------------- | --------------------------------- |
+| Carbon dioxide CO₂                      | +2.16 W/m²                        |
+| Methane CH₄                             | +0.54 W/m²                        |
+| Nitrous oxide N₂O                       | +0.21 W/m²                        |
+| Halogenated gases                       | +0.32 W/m²                        |
+| Ozone O₃                                | +0.47 W/m²                        |
+| Aerosols                                | −1.10 W/m²                        |
+| Land use change related albedo change   | −0.15 W/m²                        |
+| Contrails and aviation induced cirrus   | +0.05 W/m²                        |
+| Solar variability                       | +0.01 W/m²                        |
+| Gesamt                                  | ≈ +2.72 W/m²                      |
+
+Table: IPCC AR6 report table 7.15
+:::
+
+Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). @tbl-ipcc revealed that the overall land use change related albedo change has a cooling effect.
 
 The radiative forcing impact $\Delta F$ caused by an albedo change $\Delta \alpha$ can be approximated as:
 
 $\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4$
 
-where $S$ = solar constant $~1361 W m^{−2}$ and $A$ = planetary albedo $~0.3$ (empirical value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (increased reflectivity), while positive values indicate warming (decreased reflectivity).
+where the solar constant $S = ~1361 W m^{−2}$ and the planetary albedo $A = ~0.3$ (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (increased reflectivity), while positive values indicate warming (decreased reflectivity).
 
-Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice melting. This is a positive feedback loop for further albedo changes since bright surfaces are replaced by darker ones. To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
+Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes since bright surfaces are replaced by darker ones. To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
 
 ### Spatial and temporal data aggregation
 
