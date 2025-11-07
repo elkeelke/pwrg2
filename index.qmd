@@ -79,7 +79,7 @@ Two related aspects are worth mentioning:
 
 Other studies investigated the impact of PV on radiative forcing at several different installation sites such as city roofs, deserts, alpine locations, and lakes:
 
-*  @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W/m^2$ positive RF. The results were validated using MODIS satellite observations. 
+*  @zhou2025assessing used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose $3.53 * 10^{-8}W m^{-2}$ positive RF. The results were validated using MODIS satellite observations. 
 
 *  @li2022comparative examined the effects of PV panels on surface radiation through a comparative study between a PV site and a reference site in the Gobi area of Xinjiang, China in summer 2020. The results showed that nighttime outgoing longwave radiation (OLR) was lower at the PV site, while daytime values were similar. The PV site’s surface albedo (0.14) was 39.1% lower than the reference site’s (0.23). Overall, net radiation was 30.7% higher at the PV site: 75% due to reduced upward shortwave radiation, and 25% to lower nocturnal longwave radiation.
 
@@ -267,7 +267,7 @@ Albedo is defined as the ratio of reflected to incoming solar radiation: $\alpha
 
 It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Ground-based albedo can be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage. Satellite remote sensing provides a spatially continuous means of estimating surface albedo. In this case, multi-spectral sensors record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared), and albedo can then be derived by applying weighted linear combinations of these reflectance values.
 
-Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report @IPCC_AR6_WGI_Chapter7_2021 assessed the contributions as presented in @tbl-ipcc below:
+Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report by @IPCC_AR6_WGI_Chapter7_2021 assessed the contributions as presented in @tbl-ipcc below:
 
 ::: {#tbl-ipcc}
 | Category                                | Radiative Forcing (2019 vs. 1750) |
@@ -286,15 +286,17 @@ Radiative forcing (RF) is generally measured in measured in watts per square met
 Table: IPCC AR6 report table 7.15
 :::
 
-Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). @tbl-ipcc revealed that the overall land use change related albedo change has a cooling effect.
+Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes, since bright surfaces are replaced by darker ones. Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). @tbl-ipcc revealed that the overall land use change related albedo change has a cooling effect.
 
 The radiative forcing impact $\Delta F$ caused by an albedo change $\Delta \alpha$ can be approximated as:
 
-$\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4$
+$$\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4$$
 
-where the solar constant $S = ~1361 W m^{−2}$ and the planetary albedo $A = ~0.3$ (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (increased reflectivity), while positive values indicate warming (decreased reflectivity).
+where the solar constant $S$ is equal to ~$1361 W m^{−2}$ and the planetary albedo $A$ amounts to ~$0.3$ (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (because of increased reflectivity), while positive values indicate warming (because of decreased reflectivity).
 
-Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes since bright surfaces are replaced by darker ones. To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
+### Data aquisition
+
+Satellites and data sets mentioned in the literature study.
 
 ### Spatial and temporal data aggregation
 
@@ -321,6 +323,8 @@ Is it possible to assess and quantify the albedo change by original surface type
 ## LCA integration (research question 3)
 
 How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? 
+
+To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
 
 ### Trust in data sources
 
