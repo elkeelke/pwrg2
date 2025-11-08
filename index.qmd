@@ -261,7 +261,7 @@ The goal of the research plan presented in this section is to provide the theore
 
 In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed.
 
-TBD: The following steps are required: data selection, data aggregation, albedo measurement, ... (make this a figure)
+TBD: The following steps are required: data selection (area of interest and reference area), albedo measurement, data aggregation, ... (make this a figure)
 
 ### Albedo measurement and radiative forcing
 
@@ -312,7 +312,7 @@ Other satellite types provide higher spatial resolution and therefore also suppo
 
 The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels), or it can be based on defined location data.
 
-Satellite-derived data generally contains significant inherent noise due to variable weather conditions and cloud cover, and also operational issues. Aggregating multiple observations spatially and temporally produces an average value, which reduces noise progressively as more data is combined. This means that the resulting numbers will be more stable for larger PV plants, and longer time periods of observation.
+Satellite-derived data generally contains significant inherent noise due to variable weather conditions and cloud cover, and also operational issues. Aggregating multiple observations spatially and temporally produces an average value, which reduces noise progressively as more data is combined. Consequently, the resulting estimates tend to be more stable for larger PV plants and over longer observation periods.
 
 To understand the change in albedo there are two options for comparison, either against the same spatial area before the PV farm was installed, or same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations.
 
@@ -322,15 +322,44 @@ Since seasonality such as temporal snow cover and vegetation dynamics in the loc
 
 ## Original surface related considerations (research question 2)
 
-How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
+There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type.
 
-### Surface identification
+Surface identification via satellite image is a solved problem. For identifying the original surface there are several relevant datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in table @tbl-esa. 
 
-Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Can we detect PV panels? 
+::: {#tbl-esa}
+| Class                             | Description                                                                    |
+| ----------------------------------| -------------------------------------------------------------------------------|
+| Tree cover                        | Areas dominated by trees (≥10% cover), incl. plantations and flooded forests.  |
+| Shrubland                         | Areas dominated by shrubs (<5 m tall) with ≥10% shrub cover.                   |
+| Grassland                         | Areas dominated by herbaceous plants (≥10% cover); woody plants <10%.          |
+| Cropland                          | Land where plants are sown or harvested at least once a year.                  |
+| Built-up                          | Land covered by buildings, roads, and other man-made structures.               |
+| Bare and sparse vegetation        | Lands with exposed soil, sand, or rocks, and ≤10% vegetative cover.            |
+| Snow and ice                      | Areas persistently covered by snow or glaciers.                                |
+| Permanent water bodies            | Lakes, reservoirs, and rivers mostly covered by water (>9 months/year).        |
+| Herbaceous wetland                | Land dominated by herbaceous vegetation, permanently or regularly flooded.     |
+| Mangroves                         | Salt-tolerant trees and plants in intertidal tropical zones.                   |
+| Moss and lichen                   | Land covered by mosses and/or lichens, often in polar or high-altitude regions.|
+
+Table: ESA WorldCover (10 m resolution global land cover map) categories
+:::
 
 ### Albedo change by (original) surface type
 
-Is it possible to assess and quantify the albedo change by surface type? 
+@cescatti2012intercomparison provides a list of aggregated albedo values per surface type based on MODIS.
+
+| Surface type                      | Description                                    | Mean yearly albedo (broadband 300-2800 nm) |
+| --------------------------------- | ---------------------------------------------- | ------------------------------------------ |
+| EBF (Evergreen Broadleaf Forest)  | Tropical evergreen broadleaf forests           | ~ 0.13                                     |
+| ENF (Evergreen Needleleaf Forest) | Boreal/temperate evergreen needle‑leaf forests | ~ 0.11                                     |
+| DBF (Deciduous Broadleaf Forest)  | Temperate deciduous broadleaf forests          | ~ 0.14                                     |
+| MF (Mixed Forest)                 | Mixed broadleaf & needleleaf forests           | ~ 0.13                                     |
+| WSA (Woody Savanna)               | Woody savanna landscapes                       | ~ 0.18                                     |
+| SAV (Savanna)                     | Grass/savanna open woody vegetation            | ~ 0.21                                     |
+| GRA (Grassland)                   | Natural grasslands                             | ~ 0.22                                     |
+| CRO (Cropland)                    | Annual croplands                               | ~ 0.23                                     |
+
+TBD: Need deserts, ice and snow 
 
 ## LCA integration (research question 3)
 
