@@ -69,11 +69,13 @@ One of the earliest studies examining the environmental impacts of photovoltaic 
 
 *  @xu2024global performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter. 
 
-Two related aspects are worth mentioning:
+Several related aspects are worth mentioning:
 
 *  @gul2018enhancement examine the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
 
-*  @coimbra2025energy focus on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.
+*  @coimbra2025energy focus on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants. 
+
+* @barron2016photovoltaic investigated the same topic and found that PV farms induce a “heat island” effect when lowering the terrestrial albedo from ~20% in natural deserts to ~5% over PV panels by installing a PV farm. Temperatures were regularly 3–4 °C warmer than the surrounding wildlands at night.
 
 ## Albedo effects of PV installations per original surface
 
@@ -253,19 +255,21 @@ Three main research questions are explored:
 
 # Research plan
 
-The goal of the research plan presented in this section is to address the research questions defined in @sec-research-questions.
+The goal of the research plan presented in this section is to provide the theoretical foundation for addressing the research questions defined in @sec-research-questions.
 
 ## Methodology (research question 1)
 
+In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed.
+
 How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation?
 
-### Albedo measurement and environmental impact assessment
+### Albedo measurement and radiative forcing
 
 This chapter outlines the principles and methods used for measuring surface albedo, describes its relationship with radiative forcing, and discussed how to assess the related environmental impact.
 
-Albedo is defined as the ratio of reflected to incoming solar radiation: $\alpha =\frac{R_{out}}{R_{in}}$
+Albedo is defined as the ratio of reflected to incoming solar radiation: $\alpha =\frac{R_{reflected}}{R_{incoming}}$
 
-It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Ground-based albedo can be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage. Satellite remote sensing provides a spatially continuous means of estimating surface albedo. In this case, multi-spectral sensors record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared), and albedo can then be derived by applying weighted linear combinations of these reflectance values.
+It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Ground-based albedo can be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage. Satellite remote sensing provides a spatially continuous means of estimating surface albedo, which will be further described in @sec-satellite-data-aquisition.
 
 Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report by @IPCC_AR6_WGI_Chapter7_2021 assessed the contributions as presented in @tbl-ipcc below:
 
@@ -286,7 +290,7 @@ Radiative forcing (RF) is generally measured in measured in watts per square met
 Table: IPCC AR6 report table 7.15
 :::
 
-Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes, since bright surfaces are replaced by darker ones. Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). @tbl-ipcc revealed that the overall land use change related albedo change has a cooling effect.
+Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes, since bright surfaces are replaced by darker ones. Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). @tbl-ipcc contextualizes the radiative forcing resulting from overall land-use-change-related albedo changes, showing that, when considering all land-use changes (not just PV-related), the net effect of these albedo changes is cooling.
 
 The radiative forcing impact $\Delta F$ caused by an albedo change $\Delta \alpha$ can be approximated as:
 
@@ -294,15 +298,19 @@ $$\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4$$
 
 where the solar constant $S$ is equal to ~$1361 W m^{−2}$ and the planetary albedo $A$ amounts to ~$0.3$ (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (because of increased reflectivity), while positive values indicate warming (because of decreased reflectivity).
 
-### Data aquisition
+TBD: What is black-sky (direct) and white-sky (diffuse) albedo
 
-Satellites and data sets mentioned in the literature study.
+### Satellite data aquisition {#sec-satellite-data-aquisition}
+
+Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
+
+Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
 
 ### Spatial and temporal data aggregation
 
-What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data?
+There is generally a lot of inherent noise found in satellite-derived data due to varying weather conditions and cloud cover.
 
-The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g. due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
+Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
 
 ### Seasonality
 
@@ -312,13 +320,13 @@ Is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant fa
 
 How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
 
-### Original surface identification
+### Surface identification
 
-Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? 
+Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Can we detect PV panels? 
 
-### Albedo change by original surface type
+### Albedo change by (original) surface type
 
-Is it possible to assess and quantify the albedo change by original surface type? 
+Is it possible to assess and quantify the albedo change by surface type? 
 
 ## LCA integration (research question 3)
 
@@ -328,19 +336,19 @@ To include RF in an LCA, it is necessary to translate the RF value into a compar
 
 ### Trust in data sources
 
-The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
+The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
 
-### Dealing with uncertainty
+### Dealing with data uncertainty
 
 # Project plan for case study
 
+Agri-PV installation at Campus Grüntal
+
 In this section, a detailed research project plan for the suggested case study will be presented, together with project milestones and a time plan.
 
-* Find out if we can get the relevant satellite data before and after the agri-PV installation at Campus Grüntal.
+* Find out if we can get the relevant satellite data before and after
 
-* Functional unit definition
-
-* Lay out if and how we can do it in an automated way for a larger amount of data.
+LCA format: Goal and scope, Functional unit definition, ...
 
 ## Project milestones and time plan
 
@@ -367,7 +375,7 @@ Topics:
 
 # Appendix
 
-## Overview: Satellite data for earth observation
+## Overview: Satellite data for earth observation  {#sec-satellite-data}
 
 This chapter provides an introduction to satellites that provide observational data of the earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed. 
 
@@ -428,6 +436,7 @@ Far more LEO satellites for earth observation than GEO satellites exist: around 
 | Sentinel-1 (A & B/C)        | open       | 5 – 20 m SAR                  | 6 days (combined)          |
 | Sentinel-2 (A, B & C)       | open       | 10 – 60 m multispectral       | 5 days (combined)          |
 | MODIS (Terra, Aqua)         | open       | 250 m – 1 km multispectral    | Daily                      |
+| VIIRS                       | open       | 375 m – 750 m multispectral   | Daily                      |
 | Biomass                     | open (*)   | 10 m P-band SAR               | Up to 16 orbits/day        |
 | Planet Labs                 | commercial | 3 – 5 m optical               | Daily                      |
 | Maxar WorldView             | commercial | 30 – 50 cm optical            | Up to 15 orbits/day       |
