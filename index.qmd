@@ -363,12 +363,14 @@ Table: ESA WorldCover (10 m resolution global land cover map) categories
 Table: Compiled list of typical albedo values per surface type
 :::
 
-
 ## LCA integration (research question 3)
 
-How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? 
+How can the satellite-derived albedo data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? 
 
 To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
+
+Regionalized LCI Modeling: A Framework for the Integration of Spatial Data in Life Cycle Assessment
+https://ideas.repec.org/h/spr/prochp/978-3-319-44711-7_18.html
 
 ### Trust in data sources
 
@@ -385,6 +387,8 @@ In this section, a detailed research project plan for the suggested case study w
 * Find out if we can get the relevant satellite data before and after
 
 LCA format: Goal and scope, Functional unit definition, ...
+
+LCA data quality indicators (DQI)
 
 ## Project milestones and time plan
 
