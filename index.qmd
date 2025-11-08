@@ -322,9 +322,7 @@ Since seasonality such as temporal snow cover and vegetation dynamics in the loc
 
 ## Original surface related considerations (research question 2)
 
-There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type.
-
-Surface identification via satellite image is a solved problem. For identifying the original surface there are several relevant datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in table @tbl-esa. 
+There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type. It turns out that both of these are solved problems. For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type based on satellite data (MODIS, Meteosat).
 
 ::: {#tbl-esa}
 | Class                             | Description                                                                    |
@@ -344,22 +342,27 @@ Surface identification via satellite image is a solved problem. For identifying 
 Table: ESA WorldCover (10 m resolution global land cover map) categories
 :::
 
-### Albedo change by (original) surface type
+::: {#tbl-albedo}
+| Surface type                | Mean yearly albedo | Source
+| --------------------------- | -------------------|------------------ 
+| Water                       | ~ 0.1              | @oke1987boundary
+| Evergreen Needleleaf Forest | ~ 0.11             | @cescatti2012intercomparison
+| Evergreen Broadleaf Forest  | ~ 0.13             | @cescatti2012intercomparison
+| Mixed Forest                | ~ 0.13             | @cescatti2012intercomparison
+| Deciduous Broadleaf Forest  | ~ 0.14             | @cescatti2012intercomparison
+| Buildings                   | ~ 0.1              | @oke1987boundary
+| Woody Savanna               | ~ 0.18             | @cescatti2012intercomparison
+| Savanna                     | ~ 0.21             | @cescatti2012intercomparison
+| Grassland                   | ~ 0.22             | @cescatti2012intercomparison
+| Cropland                    | ~ 0.23             | @cescatti2012intercomparison
+| Desert sand                 | ~ 0.4              | @tetzlaff1983albedo
+| Melting snow                | ~ 0.4              | @van2020evaluation
+| Older snow or firn          | ~ 0.7              | @van2020evaluation
+| Fresh, dry snow             | ~ 0.85             | @van2020evaluation
 
-@cescatti2012intercomparison provides a list of aggregated albedo values per surface type based on MODIS.
+Table: Compiled list of typical albedo values per surface type
+:::
 
-| Surface type                      | Description                                    | Mean yearly albedo (broadband 300-2800 nm) |
-| --------------------------------- | ---------------------------------------------- | ------------------------------------------ |
-| EBF (Evergreen Broadleaf Forest)  | Tropical evergreen broadleaf forests           | ~ 0.13                                     |
-| ENF (Evergreen Needleleaf Forest) | Boreal/temperate evergreen needle‑leaf forests | ~ 0.11                                     |
-| DBF (Deciduous Broadleaf Forest)  | Temperate deciduous broadleaf forests          | ~ 0.14                                     |
-| MF (Mixed Forest)                 | Mixed broadleaf & needleleaf forests           | ~ 0.13                                     |
-| WSA (Woody Savanna)               | Woody savanna landscapes                       | ~ 0.18                                     |
-| SAV (Savanna)                     | Grass/savanna open woody vegetation            | ~ 0.21                                     |
-| GRA (Grassland)                   | Natural grasslands                             | ~ 0.22                                     |
-| CRO (Cropland)                    | Annual croplands                               | ~ 0.23                                     |
-
-TBD: Need deserts, ice and snow 
 
 ## LCA integration (research question 3)
 
