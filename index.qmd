@@ -338,7 +338,7 @@ LCA data quality indicators (DQI)
 
 ## Original surface related considerations (research question 2) {#sec-original-surface}
 
-There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type. It turns out that both of these are solved problems. For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type based on satellite data (MODIS, Meteosat).
+There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type. It turns out that both of these are solved problems. For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories provided are described in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type based on satellite data (MODIS, Meteosat) together with a reference for each value.
 
 ::: {#tbl-esa}
 | Class                             | Description                                                                    |
@@ -385,13 +385,14 @@ How can the satellite-derived albedo data be incorporated into LCAs in a methodo
 
 To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
 
+TBD: there is a lot more to this
+
 # Project plan for LCA case study
 
 In this section, a detailed research project plan for the suggested case study will be presented, together with project milestones and a time plan.
 
 Agri-PV installation at Campus Grüntal
 * Find out if we can get the relevant satellite data before and after
-
 
 ## Goal and Scope
 
@@ -413,14 +414,12 @@ Agri-PV installation at Campus Grüntal
 
 * Validation
 
+
+<!--
 ## Resources
 
 * GeoAI Tutorial 13: Train a Deep Learning Model for Detecting Solar Panels
 https://www.youtube.com/watch?v=_OmkNfcO7VU (https://opengeoai.org/)
-
-<!--
-Topics:
-
 
 -->
 
@@ -430,7 +429,7 @@ Topics:
 
 This chapter provides an introduction to satellites that provide observational data of the earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed. 
 
-::: {.table #tbl-methods caption="Methods for sensing"}
+::: {.table #tbl-methods}
 
 | Method                                 | Key feature           | Works at night | Cloud penetrating |
 | -------------------------------------- | --------------------- | -------------- | ----------------- |
@@ -438,6 +437,7 @@ This chapter provides an introduction to satellites that provide observational d
 | Thermal Infrared (IR)                  | Detects heat          | Yes            | No                |
 | Synthetic Aperture Radar (SAR)         | Uses radar            | Yes            | Yes               |
 
+Table: Methods for sensing
 :::
 
 There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in @tbl-methods. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e. heat, emitted from the earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.
@@ -456,7 +456,7 @@ Each of these orbital satellite types serves different purposes. The satellite o
 
 Observational Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensated by providing high temporal resolution. @tbl-geo-satellites provides an overview of the existing GEO satellites, their operators, the regions covered, the type of access and, if relevant, the license that the data is available under. 
 
-::: {.table #tbl-geo-satellites caption="GEO satellites overview"}
+::: {.table #tbl-geo-satellites}
 
 | Satellite / Series                             | Operator / Agency    | Region Covered                 | Licensing                                     |
 | ---------------------------------------------- | -------------------- | ------------------------------ |---------------------------------------------- |
@@ -467,6 +467,7 @@ Observational Geostationary Earth Orbit satellites provide continuous, real-time
 | Fengyun series (FY-2, FY-4)                    | CMA (China)          | Asia-Pacific region            | Restricted access for partners                |
 | Electro-L series                               | Russian Space Agency | Russia, Europe, parts of Asia  | Limited public access                         |
 
+Table: GEO satellites overview
 :::
 
 The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides comparable numbers of optical, near-infrared and infrared channels.
@@ -479,7 +480,7 @@ To summarize, GEO satellites for earth observation are most helpful for high-fre
 
 Far more LEO satellites for earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. @tbl-leo-satellites provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. Note that some providers have more than one satellite on offer. In these cases only the one with the highest resolution and revisit frequency is listed. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.
 
-::: {.table #tbl-leo-satellites caption="LEO satellites overview"}
+::: {.table #tbl-leo-satellites}
 
 | Satellite / provider        | Access     | Resolution                    | Revisit Frequency          |
 | --------------------------- | -----------| ----------------------------- | -------------------------- |
@@ -498,6 +499,7 @@ Far more LEO satellites for earth observation than GEO satellites exist: around 
 | FireSat                     | commercial | 5 m thermal IR                | 30 minutes (*)             |
 | OroraTech                   | commercial | Variable thermal IR           | 30 minutes (*)             |
 
+Table: LEO satellites overview
 :::
 
 <!-- 
