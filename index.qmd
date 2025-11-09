@@ -119,6 +119,8 @@ Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geog
 
 @itten2023remote explored how remote sensing data from satellites can support and partly replace company-provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use change (most recently by @jian2025highly), biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
+@reinhard2016regionalized provides a case study for integrating regionalized life cycle inventory modeling in LCAs based on rapeseed cultivation in Germany based on rasterized inventory data with a resolution of one kilometer based the ethodological guidelines for the life cycle inventory of agricultural products developed by @nemecek2014.
+
 ### Relevant datasets for surface albedo
 
 @roccetti2024hamster provide a dataset for surface albedo based on the MODIS Surface Reflectance Black-Sky Albedo dataset (see @schaaf2021modis) and principal component analysis (PCA) as described by @hotelling1933pca.
@@ -328,6 +330,12 @@ Since seasonality such as temporal snow cover and vegetation dynamics in the loc
 
 ### Data validation
 
+The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
+
+TBD: a lot more to say
+
+LCA data quality indicators (DQI)
+
 ## Original surface related considerations (research question 2) {#sec-original-surface}
 
 There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type. It turns out that both of these are solved problems. For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type based on satellite data (MODIS, Meteosat).
@@ -377,26 +385,21 @@ How can the satellite-derived albedo data be incorporated into LCAs in a methodo
 
 To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
 
-Regionalized LCI Modeling: A Framework for the Integration of Spatial Data in Life Cycle Assessment
-https://ideas.repec.org/h/spr/prochp/978-3-319-44711-7_18.html
-
-### Trust in data sources TBD maybe move to earlier
-
-The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
-
-### Dealing with data uncertainty (sensitivity analysis)
-
-# Project plan for case study
-
-Agri-PV installation at Campus Grüntal
+# Project plan for LCA case study
 
 In this section, a detailed research project plan for the suggested case study will be presented, together with project milestones and a time plan.
 
+Agri-PV installation at Campus Grüntal
 * Find out if we can get the relevant satellite data before and after
 
-LCA format: Goal and scope, Functional unit definition, ...
 
-LCA data quality indicators (DQI)
+## Goal and Scope
+
+## Functional unit definition
+
+## System diagramm
+
+### Dealing with data uncertainty (sensitivity analysis)
 
 ## Project milestones and time plan
 
