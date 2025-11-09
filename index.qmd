@@ -26,7 +26,7 @@ Remote sensing, in particular satellite-based earth observation (EO), provides e
 
 A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV panels and open ground PV installations in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-The structure of the project work is as follows. Following the introduction, a review of existing literature on the incorporation of albedo changes into LCA, as well as the use of remote sensing based metrics to support this integration, will be presented. The central contribution of the work will be the design of a detailed research project plan including methodological steps, project milestones, and a time plan. For the interested reader, the appendix provides introductory overviews of life cycle assessment and satellite-based earth observation for readers seeking background information on these topics.
+The structure of this project work is as follows. Following the introduction, a review of existing literature is presented, focusing on how albedo changes are incorporated into life cycle assessment (LCA) and how remote sensing–based metrics can support this integration. This is followed by the formulation of the research questions. Subsequently, a research plan outlining the methodological steps to address these questions is described. A detailed case study plan, including project milestones and a timeline, is then provided. Finally, for readers interested in additional background information, the appendix offers an introductory overview of satellite-based Earth observation.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -387,22 +387,24 @@ To include RF in an LCA, it is necessary to translate the RF value into a compar
 
 TBD: there is a lot more to this
 
-# Project plan for LCA case study
+# Project plan for LCA case study: Agri-PV installation at Campus Grüntal
 
 In this section, a detailed research project plan for the suggested case study will be presented, together with project milestones and a time plan.
 
-Agri-PV installation at Campus Grüntal
 * Find out if we can get the relevant satellite data before and after
-
-## Goal and Scope
-
-## Functional unit definition
-
-## System diagramm
 
 ### Dealing with data uncertainty (sensitivity analysis)
 
 ## Project milestones and time plan
+
+### Goal and Scope
+
+
+### Functional unit definition
+
+This is a dual use system for agriculture and energy production.
+
+### System boundaries and diagram
 
 * Methodology definition
 
