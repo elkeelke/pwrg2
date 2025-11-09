@@ -259,17 +259,39 @@ The goal of the research plan presented in this section is to provide the theore
 
 ## Methodology (research question 1)
 
-In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed.
+In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed. 
 
-TBD: The following steps are required: data selection (area of interest and reference area), albedo measurement, data aggregation, ... (make this a figure)
+![Conceptual framework for for assessing changes in surface albedo resulting from PV installations using satellite-derived data](img/PWRG 2 methodology.png){#fig-methodology fig-align="center" width="80%"}
+
+@fig-methodology provides an overview of the building blocks, some of which will be discussed in the remainder of this section. Note that satellite data selection is required for two areas: the area of interest and the reference area that will be compared against as the baseline. @sec-original-surface will discuss the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo. The albedo calculation will be performed based on the each data point provided by the satellite. After that, the result data will be aggregated spatially and temporally. After validating the aggregated result values, the albedo results have to translated to an impact metric for LCA integration. Impact assessment and LCA integration will be discussed in @sec-lca-integration.
+
+### Satellite data selection and retrieval
+
+Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
+
+To understand the change in albedo there are two options for comparison, either against the same spatial area before the PV farm was installed, or same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
+
+Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
+
+Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
+
+Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
+
+The selected data can then be downloaded for further processing and analysis. These datasets are typically large and are continuously updated over time. Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability. 
+
+### Satellite data filtering
+
+If any data points are faulty, they must be identified and removed. This step can be complex and should be carried out carefully, as it may affect the final results.
 
 ### Albedo measurement and radiative forcing
 
-This chapter outlines the principles and methods used for measuring surface albedo, describes its relationship with radiative forcing, and discussed how to assess the related environmental impact.
+This chapter outlines the principles and methods used for measuring surface albedo and describes its relationship with radiative forcing (TBD: why that). @sec-lca-integration will discuss how to translate the results into an assessment of the related environmental impact.
 
 Albedo is defined as the ratio of reflected to incoming solar radiation: $\alpha =\frac{R_{reflected}}{R_{incoming}}$
 
-It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Ground-based albedo can be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage. Satellite remote sensing provides a spatially continuous means of estimating surface albedo, which will be further described in @sec-satellite-data-aquisition.
+It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, color, and the angle of incoming solar radiation. Note that ground-based albedo could also be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage and therefore the satellite-based approach was preferred in this methodology.
+
+TBD: What is black-sky (direct) and white-sky (diffuse) albedo
 
 Radiative forcing (RF) is generally measured in measured in watts per square meter ($W m^{−2}$) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of green house gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report by @IPCC_AR6_WGI_Chapter7_2021 assessed the contributions as presented in @tbl-ipcc below:
 
@@ -298,29 +320,15 @@ $$\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4$$
 
 where the solar constant $S$ is equal to ~$1361 W m^{−2}$ and the planetary albedo $A$ amounts to ~$0.3$ (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of $\Delta F$ represent cooling (because of increased reflectivity), while positive values indicate warming (because of decreased reflectivity).
 
-TBD: What is black-sky (direct) and white-sky (diffuse) albedo
-
-### Satellite data aquisition {#sec-satellite-data-aquisition}
-
-Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
-
-Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
-
-Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
-
-### Spatial selection and temporal data aggregation
-
-The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels), or it can be based on defined location data.
+### Data aggregation
 
 Satellite-derived data generally contains significant inherent noise due to variable weather conditions and cloud cover, and also operational issues. Aggregating multiple observations spatially and temporally produces an average value, which reduces noise progressively as more data is combined. Consequently, the resulting estimates tend to be more stable for larger PV plants and over longer observation periods.
 
-To understand the change in albedo there are two options for comparison, either against the same spatial area before the PV farm was installed, or same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations.
-
-### Seasonality
-
 Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), unless there are no seasons in the location, the temporal aggregation window should be at least one year. This means that only PV plants that existing for longer than that period can be evaluated instantly.
 
-## Original surface related considerations (research question 2)
+### Data validation
+
+## Original surface related considerations (research question 2) {#sec-original-surface}
 
 There are two aspects related to original surface: surface detection, and the retrieval of related albedo values per surface type. It turns out that both of these are solved problems. For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories are listed in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type based on satellite data (MODIS, Meteosat).
 
@@ -363,7 +371,7 @@ Table: ESA WorldCover (10 m resolution global land cover map) categories
 Table: Compiled list of typical albedo values per surface type
 :::
 
-## LCA integration (research question 3)
+## LCA integration (research question 3) {#sec-lca-integration}
 
 How can the satellite-derived albedo data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? 
 
@@ -372,11 +380,11 @@ To include RF in an LCA, it is necessary to translate the RF value into a compar
 Regionalized LCI Modeling: A Framework for the Integration of Spatial Data in Life Cycle Assessment
 https://ideas.repec.org/h/spr/prochp/978-3-319-44711-7_18.html
 
-### Trust in data sources
+### Trust in data sources TBD maybe move to earlier
 
 The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
 
-### Dealing with data uncertainty
+### Dealing with data uncertainty (sensitivity analysis)
 
 # Project plan for case study
 
