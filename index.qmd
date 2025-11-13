@@ -141,6 +141,8 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 -   @manninen2022cloud describes a new method for cloud-correcting observations of black-sky surface albedo derived using the Advanced Very High Resolution Radiometer (AVHRR). Cloud cover constitutes a major challenge for surface albedo estimation using AVHRR data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.
 
+-   @geyer2010coupling1 presents an inventory modelling proof-of-concept approach for coupling GIS and LCA for biodiversity assessments of land use and applies it to a case study of ethanol production from agricultural crops in California, and a follow up for impact assessment in @geyer2010coupling2.
+
 ```{=html}
 <!-- 
 Groups:
@@ -335,6 +337,8 @@ Since seasonality such as temporal snow cover and vegetation dynamics in the loc
 ### Data validation
 
 The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
+
+What are the hurdles when using satellite data at scale for environmental monitoring?
 
 TBD: a lot more to say
 
