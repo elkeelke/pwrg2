@@ -43,6 +43,15 @@ Solar panels convert sunlight into both electrical energy and heat. Since PV ins
 
 The aim of this work is to devise a project plan to (1) quantify the impact of albedo changes associated with dark-colored PV installations and to (2) integrate this effect into life cycle assessments (LCAs) of photovoltaic systems. While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs.
 
+TBD Three main research questions are explored:
+
+1.  How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data? The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g. due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
+
+2.  How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
+
+3.  How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
+
+
 # Literature study
 
 Several research areas relate to this topic, including albedo effects in general, albedo effects of photovoltaic (PV) systems, the inclusion of albedo effects in life cycle assessment (LCA), and remote sensing applications for location-specific LCAs. This chapter provides an overview of existing studies in these fields that are relevant to the present work.
@@ -142,14 +151,6 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 -   @manninen2022cloud describes a new method for cloud-correcting observations of black-sky surface albedo derived using the Advanced Very High Resolution Radiometer (AVHRR). Cloud cover constitutes a major challenge for surface albedo estimation using AVHRR data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.
 
 -   @geyer2010coupling1 presents an inventory modelling proof-of-concept approach for coupling GIS and LCA for biodiversity assessments of land use and applies it to a case study of ethanol production from agricultural crops in California, and a follow up for impact assessment in @geyer2010coupling2.
-
-Three main research questions are explored:
-
-1.  How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data? The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g. due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.
-
-2.  How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are expected to be minor since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.
-
-3.  How can the satellite-derived data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of photovoltaic systems.
 
 # Materials and methods
 
@@ -366,6 +367,8 @@ The albedo change introduced by the system will be within the system boundaries.
 -->
 
 # Conclusion and Discussion
+
+Validation und Unsicherheiten
 
 # Appendix
 
