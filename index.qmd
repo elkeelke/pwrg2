@@ -395,13 +395,15 @@ To include RF in an LCA, it is necessary to translate the RF value into a compar
 
 TBD: there is a lot more to this
 
-# Project plan for LCA case study: Agri-PV installation at Campus Grüntal
+# LCA case study: Agri-PV installation at Campus Grüntal
 
 In this section, a detailed research project plan for the suggested LCA case study will be presented, together with project milestones and a time plan. This work focuses on developing the planning for the LCA following the four main interlinked phases as defined in [@ISO14040] and [@ISO14044]. The assessment itself will not be carried out but only planned. If there are any relevant constraints to follow for the person carrying out the task, these will be noted in the work package description.
 
 ![Agri-PV at Campus Grüntal in Wädenswil (Switzerland). Source: ZHAW.](img/agripv.png){#fig-agripv fig-align="center" width="90%"}
 
 The subject of the LCA is the Agri-PV installation at Campus Grüntal in Wädenswil (Switzerland) pictured in @fig-agripv. It is a research site that combines agricultural production with photovoltaic electricity generation in the same land area. Through this integration, the project explores how partial shading, modified microclimate, and tracking behaviour affect crop yields, irrigation demand, soil characteristics and biodiversity—while at the same time contributing renewable electricity (see @baumgartner2025agripv). Covering approximately 2.000 m², the system comprises more than 200 solar modules with a nominal capacity of roughly 150 kWp and is expected to produce 225.000 kWh of electricity per year, which is roughly equivalent to the annual consumption of 45 single-family homes (see @zhaw2025agriPV).
+
+<!--
 
 ## Milestone 1: Goal and Scope
 
@@ -439,8 +441,6 @@ The albedo change introduced by the system will be within the system boundaries.
 
 ## Milestone 2: Life Cycle Inventory (LCI) Analysis
 
-<!--
-
 -   Find out if we can get the relevant satellite data before and after
 
 -   Methodology definition
@@ -452,8 +452,6 @@ The albedo change introduced by the system will be within the system boundaries.
 -   Evaluation
 
 -   Validation
-
--->
 
 ## Milestone 3: Life Cycle Impact Assessment (LCIA)
 
@@ -475,6 +473,7 @@ The albedo change introduced by the system will be within the system boundaries.
 : Work packages and time estimates
 :::
 
+-->
 
 ```{=html}
 <!--
