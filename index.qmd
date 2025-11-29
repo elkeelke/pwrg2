@@ -37,12 +37,11 @@ Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g.
 
 Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance. 
 
-TBD check existing data in Ecoinvent / Simapro
-
-
 Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service's life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach.
 
 Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived earth observation (EO) data is continuously collected and supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs.
+
+TBD check existing data in Ecoinvent / Simapro
 
 The aim of this work is to describe how to (1) quantify the environmental impact of albedo changes associated with dark-colored PV installations and (2) integrate it into life cycle assessments (LCAs) of photovoltaic systems. Three main research questions will be explored:
 
@@ -131,6 +130,8 @@ Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geog
 @itten2023remote explored how remote sensing data from satellites can support and partly replace company-provided data for scope 3 reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use change (most recently by @jian2025highly), biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.
 
 @reinhard2016regionalized provides a case study for integrating regionalized life cycle inventory modeling in LCAs based on rapeseed cultivation in Germany based on rasterized inventory data with a resolution of one kilometer based the ethodological guidelines for the life cycle inventory of agricultural products developed by @nemecek2014.
+
+@dorber2018modeling used satellite data to estimate the environmental impact from land use and land use change for hydropower reservoirs for application in LCAs. The study calculated an average net land occupation for water storage reservoirs in Norway, with an adjustment to account for the natural lakes that were often part of the reservoir's area before impoundment, for a more comprehensive evaluation of the overall environmental footprint of hydroelectric power. 
 
 ### Relevant datasets for surface albedo
 
