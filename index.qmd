@@ -376,9 +376,9 @@ LCA data quality indicators (DQI)
 
 # Appendix
 
-## Meeting notes
+## Project organization
 
-Meeting notes can be found in this [document](https://docs.google.com/document/d/1VU0kbmwIUlZccU_cYHZRlxYZlabygCJDcqKL89btGjQ/edit?tab=t.0) (access upon request).
+Meeting notes can be found in this [document](https://docs.google.com/document/d/1VU0kbmwIUlZccU_cYHZRlxYZlabygCJDcqKL89btGjQ/edit?tab=t.0) (access upon request). The time plan for the project can be found in this [document](https://docs.google.com/spreadsheets/d/1tMAxxHvsHJsqjUZ7jw08sTwZ_VDRYiV4cWMNbbDzMaw/edit?gid=1314943303#gid=1314943303) (access upon request)
 
 ## Overview: Satellite data for earth observation {#sec-satellite-data}
 
