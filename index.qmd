@@ -37,11 +37,9 @@ Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g.
 
 Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance. 
 
-Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service's life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach.
+Life Cycle Assessment (LCA) as defined in [@ISO14040] and [@ISO14044] is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service's life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Typically the data originates from databases with collected background data such as ecoinvent [@ecoinvent2023]. However, the data required to assess albedo-related effects, such as surface reflectance and related radiative forcing contributions, is not included in ecoinvent or other comparable LCI databases, and albedo-related effects for PV installation are currently not included. 
 
 Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the earth's surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived earth observation (EO) data is continuously collected and supports a wide range of applications, from climate modeling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. While ISO14040 [@ISO14040] provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in LCAs.
-
-TBD check existing data in Ecoinvent / Simapro
 
 The aim of this work is to describe how to (1) quantify the environmental impact of albedo changes associated with dark-colored PV installations and (2) integrate it into life cycle assessments (LCAs) of photovoltaic systems. Three main research questions will be explored:
 
@@ -157,7 +155,21 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 # Materials and methods
 
-@sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo. @sec-remote-sensing describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. @sec-lca-integration discusses how to translate the resulting data and numbers into an environmental impact assessment, and how to include these results in LCAs. 
+@sec-remote-sensing describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. @sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo.  @sec-lca-integration discusses how to translate the resulting data and numbers into an environmental impact assessment, and how to include these results in LCAs. 
+
+## Remote sensing {#sec-remote-sensing}
+
+Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
+
+To understand the amount of change in albedo (delta) there are two options for comparison, either (1) against the same spatial area before the PV farm was installed, or (2) against a same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
+
+Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
+
+Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
+
+Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
+
+The selected data can then be downloaded for further processing and analysis. These datasets are typically large and are continuously updated over time. Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.
 
 ## Albedo measurement and radiative forcing {#sec-albedo}
 
@@ -234,24 +246,10 @@ For identifying the original surface there are several relevant satellite-based 
 : Compiled list of typical albedo values per surface type
 :::
 
-## Remote sensing {#sec-remote-sensing}
-
-Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
-
-To understand the amount of change in albedo (delta) there are two options for comparison, either (1) against the same spatial area before the PV farm was installed, or (2) against a same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
-
-Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
-
-Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
-
-Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
-
-The selected data can then be downloaded for further processing and analysis. These datasets are typically large and are continuously updated over time. Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.
-
-
 ## LCA integration {#sec-lca-integration}
 
-TBD delta / before and after
+
+Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach. 
 
 If any data points are faulty, they must be identified and removed. This step can be complex and should be carried out carefully, as it may affect the final results.
 
