@@ -161,7 +161,7 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
 
-To understand the amount of change in albedo (delta) there are two options for comparison, either (1) against the same spatial area before the PV farm was installed, or (2) against a same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
+Satellite-derived data inherently contains significant noise due to variable weather conditions, cloud cover, and operational factors. To quantify the change in albedo (Δα), two comparison approaches can be used: (1) comparing the PV farm area with itself prior to installation, or (2) comparing it with a nearby reference area of the same size and surface characteristics as the original land replaced by the PV installation. The second approach is preferable, as the data points from both areas are subject to the same weather conditions and operational influences, whereas in the before-and-after scenario, the temporal conditions differ.
 
 Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
 
@@ -205,7 +205,7 @@ where the solar constant $S$ is equal to \~$1361 W m^{−2}$ and the planeta
 
 ## Original surface detection and related albedo values {#sec-original-surface}
 
-For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on Sentinel data and provides the surface type for each 10x10 meter square globally. The surface categories provided are described in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type derived from on satellite data (MODIS, Meteosat) together with a reference to the origin for each value.
+For identifying the original surface there are several relevant satellite-based datasets such as @Zanaga2022_WorldCover2021v200, which is based on aggregated Sentinel data from 2021. It provides the surface type for each 10x10 meter square globally. The surface categories provided are described in @tbl-esa. @tbl-albedo provides a list of aggregated albedo values per surface type derived from on satellite data (MODIS, Meteosat) together with a reference to the origin for each value.
 
 ::: {#tbl-esa}
 | Class | Description |
@@ -248,29 +248,21 @@ For identifying the original surface there are several relevant satellite-based 
 
 ## LCA integration {#sec-lca-integration}
 
-*How can the satellite-derived albedo data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?*
+This section describes how to incorporate the satellite-derived albedo data be into LCAs in a methodologically sound manner. @fig-methodology provides an overview of the steps required for LCA integration.
 
-Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach. 
+![Methodology for data integration in LCA](img/PWRG 2 methodology.png){#fig-methodology fig-align="center" width="80%"}
 
-If any data points are faulty, they must be identified and removed. This step can be complex and should be carried out carefully, as it may affect the final results.
+As described in @sec-remote-sensing, the relevant data for the area of interest (AoI) and the reference area (RA) will be selected, retrieved, and filtered. This data builds the base for calculating the albedo values as described in @sec-albedo per minimally supported geographical square (pixel) from the relevant satellite bands. This calculation is satellite specific since it is based on the bands provided. Relevant formulas are provided in @liang2001narrowband. The next step is to aggregate all the per-pixel data for each pixel, and then build an average for the whole area (AoI or RA). This step reduces noise progressively as more data is combined. Consequently, the resulting estimates will be more stable for larger PV plants and over longer observation periods. The outcome of are two albedo values for the area of interest and the reference area, which build the base for delta calculation of the albedo change. This can then be converted into radiatice forcing as described in @sec-albedo. The last step is to convert into an impact factor. To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as GWP100 CO₂-equivalent emissions (CO₂eq).
 
-In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed.
+Note that the suggested approach is only applicable for PV farms that are already installed. Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), unless there are no seasons in the location, the temporal aggregation window should be at least one year. This means that only PV plants that existing for longer than that period can be evaluated instantly.
 
-![Conceptual framework for for assessing changes in surface albedo resulting from PV installations using satellite-derived data](img/PWRG%202%20methodology.png){#fig-methodology fig-align="center" width="80%"}
+Much better to provide more general data.
 
-@fig-methodology provides an overview of the building blocks, some of which will be discussed in the remainder of this section. Note that satellite data selection is required for two areas: the area of interest and the reference area that will be compared against as the baseline. 
+Use ESA World cover for Sentinel data original surface. minimal pixel for each 10x10 meter square globally. 
 
-The albedo calculation will be performed based on the each data point provided by the satellite. After that, the result data will be aggregated spatially and temporally. After validating the aggregated result values, the albedo results have to translated to an impact metric for LCA integration. 
+LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. To enabling its authoritative use in environmental impact assessments of solar energy systems the factor should best be published by TBD
 
-
-To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
-
-
-### Data aggregation
-
-Satellite-derived data generally contains significant inherent noise due to variable weather conditions and cloud cover, and also operational issues. Aggregating multiple observations spatially and temporally produces an average value, which reduces noise progressively as more data is combined. Consequently, the resulting estimates tend to be more stable for larger PV plants and over longer observation periods.
-
-Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), unless there are no seasons in the location, the temporal aggregation window should be at least one year. This means that only PV plants that existing for longer than that period can be evaluated instantly.
+High spatial variability intrinsic to environmental phenomena can not be captured with this approach. 
 
 <!--
 
