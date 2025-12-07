@@ -155,7 +155,7 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 # Materials and methods
 
-@sec-remote-sensing describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. @sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo.  @sec-lca-integration discusses how to translate the resulting data and numbers into an environmental impact assessment, and how to include these results in LCAs. 
+@sec-remote-sensing describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. @sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo.  @sec-lca-integration discusses how to translate the resulting data into an environmental impact assessment, and how to include these results in LCAs. 
 
 ## Remote sensing {#sec-remote-sensing}
 
@@ -248,6 +248,7 @@ For identifying the original surface there are several relevant satellite-based 
 
 ## LCA integration {#sec-lca-integration}
 
+*How can the satellite-derived albedo data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?*
 
 Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete. LCA methodologies often rely on aggregated impact factors, which can be globalized or regionalized. High spatial variability intrinsic to environmental phenomena can not be captured with this approach. 
 
@@ -261,11 +262,9 @@ In this section, the conceptual framework for assessing changes in surface albed
 
 The albedo calculation will be performed based on the each data point provided by the satellite. After that, the result data will be aggregated spatially and temporally. After validating the aggregated result values, the albedo results have to translated to an impact metric for LCA integration. 
 
-*How can the satellite-derived albedo data be incorporated into LCAs in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems?*
 
 To include RF in an LCA, it is necessary to translate the RF value into a comparable impact metric, such as CO₂-equivalent emissions (CO₂eq).
 
-TBD: there is a lot more to this
 
 ### Data aggregation
 
