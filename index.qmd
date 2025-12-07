@@ -256,7 +256,10 @@ As described in @sec-remote-sensing, the relevant data for the area of interest 
 
 Note that the suggested approach is only applicable for PV farms that are already installed. Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), unless there are no seasons in the location, the temporal aggregation window should be at least one year. This means that only PV plants that existing for longer than that period can be evaluated instantly.
 
-Given these constraints, a more practical approach is to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. Although this approach cannot capture the high spatial variability inherent to environmental conditions (e.g., sun angle, climate, surrounding environment) or PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface, as described in @sec-original-surface, is expected to result in a reasonable estimate.
+Given these constraints, a more practical approach is to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. Although this approach cannot capture the high spatial variability inherent to environmental conditions (e.g., sun angle, climate, surrounding environment) or PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface, as described in @sec-original-surface, is expected to result in a reasonable estimate. This approach is depicted in @fig-methodology-high.
+
+![Methodology for generalized data integration in LCA](PWRG 2 methodology high level.png.png){#fig-methodology-high fig-align="center" width="70%"}
+TBD: PV panel albedo estimate.
 
 To enabling its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels.
 
