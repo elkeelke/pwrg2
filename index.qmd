@@ -151,13 +151,13 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 -   @tran2023uncertainty reviewed 676 papers (2011–2021) on uncertainty assessment of remote sensing-based evapotranspiration (RS-ET), categorizing them by methods, context, and reporting metrics. They found that assessments are inconsistent in methodology, reference data, geographic coverage, and uncertainty reporting. The study recommends that future work should clearly document validation context, reference data uncertainties, spatial and temporal mismatches, and report multiple performance metrics.
 
--   @manninen2022cloud describes a new method for cloud-correcting observations of black-sky surface albedo derived using the Advanced Very High Resolution Radiometer (AVHRR). Cloud cover constitutes a major challenge for surface albedo estimation using AVHRR data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.
+-   @manninen2022cloud describe a new method for cloud-correcting observations of black-sky surface albedo derived using the Advanced Very High Resolution Radiometer (AVHRR). Cloud cover constitutes a major challenge for surface albedo estimation using AVHRR data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.
 
--   @geyer2010coupling1 presents an inventory modelling proof-of-concept approach for coupling GIS and LCA for biodiversity assessments of land use and applies it to a case study of ethanol production from agricultural crops in California, and a follow up for impact assessment in @geyer2010coupling2.
+-   @geyer2010coupling1 present an inventory modelling proof-of-concept approach for coupling GIS and LCA for biodiversity assessments of land use and applies it to a case study of ethanol production from agricultural crops in California, and a follow up for impact assessment in @geyer2010coupling2.
 
 # Materials and methods
 
-@sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo. There are two aspects: surface detection, and the retrieval of related albedo values per surface type. @sec-remote-sensing describes how to retrieve the relevant satellite data. @sec-lca-integration discusses how to translate the resulting numbers into an assessment of the related environmental impact and how to include them in LCAs. 
+@sec-albedo outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. @sec-original-surface discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo. @sec-remote-sensing describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. @sec-lca-integration discusses how to translate the resulting data and numbers into an environmental impact assessment, and how to include these results in LCAs. 
 
 ## Albedo measurement and radiative forcing {#sec-albedo}
 
@@ -236,11 +236,9 @@ For identifying the original surface there are several relevant satellite-based 
 
 ## Remote sensing {#sec-remote-sensing}
 
-### Satellite data selection and retrieval
-
 Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
 
-TBD make this very visible somewhere: To understand the change in albedo there are two options for comparison, either against the same spatial area before the PV farm was installed, or same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
+To understand the amount of change in albedo (delta) there are two options for comparison, either (1) against the same spatial area before the PV farm was installed, or (2) against a same-sized reference area with a surface very similar to the original surface that was replaced by the PV plant. The latter is required for cases where no data from before the PV plant was installed can be found. It has the benefit that it allows to aggregate using the exact same temporal constraints (and likely operational issues if any), unlike in the before and after scenario. However there is also the downside that there might be other differences between the locations. The relevant satellite data for the relevant time frames for the chosen spatial areas of interest must the acquired.
 
 Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
 
@@ -250,13 +248,12 @@ Other satellite types provide higher spatial resolution and therefore also suppo
 
 The selected data can then be downloaded for further processing and analysis. These datasets are typically large and are continuously updated over time. Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.
 
-### Satellite data filtering
-
-If any data points are faulty, they must be identified and removed. This step can be complex and should be carried out carefully, as it may affect the final results.
 
 ## LCA integration {#sec-lca-integration}
 
 TBD delta / before and after
+
+If any data points are faulty, they must be identified and removed. This step can be complex and should be carried out carefully, as it may affect the final results.
 
 In this section, the conceptual framework for assessing changes in surface albedo resulting from PV installations using satellite-derived remote sensing data is developed.
 
