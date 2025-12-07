@@ -161,15 +161,15 @@ The accuracy of satellite-derived data is crucial. Many scientific publications 
 
 Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g. a deep learning model for detecting solar panels, in which case the retrieval step will be performed first), or it can be based on defined location data.
 
-Satellite-derived data inherently contains significant noise due to variable weather conditions, cloud cover, and operational factors. To quantify the change in albedo (Δα), two comparison approaches can be used: (1) comparing the PV farm area with itself prior to installation, or (2) comparing it with a nearby reference area of the same size and surface characteristics as the original land replaced by the PV installation. The second approach is preferable, as the data points from both areas are subject to the same weather conditions and operational influences, whereas in the before-and-after scenario, the temporal conditions differ.
+Satellite-derived data inherently contains significant noise due to variable weather conditions, cloud cover, and operational factors. To quantify the change in albedo (delta), two comparison approaches can be used: (1) comparing the PV farm area with itself prior to installation, or (2) comparing it with a nearby reference area of the same size and surface characteristics as the original land replaced by the PV installation. The second approach is preferable, as the data points from both areas are subject to the same weather conditions and operational influences, whereas in the before-and-after scenario, the temporal conditions differ which would influence the results to a large extent.
 
-Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
+Many satellites provide relevant data (see @sec-satellite-data for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum square pixel size available) required, which depends on the use case. It's also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.
 
 Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.
 
 Other satellite types provide higher spatial resolution and therefore also support smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).
 
-The selected data can then be downloaded for further processing and analysis. These datasets are typically large and are continuously updated over time. Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.
+The selected data can then be downloaded for further processing and analysis. These datasets are typically very large and are continuously updated over time (e.g. every 10 minutes). Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.
 
 ## Albedo measurement and radiative forcing {#sec-albedo}
 
@@ -248,7 +248,11 @@ For identifying the original surface there are several relevant satellite-based 
 
 ## LCA integration {#sec-lca-integration}
 
-This section describes how to incorporate satellite-derived surface albedo change data into LCAs in a methodologically sound manner. @fig-methodology provides an overview of the steps required for LCA integration for PV site specific data.
+This section describes how to incorporate satellite-derived surface albedo change data into LCAs in a methodologically sound manner. Two potential approaches are described: PV site specific data, and generalized data.
+
+### PV site specific data
+
+@fig-methodology provides an overview of the steps required for LCA integration for PV site specific data.
 
 ![Methodology for PV site specific data integration in LCA](img/PWRG 2 methodology.png){#fig-methodology fig-align="center" width="70%"}
 
@@ -260,11 +264,11 @@ The outcome of the aggregation are two average albedo values for the area of int
 
 Note that the suggested approach is only applicable for PV farms that are already installed, because the relevant satellite data will not exist otherwise. Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), the temporal aggregation window should be at least one year. This means that only PV plants that already exist for longer than that period can be evaluated instantly, which is a significant limitation.
 
+### Generalized data
+
+Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enabling its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface, as described in @sec-original-surface, is expected to result in a reasonable estimate. This approach is depicted in @fig-m-high. It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors.
+
 ![Methodology for generalized data integration in LCA](img/PWRG 2 methodology high level.png){#fig-m-high fig-align="center" width="70%"}
-
-Given these constraints, a more practical approach is to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enabling its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface, as described in @sec-original-surface, is expected to result in a reasonable estimate. This approach is depicted in @fig-m-high.
-
-TBD: PV panel albedo estimate.
 
 <!--
 
@@ -349,6 +353,8 @@ The albedo change introduced by the system will be within the system boundaries.
 # Conclusion and Discussion
 
 Validation und Unsicherheiten
+
+TBD: PV panel albedo estimate.
 
 ## Data validation
 
