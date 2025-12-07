@@ -250,7 +250,7 @@ For identifying the original surface there are several relevant satellite-based 
 
 This section describes how to incorporate satellite-derived surface albedo change data into LCAs in a methodologically sound manner. Two potential approaches are described: PV site specific data, and generalized data.
 
-### PV site specific data
+### PV site specific data {#sec-lca-integration-pv-specific}
 
 @fig-methodology provides an overview of the steps required for LCA integration for PV site specific data.
 
@@ -266,9 +266,11 @@ Note that the suggested approach is only applicable for PV farms that are alread
 
 ### Generalized data
 
-Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enabling its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface, as described in @sec-original-surface, is expected to result in a reasonable estimate. This approach is depicted in @fig-m-high. It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors.
+Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enable its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface is expected to result in a reasonable generalized estimate.  It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors. @fig-m-high depicts how to implement this approach for the given use case.
 
 ![Methodology for generalized data integration in LCA](img/PWRG 2 methodology high level.png){#fig-m-high fig-align="center" width="70%"}
+
+In this case, the original surface can either be identified using processed satellite data such as the ESA WorldCover described in @sec-original-surface. The estimate for the albedo for PV panels and for the original surfaces will be gathered from literature study as already compiled in @sec-original-surface. Calculating the delta and conversion into an impact factor will use the same approach already described in @sec-lca-integration-pv-specific.
 
 <!--
 
@@ -355,6 +357,8 @@ The albedo change introduced by the system will be within the system boundaries.
 Validation und Unsicherheiten
 
 TBD: PV panel albedo estimate.
+
+Generalized approach should be fine since we already know from the literature study that the impact is not large
 
 ## Data validation
 
