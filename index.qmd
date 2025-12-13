@@ -231,6 +231,7 @@ For identifying the original surface there are several relevant satellite-based 
 | Water | \~ 0.1 | @oke1987boundary |
 | Buildings | \~ 0.1 | @oke1987boundary |
 | PV panels | \~ 0.1 | @ArgonneSolarEIS2012 |
+| Asphalt | \~ 0.1 | @moretti2021effect |
 | Evergreen Needleleaf Forest | \~ 0.11 | @cescatti2012intercomparison |
 | Evergreen Broadleaf Forest | \~ 0.13 | @cescatti2012intercomparison |
 | Mixed Forest | \~ 0.13 | @cescatti2012intercomparison |
@@ -272,86 +273,6 @@ Given the constraints described for PV site specific data, a more practical appr
 ![Methodology for generalized data integration in LCA](img/PWRG 2 methodology high level.png){#fig-m-high fig-align="center" width="70%"}
 
 In this case, the original surface can either be identified using processed satellite data such as the ESA WorldCover described in @sec-original-surface. The estimate for the albedo for PV panels and for the original surfaces will be gathered from literature study as already compiled in @sec-original-surface. Calculating the delta and conversion into an impact factor will use the same approach already described in @sec-lca-integration-pv-specific.
-
-<!--
-
-# LCA case study: Agri-PV installation at Campus Grüntal
-
-In this section, a detailed research project plan for the suggested LCA case study will be presented, together with project milestones and a time plan. This work focuses on developing the planning for the LCA following the four main interlinked phases as defined in [@ISO14040] and [@ISO14044]. The assessment itself will not be carried out but only planned. If there are any relevant constraints to follow for the person carrying out the task, these will be noted in the work package description.
-
-![Agri-PV at Campus Grüntal in Wädenswil (Switzerland). Source: ZHAW.](img/agripv.png){#fig-agripv fig-align="center" width="90%"}
-
-The subject of the LCA is the Agri-PV installation at Campus Grüntal in Wädenswil (Switzerland) pictured in @fig-agripv. It is a research site that combines agricultural production with photovoltaic electricity generation in the same land area. Through this integration, the project explores how partial shading, modified microclimate, and tracking behaviour affect crop yields, irrigation demand, soil characteristics and biodiversity—while at the same time contributing renewable electricity (see @baumgartner2025agripv). Covering approximately 2.000 m², the system comprises more than 200 solar modules with a nominal capacity of roughly 150 kWp and is expected to produce 225.000 kWh of electricity per year, which is roughly equivalent to the annual consumption of 45 single-family homes (see @zhaw2025agriPV).
-
-## Milestone 1: Goal and Scope
-
-The following two work packages are included in this milestone.
-
-### WP 1.1: Goal definition
-
-This work package will define:
-
-*  Intended application and reasons for carrying out the study
-
-*  Target audience
-
-*  If the results will be used in comparative assertions disclosed to the public
-
-The reason for carrying out the study is the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV).
-
-### WP 1.2: Scope definition
-
-This work package will define:
-
-*  Functional unit definition
-
-*  System boundaries
-
-*  Allocation procedures (if required)
-
-*  Impact categories and assessment methods
-
-*  Documentation of assumptions and limitations
-
-*  Data requirements and quality
-
-The albedo change introduced by the system will be within the system boundaries. The functional unit definition for this project is complex because it is is a dual-use system for agriculture and energy production. However, for the subject of the current study it would be possible to focus only on the energy production part.
-
-## Milestone 2: Life Cycle Inventory (LCI) Analysis
-
--   Find out if we can get the relevant satellite data before and after
-
--   Methodology definition
-
--   Data acquisition
-
--   Data aggregation
-
--   Evaluation
-
--   Validation
-
-## Milestone 3: Life Cycle Impact Assessment (LCIA)
-
-## Milestone 4: Interpretation
-
-### Dealing with data uncertainty (sensitivity analysis)
-
-## Project milestones and time plan
-
-@tbl-milestones provides a list of the project milestones along with a time plan. The time estimates assume that each defined task will be carried out by a single experienced person.
-
-::: {#tbl-milestones}
-| Project milestone | Work package | Time estimate |
-|-------------------|--------------|----|
-| 1 | 1: Goal definition | 1 week |
-| 1 | 2: Scope definition | 2-4 weeks |
-| 2 | ... | x weeks |
-
-: Work packages and time estimates
-:::
-
--->
 
 # Conclusion and Discussion
 
