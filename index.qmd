@@ -229,11 +229,12 @@ For identifying the original surface there are several relevant satellite-based 
 | Surface type | Mean yearly albedo | Source |
 |------------------------------|----------------------|--------------------|
 | Water | \~ 0.1 | @oke1987boundary |
+| Buildings | \~ 0.1 | @oke1987boundary |
+| PV panels | \~ 0.1 | @ArgonneSolarEIS2012 |
 | Evergreen Needleleaf Forest | \~ 0.11 | @cescatti2012intercomparison |
 | Evergreen Broadleaf Forest | \~ 0.13 | @cescatti2012intercomparison |
 | Mixed Forest | \~ 0.13 | @cescatti2012intercomparison |
 | Deciduous Broadleaf Forest | \~ 0.14 | @cescatti2012intercomparison |
-| Buildings | \~ 0.1 | @oke1987boundary |
 | Woody Savanna | \~ 0.18 | @cescatti2012intercomparison |
 | Savanna | \~ 0.21 | @cescatti2012intercomparison |
 | Grassland | \~ 0.22 | @cescatti2012intercomparison |
@@ -250,7 +251,7 @@ For identifying the original surface there are several relevant satellite-based 
 
 This section describes how to incorporate satellite-derived surface albedo change data into LCAs in a methodologically sound manner. Two potential approaches are described: PV site specific data, and generalized data.
 
-### PV site specific data {#sec-lca-integration-pv-specific}
+### Approach for PV site specific data {#sec-lca-integration-pv-specific}
 
 @fig-methodology provides an overview of the steps required for LCA integration for PV site specific data.
 
@@ -264,7 +265,7 @@ The outcome of the aggregation are two average albedo values for the area of int
 
 Note that the suggested approach is only applicable for PV farms that are already installed, because the relevant satellite data will not exist otherwise. Since seasonality such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest (including deserts), the temporal aggregation window should be at least one year. This means that only PV plants that already exist for longer than that period can be evaluated instantly, which is a significant limitation.
 
-### Generalized data
+### Approach for generalized data
 
 Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enable its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface is expected to result in a reasonable generalized estimate.  It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors. @fig-m-high depicts how to implement this approach for the given use case.
 
@@ -355,8 +356,6 @@ The albedo change introduced by the system will be within the system boundaries.
 # Conclusion and Discussion
 
 Validation und Unsicherheiten
-
-TBD: PV panel albedo estimate.
 
 Generalized approach should be fine since we already know from the literature study that the impact is not large
 
