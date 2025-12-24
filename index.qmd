@@ -300,10 +300,13 @@ For LCAs for PV farms, the functional unit will typically be a certain amount of
 
 (Prio1) Rückschlüsse ziehen: für alpine Anlagen wichtig (und für welche anderen Anlagen, e.g. white buildings like in Greece or India oder sonst wo es weisse Häuser gibt)
 
+@zhao2025comparative economic payback periods for cool roofs and photovoltaic roofs are 1.75 years and 10.90 years, respectively; the energy payback periods are 13.6 years and 43.7 years, respectively; and the environmental payback periods are 2.2 years and 7.6 years, respectively. In terms of energy savings, photovoltaic roofs outperform cool roofs significantly, with an annual energy saving of 139 kWh/m 2 for photovoltaic roofs compared to 6.5 kWh/m 2 for cool roofs
 
 The surface albedo numbers in @tbl-albedo are not an exhaustive list. When implementing the generalized apprach, additional literature study could be performed for a fully complete list of values. TBD The values are sometimes yearly means and sometimes other types
 
 Most important for deserts and for alpine PV installations. natural deserts heat island (see literature study)
+
+White roofs: Cool roofs boost the energy production of photovoltaics: Investigating the impact of roof albedo on the energy performance of monofacial and bifacial photovoltaic modules. For monofacial PV: ~+0.7% energy per +0.1 albedo increase, for bifacial PV: ~+4.5% energy per +0.1 albedo increase. co‑benefits for cooling and heat island mitigation https://www.sciencedirect.com/science/article/pii/S0038092X23005819
 
 
 (Prio1) Generalized approach should be fine since we already know from the literature study that the impact is not large (Elke)
