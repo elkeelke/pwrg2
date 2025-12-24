@@ -79,11 +79,11 @@ Several related aspects are worth mentioning:
 
 -   Today's solar panels are all in the typical dark color. Efforts to improve the performance of colored panels, such as those described by @ji2019vivid, are ongoing and will take time to reach practical application. At this point in times, if architects want to use lighter colors, happens happens especially for facade installations will has to be realised by installing lighter colored glass panels in front of the dark solar panel. Doing so reduces the amount of albedo change and the overall energy yield from the PV installation.
 
--   @gul2018enhancement examine the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
+-   @gul2018enhancement examined the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
 
--   @coimbra2025energy focus on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.
+-   @coimbra2025energy focused on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.
 
--   @barron2016photovoltaic investigated the same topic and found that PV farms induce a “heat island” effect when lowering the terrestrial albedo from \~20% in natural deserts to \~5% over PV panels by installing a PV farm. Temperatures were regularly 3–4 °C warmer than the surrounding wildlands at night.
+-   @barron2016photovoltaic investigated the same topic and found that PV farms induce a “heat island” effect when lowering the terrestrial albedo from \~20% in natural deserts to \~5% over PV panels by installing a PV farm. Temperatures were regularly 3–4 °C warmer than the surrounding wildlands at night. On the contrary, @zhang2020assessing analyzed surface temperature changes at the 23 largest PV installations worldwide using thermal infrared remote sensing. They found that the PV plants significantly reduced daily mean surface temperature by \~0.5 °C, with a stronger cooling effect during the daytime than at night, and that cooling intensity increased with plant capacity. Although PV installation lowered surface albedo, it increased effective albedo when electricity generation was considered because PV systems convert a portion of the absorbed solar radiation into electricity, which is exported away from the site rather than being released locally as heat. The magnitude of cooling, especially at night, varied with latitude, elevation, climate, and vegetation conditions, suggesting that regional geography and environment should be considered when selecting future PV plant sites.
 
 ## Albedo effects of PV installations per original surface
 
@@ -228,6 +228,8 @@ For identifying the original surface there are several relevant satellite-based 
 ::: {#tbl-albedo}
 | Surface type | Mean yearly albedo | Source |
 |------------------------------|----------------------|--------------------|
+| Deep water | 0.04–0.08 | @brutsaert1984 |
+| Moist dark soils / ploughed fields | 0.05–0.15 | @brutsaert1984 |
 | Water | \~ 0.1 | @oke1987boundary |
 | Buildings | \~ 0.1 | @oke1987boundary |
 | PV panels | \~ 0.1 | @ArgonneSolarEIS2012 |
@@ -235,16 +237,23 @@ For identifying the original surface there are several relevant satellite-based 
 | Evergreen Needleleaf Forest | \~ 0.11 | @cescatti2012intercomparison |
 | Evergreen Broadleaf Forest | \~ 0.13 | @cescatti2012intercomparison |
 | Mixed Forest | \~ 0.13 | @cescatti2012intercomparison |
+| Coniferous Forest | 0.10–0.15 | @brutsaert1984 |
+| Grey soils or bare fields | 0.15–0.25 | @brutsaert1984 |
 | Deciduous Broadleaf Forest | \~ 0.14 | @cescatti2012intercomparison |
 | Woody Savanna | \~ 0.18 | @cescatti2012intercomparison |
 | Savanna | \~ 0.21 | @cescatti2012intercomparison |
+| Grass or short vegetation | 0.15–0.25 | @brutsaert1984 |
 | Grassland | \~ 0.22 | @cescatti2012intercomparison |
 | Cropland | \~ 0.23 | @cescatti2012intercomparison |
+| Dry soils or desert | 0.20–0.35 | @brutsaert1984 |
+| White sand | 0.30–0.40 | @brutsaert1984 |
 | Desert sand | \~ 0.4 | @tetzlaff1983albedo |
 | Melting snow | \~ 0.4 | @van2020evaluation |
+| Old or dirty snow | 0.35–0.65 | @brutsaert1984 |
+| Clean snow | 0.60–0.75 | @brutsaert1984 |
 | Older snow or firn | \~ 0.7 | @van2020evaluation |
-| Fresh, dry snow | \~ 0.85 | @van2020evaluation |
-
+| Fresh dry snow | \~ 0.85 | @van2020evaluation |
+| Fresh dry snow | 0.80–0.90 | @brutsaert1984 |
 : Compiled list of typical albedo values per surface type
 :::
 
@@ -288,9 +297,22 @@ For LCAs for PV farms, the functional unit will typically be a certain amount of
 
 # Conclusion and Discussion
 
-Validation und Unsicherheiten
 
-Generalized approach should be fine since we already know from the literature study that the impact is not large
+(Prio1) Rückschlüsse ziehen: für alpine Anlagen wichtig (und für welche anderen Anlagen, e.g. white buildings like in Greece or India oder sonst wo es weisse Häuser gibt)
+
+
+The surface albedo numbers in @tbl-albedo are not an exhaustive list. When implementing the generalized apprach, additional literature study could be performed for a fully complete list of values. TBD The values are sometimes yearly means and sometimes other types
+
+Most important for deserts and for alpine PV installations. natural deserts heat island (see literature study)
+
+
+(Prio1) Generalized approach should be fine since we already know from the literature study that the impact is not large (Elke)
+
+(Prio1) Data uncertainty (Elke)
+
+(Prio2) Probleme mit Aggregation noch genauer beschreiben
+
+(Prio2) Data validation
 
 ## Data validation
 
