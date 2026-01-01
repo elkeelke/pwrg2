@@ -79,11 +79,13 @@ Several related aspects are worth mentioning:
 
 -   Today's solar panels are all in the typical dark color. Efforts to improve the performance of colored panels, such as those described by @ji2019vivid, are ongoing and will take time to reach practical application. At this point in times, if architects want to use lighter colors, happens happens especially for facade installations will has to be realised by installing lighter colored glass panels in front of the dark solar panel. Doing so reduces the amount of albedo change and the overall energy yield from the PV installation.
 
--   @gul2018enhancement examined the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panel since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
+-   @gul2018enhancement examined the effects of the surfaces around PV installation and find that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panels since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.
 
 -   @coimbra2025energy focused on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Many factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, all affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.
 
 -   @barron2016photovoltaic investigated the same topic and found that PV farms induce a “heat island” effect when lowering the terrestrial albedo from \~20% in natural deserts to \~5% over PV panels by installing a PV farm. Temperatures were regularly 3–4 °C warmer than the surrounding wildlands at night. On the contrary, @zhang2020assessing analyzed surface temperature changes at the 23 largest PV installations worldwide using thermal infrared remote sensing. They found that the PV plants significantly reduced daily mean surface temperature by \~0.5 °C, with a stronger cooling effect during the daytime than at night, and that cooling intensity increased with plant capacity. Although PV installation lowered surface albedo, it increased effective albedo when electricity generation was considered because PV systems convert a portion of the absorbed solar radiation into electricity, which is exported away from the site rather than being released locally as heat. The magnitude of cooling, especially at night, varied with latitude, elevation, climate, and vegetation conditions, suggesting that regional geography and environment should be considered when selecting future PV plant sites.
+
+-   @zhao2025comparative compared white roofs and PV roofs and showed that economic payback periods for (white) cool roofs and PV roofs are 1.75 years and 10.90 years, respectively; the energy payback periods are 13.6 years and 43.7 years, respectively; and the environmental payback periods are 2.2 years and 7.6 years, respectively. In terms of energy savings, photovoltaic roofs outperform cool roofs significantly, with an annual energy saving of 139 kWh/m² for photovoltaic roofs compared to 6.5 kWh/m² for cool roofs.
 
 ## Albedo effects of PV installations per original surface
 
@@ -231,16 +233,16 @@ For identifying the original surface there are several relevant satellite-based 
 | Deep water | 0.04–0.08 | @brutsaert1984 |
 | Moist dark soils / ploughed fields | 0.05–0.15 | @brutsaert1984 |
 | Water | \~ 0.1 | @oke1987boundary |
-| Buildings | \~ 0.1 | @oke1987boundary |
+| Buildings (dark roof) | \~ 0.1 | @oke1987boundary |
 | PV panels | \~ 0.1 | @ArgonneSolarEIS2012 |
 | Asphalt | \~ 0.1 | @moretti2021effect |
-| Evergreen Needleleaf Forest | \~ 0.11 | @cescatti2012intercomparison |
-| Evergreen Broadleaf Forest | \~ 0.13 | @cescatti2012intercomparison |
-| Mixed Forest | \~ 0.13 | @cescatti2012intercomparison |
-| Coniferous Forest | 0.10–0.15 | @brutsaert1984 |
+| Evergreen needleleaf forest | \~ 0.11 | @cescatti2012intercomparison |
+| Evergreen broadleaf forest | \~ 0.13 | @cescatti2012intercomparison |
+| Mixed forest | \~ 0.13 | @cescatti2012intercomparison |
+| Coniferous forest | 0.10–0.15 | @brutsaert1984 |
 | Grey soils or bare fields | 0.15–0.25 | @brutsaert1984 |
-| Deciduous Broadleaf Forest | \~ 0.14 | @cescatti2012intercomparison |
-| Woody Savanna | \~ 0.18 | @cescatti2012intercomparison |
+| Deciduous broadleaf forest | \~ 0.14 | @cescatti2012intercomparison |
+| Woody savanna | \~ 0.18 | @cescatti2012intercomparison |
 | Savanna | \~ 0.21 | @cescatti2012intercomparison |
 | Grass or short vegetation | 0.15–0.25 | @brutsaert1984 |
 | Grassland | \~ 0.22 | @cescatti2012intercomparison |
@@ -252,7 +254,7 @@ For identifying the original surface there are several relevant satellite-based 
 | Old or dirty snow | 0.35–0.65 | @brutsaert1984 |
 | Clean snow | 0.60–0.75 | @brutsaert1984 |
 | Older snow or firn | \~ 0.7 | @van2020evaluation |
-| Fresh dry snow | \~ 0.85 | @van2020evaluation |
+| White roof coating | \~ 0.75 | @epa2003coolroof |
 | Fresh dry snow | 0.80–0.90 | @brutsaert1984 |
 : Compiled list of typical albedo values per surface type
 :::
@@ -297,27 +299,13 @@ For LCAs for PV farms, the functional unit will typically be a certain amount of
 
 # Conclusion and Discussion
 
+The compiled surface albedo values in @tbl-albedo reveal substantial variation among different surface types. Because the albedo of PV panels is comparable to that of buildings with dark roofs, installing PV systems on such buildings results in only minor changes in surface albedo. Water surfaces have a slightly lower albedo than PV panels, meaning that floating PV installations will lead to a small increase in albedo. In contrast, desert sand exhibits a higher albedo than PV panels, therefore large-scale PV farms in desert environments are expected to induce a moderate reduction in albedo. When PV panels are installed on white-roofed buildings, such as those commonly found in regions of Greece or India, the resulting albedo change differs markedly from installations on dark roofs because the albedo of white roofs is a lot higher. Ice and snow have the highest albedo of all surfaces considered and  and reflect a large fraction of incoming solar radiation. Consequently, alpine PV installations are associated with the most pronounced albedo changes, resulting in substantially lower reflectivity.
 
-(Prio1) Rückschlüsse ziehen: für alpine Anlagen wichtig (und für welche anderen Anlagen, e.g. white buildings like in Greece or India oder sonst wo es weisse Häuser gibt)
+While the albedo reduction introduced by PV installations may increase local heat absorption at the building scale, but it must be evaluated in conjunction with the benefits of renewable electricity generation.
 
-@zhao2025comparative economic payback periods for cool roofs and photovoltaic roofs are 1.75 years and 10.90 years, respectively; the energy payback periods are 13.6 years and 43.7 years, respectively; and the environmental payback periods are 2.2 years and 7.6 years, respectively. In terms of energy savings, photovoltaic roofs outperform cool roofs significantly, with an annual energy saving of 139 kWh/m 2 for photovoltaic roofs compared to 6.5 kWh/m 2 for cool roofs
+(Prio1) Generalized approach approriate since literature study revealed that overall impact is not large
 
-The surface albedo numbers in @tbl-albedo are not an exhaustive list. When implementing the generalized apprach, additional literature study could be performed for a fully complete list of values. TBD The values are sometimes yearly means and sometimes other types
-
-Most important for deserts and for alpine PV installations. natural deserts heat island (see literature study)
-
-White roofs: Cool roofs boost the energy production of photovoltaics: Investigating the impact of roof albedo on the energy performance of monofacial and bifacial photovoltaic modules. For monofacial PV: ~+0.7% energy per +0.1 albedo increase, for bifacial PV: ~+4.5% energy per +0.1 albedo increase. co‑benefits for cooling and heat island mitigation https://www.sciencedirect.com/science/article/pii/S0038092X23005819
-
-
-(Prio1) Generalized approach should be fine since we already know from the literature study that the impact is not large (Elke)
-
-(Prio1) Data uncertainty (Elke)
-
-(Prio2) Probleme mit Aggregation noch genauer beschreiben
-
-(Prio2) Data validation
-
-## Data validation
+## Data uncertainty (Prio1) and validation (Prio2) 
 
 The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
 
@@ -326,6 +314,12 @@ What are the hurdles when using satellite data at scale for environmental monito
 TBD: a lot more to say
 
 LCA data quality indicators (DQI)
+
+## Limitations
+
+The surface albedo numbers compiled in @tbl-albedo are not exhaustive. For a full implementation, additional literature study must be performed for a complete list of values. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important.
+
+(Prio2) Probleme mit Aggregation noch genauer beschreiben
 
 # Appendix
 
