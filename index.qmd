@@ -65,7 +65,7 @@ Several research areas relate to this topic, including albedo effects in general
 
 @loeb2025emerging use 24 years of satellite observations to show that there is a small measurable difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR). The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation. The assumption so far was that changes in cloud cover would balance the differences between the hemispheres (see @datseris2021earth), but this study suggests that this compensating effect is not completely effective. Understanding how the clouds respond to the developing imbalance is critical for predicting future climate evolution. @diamond2024testing follow up on this line of research by decomposing the hemispheric albedo symmetry into components associated with the surface, clear-sky atmosphere, and different cloud types as defined by cloud effective pressure and optical thickness.
 
-## PV installations and albedo effects
+## PV installations and albedo effects {#sec-pv-albedo}
 
 One of the earliest studies examining the environmental impacts of photovoltaic (PV) installations is @fthenakis2008emissions, and since then, numerous scientific publications have investigated PV systems through LCA approaches. While most of them overlook the effects of surface albedo change, such as @gerbinet2014life, @ferrara2024life, @gomez2024agile, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:
 
@@ -87,7 +87,7 @@ Several related aspects are worth mentioning:
 
 -   @zhao2025comparative compared white roofs and PV roofs and showed that economic payback periods for (white) cool roofs and PV roofs are 1.75 years and 10.90 years, respectively; the energy payback periods are 13.6 years and 43.7 years, respectively; and the environmental payback periods are 2.2 years and 7.6 years, respectively. In terms of energy savings, photovoltaic roofs outperform cool roofs significantly, with an annual energy saving of 139 kWh/m² for photovoltaic roofs compared to 6.5 kWh/m² for cool roofs.
 
-## Albedo effects of PV installations per original surface
+## Albedo effects of PV installations per original surface {#sec-pv-original}
 
 Other studies investigated the impact of PV on radiative forcing at several different installation sites such as city roofs, deserts, alpine locations, and lakes:
 
@@ -271,7 +271,7 @@ Two potential approaches are described, for PV site specific data and for genera
 
 @fig-methodology provides an overview of the steps required for LCA integration for PV site specific data, which will be described in this section.
 
-![Methodology for PV site specific data integration in LCA](img/PWRG 2 methodology.png){#fig-methodology fig-align="center" width="65%"}
+![Methodology for PV site specific data integration in LCA](img/PWRG 2 methodology.png){#fig-methodology fig-align="center" width="80%"}
 
 As the first step (1), the relevant data for the area of interest (AoI) and the reference area (RA) will be selected (see @sec-remote-sensing). After that in (2) the data will be retrieved, usually via download from the satellite provider. In the next step (3), faulty data points in the downloaded data need to be identified and filtered out. To ensure comparability of the AoI and RA data in the later steps, it is required that both data sets are filtered in the exact same way and that they have the exact same temporal coverage.
 
@@ -285,7 +285,7 @@ Given the constraints described for PV site specific data, a more practical appr
 
 Although this approach cannot capture the high spatial variability inherent to the PV site's environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, color, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface is expected to result in a reasonable generalized estimate.  It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors. @fig-m-high depicts how to implement this approach for the given use case.
 
-![Methodology for generalized data integration in LCA](img/PWRG 2 methodology high level.png){#fig-m-high fig-align="center" width="65%"}
+![Methodology for generalized data integration in LCA](img/PWRG 2 methodology high level.png){#fig-m-high fig-align="center" width="70%"}
 
 In this case, the original surface can either be specified by the user or identified using processed satellite data such as the ESA WorldCover. The corresponding estimate for the surface albedo will be gathered from literature study (as already compiled in @sec-original-surface).
 
@@ -301,17 +301,13 @@ For LCAs for PV farms, the functional unit will typically be a certain amount of
 
 The compiled surface albedo values in @tbl-albedo reveal substantial variation among different surface types. Because the albedo of PV panels is comparable to that of buildings with dark roofs, installing PV systems on such buildings results in only minor changes in surface albedo. Water surfaces have a slightly lower albedo than PV panels, meaning that floating PV installations will lead to a small increase in albedo. In contrast, desert sand exhibits a higher albedo than PV panels, therefore large-scale PV farms in desert environments are expected to induce a moderate reduction in albedo. When PV panels are installed on white-roofed buildings, such as those commonly found in regions of Greece or India, the resulting albedo change differs markedly from installations on dark roofs because the albedo of white roofs is a lot higher. Ice and snow have the highest albedo of all surfaces considered and  and reflect a large fraction of incoming solar radiation. Consequently, alpine PV installations are associated with the most pronounced albedo changes, resulting in substantially lower reflectivity.
 
-While the albedo reduction introduced by PV installations may increase local heat absorption at the building scale, but it must be evaluated in conjunction with the benefits of renewable electricity generation.
+While the albedo reduction introduced by PV installations may increase local heat absorption at the building scale, this effect must be evaluated in conjunction with the benefits of renewable electricity generation. Overall, the literature review (see @sec-pv-albedo in particular) indicates that although replacing natural surfaces with PV panels leads to a measurable albedo effect that can be quantified within an LCA, this effect represents a substantially smaller environmental impact compared to the benefits associated with the renewable energy produced by PV systems. While this conclusion is very likely to hold true across installations on all surface types including ice and snow, a full LCA for the PV installation in question should be performed to fully quantify the impact. The only existing study about an alpine PV installation in Tibet (see @sec-pv-original) found that while surface albedo was reduced and net radiation was increased as expected, the PV panels also caused a multitude of other effects such as the the soil frozen period to extend significantly and recommended more long-term monitoring and analysis. 
 
-(Prio1) Generalized approach approriate since literature study revealed that overall impact is not large
-
-## Data uncertainty (Prio1) and validation (Prio2) 
+## TBD Data uncertainty (Prio1) and validation (Prio2) 
 
 The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
 
 What are the hurdles when using satellite data at scale for environmental monitoring?
-
-TBD: a lot more to say
 
 LCA data quality indicators (DQI)
 
@@ -319,7 +315,7 @@ LCA data quality indicators (DQI)
 
 The surface albedo numbers compiled in @tbl-albedo are not exhaustive. For a full implementation, additional literature study must be performed for a complete list of values. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important.
 
-(Prio2) Probleme mit Aggregation noch genauer beschreiben
+The filtering and aggregation steps described in @sec-lca-integration-pv-specific will have significant impact on the resulting numbers and therefore need to be carefully designed, documented, and validated which was omitted in this work but is required for a fully functional system.
 
 # Appendix
 
