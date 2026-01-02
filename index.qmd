@@ -26,7 +26,7 @@ Remote sensing, in particular satellite-based earth observation (EO), provides e
 
 A promising area where such data might be applied is for the evaluation of changes in surface reflectivity (albedo) associated with the installation of photovoltaic panels (PV). This can be assessed from the relevant satellite data before and after the installation of the PV sites under study, for both building mounted PV panels and open ground PV installations in deserts, on grasslands, on croplands, or on water surfaces. Depending on the type of land cover there might be net positive, neutral, or net negative effects. For most cases, net positive effects are expected. The change in surface albedo caused by replacing natural or built surfaces with PV panels is expected to represent a significantly smaller environmental impact compared to the environmental benefits of solar power over non-renewable energy sources. However, it constitutes a measurable effect that can potentially be quantified and incorporated into LCAs. 
 
-The structure of this project work is as follows. First there is an introduction with a formulation of the research questions. After that, a review of existing literature is presented, focusing on how albedo changes are incorporated into life cycle assessment (LCA) and how remote sensing–based metrics can support this integration. Subsequently, the required inputs and the methodological steps to address the research question are described followed by a section to conclude and discuss the work. Finally, for readers interested in additional background information, the appendix offers an introductory overview of satellite-based Earth observation.
+The structure of this project work is as follows. First, there is an introduction with a formulation of the research questions. After that, a review of existing literature is presented, focusing on how albedo changes are incorporated into life cycle assessment (LCA) and how remote sensing–based metrics can support this integration. Subsequently, the required data inputs and the methodological steps to address the research questions are described followed by a section to conclude and discuss the work. The outcome is that, while surface albedo change is a measurable environmental effect of PV installations, it plays a minor role compared to the overall benefits of renewable energy. The magnitude of impact on surface albedo is dependent on the original land cover being replaced, with installations on dark-roofed buildings showing negligible changes, whereas alpine and desert environments experience the most pronounced reductions in reflectivity. Despite the local warming induced by these changes, the positive radiative forcing caused by albedo reduction is typically offset by the clean energy generation provided by the PV plant.
 
 Grading consists of the following parts: Scientific Publication: 50\%, Supporting Material 15\%, Oral Presentation 25\%, Work Process / Project Management: 10\%
 ```
@@ -139,7 +139,7 @@ Spatially explicit LCAs are a refinement of traditional LCAs to incorporate geog
 
 @riihela2024four present CLARA-A3 surface albedo data as the third edition of the CM SAF cLoud, Albedo and surface Radiation (CLARA) data record family. The temporal coverage of this edition is extended from 1979 until the near-present day. The core algorithms and data format remain unchanged from previous editions, but now white- and blue-sky albedo estimates are also available for the first time in CLARA data.
 
-## Accuracy of satellite-derived data
+## Accuracy of satellite-derived data {#sec-accuracy-satellite-data}
 
 The accuracy of satellite-derived data is crucial. Many scientific publications are focused on assessing accuracy levels and understanding the reasons for discrepancies:
 
@@ -279,7 +279,7 @@ These datasets then build the base for calculating albedo values in step (4) as 
 
 While this approach uses the most specific data possible, there are several limitations. Most importantly, note that the suggested approach is only applicable for PV farms that are already installed, because the relevant satellite data will not exist otherwise. In addition, since seasonal factors such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest, the temporal aggregation window must be at least one year. This means that only PV plants that already exist for longer than that period can be evaluated instantly.
 
-#### Generalized data
+#### Generalized data {#sec-lca-integration-generalized}
 
 Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enable its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels. 
 
@@ -299,23 +299,45 @@ For LCAs for PV farms, the functional unit will typically be a certain amount of
 
 # Conclusion and Discussion
 
+In this paper, a methodology for integrating surface albedo changes in an LCA via satellite or generalized data has been presented. The site-specific approach utilizes a six-step framework that begins with selecting an area of interest and a reference area, followed by retrieving and filtering high-resolution satellite imagery to ensure identical temporal coverage. Albedo is then calculated at the pixel level and aggregated to determine the average delta (Δα) between the PV installation and the original land cover. Alternatively, the generalized approach offers a simplified application by identifying the original surface through existing global datasets and applying literature-derived albedo values to estimate the change relative to dark coloured PV panels.
+
 The compiled surface albedo values in @tbl-albedo reveal substantial variation among different surface types. Because the albedo of PV panels is comparable to that of buildings with dark roofs, installing PV systems on such buildings results in only minor changes in surface albedo. Water surfaces have a slightly lower albedo than PV panels, meaning that floating PV installations will lead to a small increase in albedo. In contrast, desert sand exhibits a higher albedo than PV panels, therefore large-scale PV farms in desert environments are expected to induce a moderate reduction in albedo. When PV panels are installed on white-roofed buildings, such as those commonly found in regions of Greece or India, the resulting albedo change differs markedly from installations on dark roofs because the albedo of white roofs is a lot higher. Ice and snow have the highest albedo of all surfaces considered, and reflect a large fraction of incoming solar radiation. Consequently, alpine PV installations are associated with the most pronounced albedo changes, resulting in substantially lower reflectivity.
 
 While the albedo reduction introduced by PV installations may increase local heat absorption at the building scale, this effect must be evaluated in conjunction with the benefits of renewable electricity generation. Overall, the literature review (see @sec-pv-albedo in particular) indicates that although replacing natural surfaces with PV panels leads to a measurable albedo effect that can be quantified within an LCA, this effect represents a substantially smaller environmental impact compared to the benefits associated with the renewable energy produced by PV systems. This conclusion is expected to hold true across installations on all surface types including ice and snow where albedo changes are most pronounced. The only existing study about an alpine PV installation in Tibet (see @sec-pv-original) found that while surface albedo was reduced and net radiation was increased as expected, the PV panels also caused a multitude of other effects such as the soil frozen period to extend significantly and recommended more long-term monitoring and analysis. This data could build the base for a full LCA.
 
-## TBD Data uncertainty (Prio1) and validation (Prio2) 
+## Data uncertainty and validation 
 
-The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into LCAs of PV systems.
+In LCAs, data quality indicators (DQIs) as defined in @ISO14044 are criteria used to describe, assess, and document how reliable and representative the data feeding into a life cycle inventory can be considered to understand how much confidence can be placed in the LCA results. DQIs cover the following aspects:
 
-What are the hurdles when using satellite data at scale for environmental monitoring?
+1.   Technological representativeness: the degree to which the data reflects the actual technology or process studied. 
 
-LCA data quality indicators (DQI)
+1.   Geographical representativeness: how closely the data matches the geographic location of the system (e.g., regional vs. global average conditions).
+
+1.   Temporal representativeness: how current the data are relative to the reference year of the study.
+
+1.   Completeness: whether all relevant inputs and outputs are included in the data.
+
+1.   Reliability and precision: the quality of the given data sources and methods. Measured data is preferred over calculated data. If neither is available, a fallback to estimated or assumed data will be performed.
+
+1.   Consistency and methodological coherence: whether the data was generated using consistent assumptions, system boundaries, and methods.
+
+Satellite-derived albedo products generally rank high on all DQI dimensions because they provide granular data that is representative on all three dimensions and also complete, reliable, and consistent. Also, they originate from authoritative bodies like NOAA and EUMETSAT and are therefore considered scientifically validated and reliable.
+
+However, satellite-derived albedo products are subject to uncertainties inherently arising from several sources (cf. literature study in @sec-accuracy-satellite-data):
+
+-   The first source of uncertainty originates from technical constraints. If the satellite's pixel size is too coarse for the PV farm to be analysed, mixed pixels that only partly cover the area of interest will influence the results. Inconsistencies can also occur due to a difference between aerial and ground level viewpoints. Finally, sensor calibration is important to avoid introducing long-term drift in data quality in continuous monitoring setups which would affect temporal representativeness.  
+
+-   Furthermore, operational issues such as temporary sensor malfunctions causing data gaps and/or faulty data are inevitable. This must be explicitly addressed within the methodological framework.
+
+-   Another source of uncertainty originates from atmospheric and environmental uncertainties. Cloud cover is a major challenge for surface albedo estimation, often requiring sophisticated probability-based correction methods. Similarly, snow cover and seasonal vegetation dynamics can drastically alter reflectivity, requiring temporal aggregation to obtain stable, meaningful results. Atmospheric correction is required since variations in aerosols and water vapour can lead to an emerging darkening or brightening in satellite observations, which makes the isolation of the albedo effect from other atmospheric signals complicated.
+
+The simplest approach to cross-validation is to perform it against the generalized data as described in @sec-lca-integration-generalized.
 
 ## Limitations
 
-The surface albedo numbers compiled in @tbl-albedo are not exhaustive. For a full implementation, additional literature study must be performed for a complete list of values. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important.
+The surface albedo numbers compiled in @tbl-albedo has high coverage but is not an exhaustive list. For a full implementation, additional literature study must be performed for a complete list of values. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important.
 
-The filtering and aggregation steps described in @sec-lca-integration-pv-specific will have significant impact on the resulting numbers and therefore need to be carefully designed, documented, and validated which was omitted in this work but is required for a fully functional system.
+The exact approach chosen for the filtering and aggregation steps described in @sec-lca-integration-pv-specific has significant impact on the resulting numbers. Therefore, it needs to be carefully designed and documented, which was omitted in this work but is required for a fully functional system.
 
 # Appendix
 
