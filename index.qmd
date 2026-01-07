@@ -297,7 +297,7 @@ For an LCA for a PV farm, the functional unit will typically be a certain amount
 
 # Discussion and conclusion
 
-In this paper, a methodology for integrating surface albedo changes in an LCA via satellite or generalized data has been presented. The site-specific approach utilizes a six-step framework that begins with selecting an area of interest and a reference area, followed by retrieving and filtering high-resolution satellite imagery to ensure identical temporal coverage. Albedo is then calculated at the pixel level and aggregated to determine the average delta (Δα) between the PV installation and the original land cover. Alternatively, the generalized approach offers a simplified application by identifying the original surface through existing global datasets and applying albedo values derived from literature to estimate the change relative to dark coloured PV panels.
+In this paper, a methodology for integrating surface albedo changes in an LCA via satellite or generalized data has been presented. The site-specific approach utilizes a six-step framework that begins with selecting an area of interest and a reference area, followed by retrieving and filtering high-resolution satellite imagery to ensure identical temporal coverage. Albedo is then calculated at the pixel level and aggregated to determine the average delta (Δα) between the PV installation and the original land cover. Finally, the result is converted to an amount of radiative forcing, from which an impact factor can be derived. Alternatively, the generalized approach offers a simplified application by identifying the original surface through existing global datasets and applying albedo values derived from literature to estimate the change relative to dark coloured PV panels.
 
 The compiled surface albedo values in @tbl-albedo reveal substantial variation among different surface types. Because the albedo of PV panels is comparable to that of buildings with dark roofs, installing PV systems on such buildings results in only minor changes in surface albedo. Water surfaces have a slightly lower albedo than PV panels, meaning that floating PV installations will lead to a small increase in albedo. In contrast, desert sand exhibits a higher albedo than PV panels, therefore large-scale PV farms in desert environments are expected to induce a moderate reduction in albedo. When PV panels are installed on white-roofed buildings, such as those commonly found in regions of Greece or India, the resulting albedo change differs markedly from installations on dark roofs because the albedo of white roofs is a lot higher. Ice and snow have the highest albedo of all surfaces considered, and reflect a large fraction of incoming solar radiation. Consequently, alpine PV installations are associated with the most pronounced albedo changes, resulting in substantially lower reflectivity.
 
@@ -325,19 +325,23 @@ However, satellite-derived albedo products are subject to uncertainties inherent
 
 -   The first source of uncertainty originates from technical constraints. If the satellite's pixel size is too coarse for the PV farm to be analysed, mixed pixels that only partly cover the area of interest will influence the results. Inconsistencies can also occur due to a difference between aerial and ground level viewpoints. Finally, sensor calibration is important to avoid introducing long-term drift in data quality in continuous monitoring setups which would affect temporal representativeness.  
 
--   Furthermore, operational issues such as temporary sensor malfunctions causing data gaps and/or faulty data are inevitable. This must be explicitly addressed within the methodological framework.
+-   Furthermore, operational issues such as temporary sensor malfunctions causing data gaps and/or faulty data are inevitable. This must be explicitly addressed within the suggested methodological framework.
 
--   Another source of uncertainty originates from atmospheric and environmental uncertainties. Cloud cover is a major challenge for surface albedo estimation, often requiring sophisticated probability-based correction methods. Similarly, snow cover and seasonal vegetation dynamics can drastically alter reflectivity, requiring temporal aggregation to obtain stable, meaningful results. Atmospheric correction is required since variations in aerosols and water vapour can lead to an emerging darkening or brightening in satellite observations, which makes the isolation of the albedo effect from other atmospheric signals complicated.
+-   Another source of uncertainty are atmospheric and environmental variations. Cloud cover is a major challenge for surface albedo estimation, often requiring sophisticated probability-based correction methods. Similarly, snow cover and seasonal vegetation dynamics can drastically alter reflectivity, requiring temporal aggregation to obtain stable, meaningful results. Atmospheric correction is required since variations in aerosols and water vapour can lead to an emerging darkening or brightening in satellite observations, which makes the isolation of the albedo effect from other atmospheric signals complicated.
 
 The simplest approach to cross-validation is to perform it against the generalized data as described in @sec-lca-integration-generalized, or against other available datasets.
 
 ## Limitations
 
-The surface albedo numbers compiled in @tbl-albedo has high coverage but is not an exhaustive list. For a full implementation, additional literature study must be performed for a complete list of values. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important.
+The surface albedo numbers compiled in @tbl-albedo have high coverage but do not constitute an exhaustive list. For some use cases, additional literature study might be necessary. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important. For some use cases and/or land cover types, albedo ground measurements might be required. 
 
-The exact approach chosen for the filtering and aggregation steps described in @sec-lca-integration-pv-specific has significant impact on the resulting numbers. Therefore, it needs to be carefully designed and documented, which was omitted in this work but is required for a fully functional system.
+The exact approach chosen for the filtering and aggregation steps described in @sec-lca-integration-pv-specific has significant impact on the resulting numbers. Therefore, it needs to be carefully designed and documented, which was omitted in this work but is required for an accurate assessment of the impacts of land cover change in an LCA.
 
 # Appendix
+
+## Acknowledgements
+
+Many thanks to Daija Angeli and René Itten for extremely valuable feedback and input to earlier versions of this paper, which improved its quality significantly.
 
 ## Project organization
 
@@ -433,3 +437,4 @@ To summarize, LEO satellites play a crucial role in earth observation, particula
 While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist. The NASA-led Commercial Satellite Data Acquisition Program @csda_nasa provides access to some of the data for research purposes, most notably for the Maxar WorldView data. It has been used in a number of scientific articles as assessed by @zhao2022overview who conducted a literature study of scientific articles referencing EO satellite missions and found that their number is exponentially growing, and while some cite commercial sources, most of the work is based on the freely available data. In this project, the focus will be on data that is available for research purposes.
 
 # References
+
