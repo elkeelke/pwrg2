@@ -8,7 +8,7 @@
 
 <meta name="author" content="Elke Michlmayr">
 
-<title>Remote Sensing Data for Life Cycle Assessment</title>
+<title>Integrating Earth Observation Data into Life Cycle Assessment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,6 +56,35 @@ div.csl-indent {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap-be9206a58a27969b3ea3001da8f26fef.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -68,8 +97,8 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Remote Sensing Data for Life Cycle Assessment</h1>
-<p class="subtitle lead">Project proposal</p>
+<h1 class="title">Integrating Earth Observation Data into Life Cycle Assessment</h1>
+<p class="subtitle lead">Project proposal for a Case Study on quantifying Albedo Change from Photovoltaic Systems</p>
 </div>
 
 
@@ -94,26 +123,513 @@ div.csl-indent {
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Life Cycle Assessment (LCA) as defined in <span class="citation" data-cites="ISO14040">(<a href="#ref-ISO14040" role="doc-biblioref">International Organization for Standardization, 2006a</a>)</span> and <span class="citation" data-cites="ISO14044">(<a href="#ref-ISO14044" role="doc-biblioref">International Organization for Standardization, 2006b</a>)</span> is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service’s life, from raw material extraction through production, use, and disposal. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Without robust and representative data, the conclusions drawn from an LCA risk being misleading or incomplete.</p>
-<p>Remote sensing, particularly through satellites, provides vast amounts of data. Satellites offer a unique, large-scale perspective for continuous observation of the Earth’s surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite derived data supports a wide range of applications, from climate modeling and disaster response to agricultural planning.</p>
-<p>The focus of this work is to explore if and how observational satellite data can be integrated into LCA to enhance the accuracy of environmental impact evaluations in various stages, especially in the inventory and modeling phases, where accurate, detailed, and geographically specific information is essential. While remote sensing supplies the observational data, LCA offers the framework for quantifying and interpreting environmental impacts.</p>
+<p>Albedo is the ratio of solar energy reflected by a surface. Light surfaces (e.g.&nbsp;snow and ice) reflect a large portion of the sunlight while dark surfaces like asphalt do not reflect it but instead absorb the sunlight and convert it into heat. Therefore, when the albedo of the earth’s surface or atmosphere changes, the planet’s energy balance is altered. The planetary boundaries framework by <span class="citation" data-cites="richardson2023earth">Richardson et al. (<a href="#ref-richardson2023earth" role="doc-biblioref">2023</a>)</span> lists surface albedo changes after greenhouse gases and aerosols as the third key anthropogenic driver in the climate change category, which is measured in (1) atmospheric CO₂ concentration and (2) energy imbalance at the top of the atmosphere. The change in the balance between incoming and outgoing energy is known as radiative forcing (RF). This effect drives weather patterns, surface temperatures, and consequently, the climate system.</p>
+<p>Solar panels convert sunlight into both electrical energy and heat. Since PV installations typically replace existing surfaces with lower-albedo PV modules, they alter the surface reflectivity and, consequently, the local and global energy balance.</p>
+<p>Life Cycle Assessment (LCA) is a standardized tool used to evaluate the environmental impacts associated with every stage of a product or service’s life, from raw material extraction through production, use, and disposal <span class="citation" data-cites="ISO14040">(<a href="#ref-ISO14040" role="doc-biblioref">International Organization for Standardization, 2006a</a>)</span> <span class="citation" data-cites="ISO14044">(<a href="#ref-ISO14044" role="doc-biblioref">International Organization for Standardization, 2006b</a>)</span>. Central to the accuracy and usefulness of an LCA is the availability and quality of the underlying data. Typically the data originates from databases with collected background data such as ecoinvent <span class="citation" data-cites="ecoinvent2023">(<a href="#ref-ecoinvent2023" role="doc-biblioref">ecoinvent Centre, 2023</a>)</span>. However, the data required to assess albedo-related effects, such as surface reflectance and related radiative forcing contributions, is not included in ecoinvent or other comparable LCI databases, and albedo-related effects for PV installation are currently not included.</p>
+<p>Remote sensing, particularly through satellites, provides vast amounts of spatial data. Satellites offer a unique, large-scale perspective for continuous observation of the earth’s surface and atmosphere. They collect data that can be directly or indirectly used to assess land cover, vegetation health, surface temperatures, atmospheric gases, and ocean characteristics. All of these are essential for understanding environmental trends and changes over time. Satellite-derived earth observation (EO) data is continuously collected and supports a wide range of applications, from climate modelling and disaster response to agricultural planning. In particular, EO data allows (1) to assess if a certain location is currently covered by a solar panel, and (2) measure the reflectivity in that location before and after the installation. While ISO14040 <span class="citation" data-cites="ISO14040">(<a href="#ref-ISO14040" role="doc-biblioref">International Organization for Standardization, 2006a</a>)</span> provides the necessary structure for an LCA, it refrains from dictating specific methodological approaches for emerging or complex environmental phenomena, such as the albedo effect and radiative forcing. This absence of prescriptive methods allows for the integration of additional data sources, e.g EO data, in an LCA.</p>
+<p>The aim of this work is to describe how to (1) quantify the environmental impact of albedo changes associated with dark coloured PV installations and (2) integrate it into an LCA for photovoltaic systems. Three sets of research questions will be explored:</p>
+<ol type="1">
+<li><p>How can satellite-derived remote sensing data be applied to assess changes in surface albedo resulting from PV installations by comparing its effects before and after the installation? What level of spatial and temporal data aggregation is required to obtain meaningful results, given the quality and resolution of the data? The hypothesis is that the inherent noise found in satellite-derived remote sensing data (e.g.&nbsp;due to varying weather conditions and cloud cover) along with its limited spatial resolution will represent major constraints to be dealt with. Nevertheless, it is expected that it will be possible to derive statistically significant result estimates with appropriate data processing and statistical methods.</p></li>
+<li><p>How does the original surface of PV systems, such as building or open ground, influence the amount of albedo change from the installation? Is it feasible to identify the original surface such as buildings, deserts, grasslands, croplands, water? Is it possible to assess and quantify the albedo change by original surface type? Furthermore, is seasonality (e.g., temporal snow cover and vegetation dynamics) a relevant factor? The hypothesis is that the impact will depend on the original surface being replaced. Albedo changes for building mounted PV panels are likely to be minor, since the albedo of typical dark roofing is expected to be similar to that of a solar panel surface. However, for other surfaces such as deserts, the changes in albedo might be significant.</p></li>
+<li><p>How can the satellite-derived data be incorporated into an LCA in a methodologically sound and credible manner, enabling its authoritative use in environmental impact assessments of solar energy systems? The hypothesis is that satellite-derived datasets from sources such as U.S. National Oceanic and Atmospheric Administration (NOAA) or European Organisation for the Exploitation of Meteorological Satellites (EUMETSAT) are considered reliable and scientifically validated. The expectation is that the given data quality should allow for quantifying aggregated albedo changes by original surface type and consequently support the incorporation of these effects into an LCA for a photovoltaic system.</p></li>
+</ol>
+<p>The structure of this project work is as follows. First, there is an introduction with a formulation of the research questions. After that, a review of existing literature is presented, focusing on how albedo changes are incorporated into an LCA and how remote sensing–based metrics can support this integration. Subsequently, the required data inputs and the methodological steps to address the research questions are described followed by a section to conclude and discuss the work.</p>
 </section>
-<section id="overview-satellite-data-for-earth-observation" class="level1">
-<h1>Overview: Satellite data for earth observation</h1>
-<p>The focus of this work is on satellites that provide observational data of the Earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed.</p>
-<p>There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in <a href="#tbl-methods" class="quarto-xref">Table&nbsp;1</a>. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e.&nbsp;heat, emitted from the Earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.</p>
-<div id="tbl-methods" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="Methods for sensing">
+<section id="literature-review" class="level1">
+<h1>Literature review</h1>
+<p>Several research areas relate to the research questions explored, including albedo effects in general, albedo effects of photovoltaic (PV) systems, the inclusion of albedo effects in an LCA, and remote sensing applications for a location-specific LCA. This chapter provides an overview of existing studies in these fields that are relevant to the present work. Most of the studies that deal with surface albedo use spatially explicit data.</p>
+<section id="albedo-effects-compared-between-surfaces-and-on-the-hemisphere-level" class="level2">
+<h2 class="anchored" data-anchor-id="albedo-effects-compared-between-surfaces-and-on-the-hemisphere-level">Albedo effects compared between surfaces and on the hemisphere level</h2>
+<p><span class="citation" data-cites="hasler2024accounting">Hasler et al. (<a href="#ref-hasler2024accounting" role="doc-biblioref">2024</a>)</span> find that maximizing the climate benefits of tree cover restoration requires accounting for albedo effects since they often offset or even reverse carbon removal gains, especially in dryland and boreal regions. Using spatial data, the study shows that while many restoration projects target climate-positive areas, many face an albedo offset of at least 20%. The study suggests rolling out large-scale tools to identify areas where restoration delivers net climate benefits.</p>
+<p><span class="citation" data-cites="zhu2024changes">Zhu et al. (<a href="#ref-zhu2024changes" role="doc-biblioref">2024</a>)</span> indicate the significant impacts of climate change and human disturbances on East Asia grassland ecosystems from the perspective of altered albedo. Changes in vegetation greenness and soil properties have a substantial impact on albedo.</p>
+<p><span class="citation" data-cites="wu2024satellite">Wu et al. (<a href="#ref-wu2024satellite" role="doc-biblioref">2024</a>)</span> estimate a 30 meter resolution annual surface albedo dataset for more than 3000 large cities worldwide for the period from 1986 to 2020 from the Landsat surface reflectance product (see <span class="citation" data-cites="usgs_landsat_sr">Survey (<a href="#ref-usgs_landsat_sr" role="doc-biblioref">2020</a>)</span>) and find an overall decreasing trend of albedo during the 35-year evaluation period, which is robust accounting for uncertainties from training sample representativeness, data uncertainty, seasonal variation, and snow-cover contamination.</p>
+<p><span class="citation" data-cites="loeb2025emerging">Loeb et al. (<a href="#ref-loeb2025emerging" role="doc-biblioref">2025</a>)</span> use 24 years of satellite observations to show that there is a small measurable difference between the Northern and Southern Hemispheres in both absorbed solar radiation (ASR) and outgoing longwave radiation (OLR). The emerging darkening of the Northern Hemisphere relative to the Southern Hemisphere is linked to changes in aerosol radiation interactions, surface albedo, and water vapor distributions. This hemispheric asymmetry in radiation is closely connected to variations in the atmosphere and ocean general circulation. The assumption so far was that changes in cloud cover would balance the differences between the hemispheres (see <span class="citation" data-cites="datseris2021earth">Datseris and Stevens (<a href="#ref-datseris2021earth" role="doc-biblioref">2021</a>)</span>), but this study suggests that this compensating effect is not completely effective. Understanding how the clouds respond to the developing imbalance is critical for predicting future climate evolution. <span class="citation" data-cites="diamond2024testing">Diamond et al. (<a href="#ref-diamond2024testing" role="doc-biblioref">2024</a>)</span> follow up on this line of research by breaking down the hemispheric albedo symmetry into components associated with the surface, clear-sky atmosphere, and different cloud types as defined by cloud effective pressure and optical thickness.</p>
+</section>
+<section id="sec-pv-albedo" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pv-albedo">PV installations and albedo effects</h2>
+<p>Today’s solar panels are all in the typical dark colour. Efforts to improve the performance of coloured panels, such as those described by <span class="citation" data-cites="ji2019vivid">Ji et al. (<a href="#ref-ji2019vivid" role="doc-biblioref">2019</a>)</span>, are ongoing and will take time to reach practical application. At this point in time, if architects want to use lighter colours, which happens especially for facade installations, this has to be realised by installing lighter coloured glass panels in front of the dark solar panel. Doing so reduces the amount of albedo change but also the overall energy yield from the PV installation.</p>
+<p><span class="citation" data-cites="barron2016photovoltaic">Barron-Gafford et al. (<a href="#ref-barron2016photovoltaic" role="doc-biblioref">2016</a>)</span> found that PV farms induce a “heat island” effect when lowering the terrestrial albedo from ~20% in natural deserts to ~5% over PV panels by installing a PV farm. Temperatures were regularly 3–4 °C warmer than the surrounding wildlands at night. On the contrary, <span class="citation" data-cites="zhang2020assessing">Zhang and Xu (<a href="#ref-zhang2020assessing" role="doc-biblioref">2020</a>)</span> analyzed surface temperature changes at the 23 largest PV installations worldwide using thermal infrared remote sensing. They found that the PV plants significantly reduced daily mean surface temperature by ~0.5 °C, with a stronger cooling effect during the daytime than at night, and that cooling intensity increased with plant capacity. Although PV installation lowered surface albedo, it increased effective albedo when electricity generation was considered because PV systems convert a portion of the absorbed solar radiation into electricity, which is exported away from the site rather than being released locally as heat. The magnitude of cooling, especially at night, varied with latitude, elevation, climate, and vegetation conditions, suggesting that regional geography and environment should be considered when selecting future PV plant sites.</p>
+<p><span class="citation" data-cites="coimbra2025energy">Coimbra (<a href="#ref-coimbra2025energy" role="doc-biblioref">2025</a>)</span> focused on thermal effects of solar plants on the environment and vice-versa. Large-scale solar power plants are often built in arid or desert habitats with fauna and flora that are highly sensitive to changes in temperature and humidity. Not only albedo change, but also many other factors such as wind direction and speed, dust concentration, ground condition, panel configuration density, orientation and distribution throughout the solar field, affect the local environment, the balance between radiation and convection, and in turn, the performance and thermal impact of solar power plants.</p>
+</section>
+<section id="sec-pv-original" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pv-original">Albedo effects of PV installations per original surface</h2>
+<p>Other studies investigated the impact of PV on radiative forcing at several different installation sites such as city roofs, deserts, alpine locations, and lakes:</p>
+<ul>
+<li><p><span class="citation" data-cites="zhou2025assessing">Zhou et al. (<a href="#ref-zhou2025assessing" role="doc-biblioref">2025</a>)</span> used a LiDAR-based approach to quantify urban albedo for the city of Delft assuming that all appropriate roofs would be covered with PV panels and found that this would yield 485.72 GWh of electric energy per year, while it would minimally lower the city’s albedo and impose <span class="math inline">\(3.53 * 10^{-8}W m^{-2}\)</span> positive RF. The results were validated using MODIS satellite observations.</p></li>
+<li><p><span class="citation" data-cites="li2022comparative">Z. Li et al. (<a href="#ref-li2022comparative" role="doc-biblioref">2022</a>)</span> examined the effects of PV panels on surface radiation through a comparative study between a PV site and a reference site in the Gobi area of Xinjiang, China in summer 2020. The results showed that nighttime outgoing longwave radiation (OLR) was lower at the PV site, while daytime values were similar. The PV site’s surface albedo (0.14) was 39.1% lower than the reference site’s (0.23). Overall, net radiation was 30.7% higher at the PV site: 75% due to reduced upward shortwave radiation, and 25% to lower nocturnal longwave radiation.</p></li>
+<li><p><span class="citation" data-cites="wang2025environmental">Wang et al. (<a href="#ref-wang2025environmental" role="doc-biblioref">2025</a>)</span> studied PV installations in an alpine meadow on the eastern Tibetan Plateau and found a 28.9% increase in net radiation, but reduced albedo and wind speed by 31.6% and 36.2%, respectively. Air temperature rose in daytime and summer, but dropped at night and in winter. Soil under panels was colder and drier, while gaps were colder and wetter, extending the frozen period by roughly 50 days and slowing moisture loss up to 3.5×. These shifts alter local energy and water balances and may moderate climate warming impacts, warranting further studies to evaluate the long-term impacts on vegetation dynamics and permafrost processes.</p></li>
+<li><p><span class="citation" data-cites="li2022physical">P. Li et al. (<a href="#ref-li2022physical" role="doc-biblioref">2022</a>)</span> examined fishery complementary PV plants using a physical model to reveal their microclimatic effects. Deployment turned the lake into a heat sink, reducing albedo by 18.8%. Water energy change was driven by a water/air vapor pressure deficit. Also, the panels warmed the surrounding environment, with heating intensity depending on water depth and strongest at the surface.</p></li>
+<li><p><span class="citation" data-cites="zhao2025comparative">S. Zhao et al. (<a href="#ref-zhao2025comparative" role="doc-biblioref">2025</a>)</span> compared white roofs and PV roofs and showed that economic payback periods for (white) cooling roofs and PV roofs are 1.75 years and 10.90 years, respectively; the energy payback periods are 13.6 years and 43.7 years, respectively; and the environmental payback periods are 2.2 years and 7.6 years, respectively. In terms of energy savings, photovoltaic roofs outperform cooling roofs significantly, with an annual energy saving of 139 kWh/m² for photovoltaic roofs compared to 6.5 kWh/m² for cooling roofs.</p></li>
+</ul>
+<p>In conclusion, impacts on albedo caused by PV installations were observed on all these surfaces, and these impacts could potentially be included in an LCA.</p>
+</section>
+<section id="albedo-effects-of-the-surroundings-of-pv-installations" class="level2">
+<h2 class="anchored" data-anchor-id="albedo-effects-of-the-surroundings-of-pv-installations">Albedo effects of the surroundings of PV installations</h2>
+<p><span class="citation" data-cites="gul2018enhancement">Gul et al. (<a href="#ref-gul2018enhancement" role="doc-biblioref">2018</a>)</span> examined the effects of the surfaces around PV installation and found that these have a small effects on the performance. It is preferrable to use bright, reflective materials like white tiles around PV panels since these maintain higher and more stable albedo values, especially in cloudy northern regions where ground reflection contributes significantly to total solar gain.</p>
+<p><span class="citation" data-cites="cosgun2024investigating">Cosgun and Demir (<a href="#ref-cosgun2024investigating" role="doc-biblioref">2024</a>)</span> explored the performance of floating PV modules installed over water surfaces, focusing on their efficiency and environmental benefits. A 1 MW PV system was simulated with two types of PV modules, bifacial and monofacial, both mounted 1 meter above the water. Results showed that bifacial modules generated more energy annually than monofacial ones due to enhanced albedo reflection from the water surface.</p>
+<p><span class="citation" data-cites="lavaert2023influence">Lavaert et al. (<a href="#ref-lavaert2023influence" role="doc-biblioref">2023</a>)</span> investigated how different ground covers affect the electricity production of two agrivoltaic systems: fixed vertical bifacial panels and horizontal single-axis trackers. The study aimed to determine whether reflective ground covers, such as white cloths, could enhance light capture and energy generation. Simulations suggested that the white ground cloth could increase the incident irradiance on the vertical bifacial panels by about 8%, but real-world measurements over 5.5 months showed no significant difference between ground covers. In contrast, for the horizontal single-axis tracker system, there was a clear benefit with the white ground cloth leading to higher yields.</p>
+</section>
+<section id="albedo-effects-in-lca-studies" class="level2">
+<h2 class="anchored" data-anchor-id="albedo-effects-in-lca-studies">Albedo effects in LCA studies</h2>
+<p>Several studies from the LCA research community have attempted to quantify albedo-related effects for inclusion in an LCA:</p>
+<ul>
+<li><p><span class="citation" data-cites="susca2012enhancement">Susca (<a href="#ref-susca2012enhancement" role="doc-biblioref">2012</a>)</span> proposed an enhancement of the LCA methodology with a time-dependent climatological model for including the effect of surface albedo on climate. They evaluated their theoretical findings with a case study of a black and a white roof evaluated over the timeframes of 50 and 100 years. The comparative LCA of the two roofs showed that the high surface albedo of the white roof played a crucial role in offsetting RF.</p></li>
+<li><p><span class="citation" data-cites="david2025">David et al. (<a href="#ref-david2025" role="doc-biblioref">2025</a>)</span> assessed whether accounting for surface albedo change caused by land use change in carbon credit quantification methods influences the amount of credits and found that overcrediting can happen because planting trees can darken the land.</p></li>
+<li><p><span class="citation" data-cites="jungbluth2012life">Jungbluth et al. (<a href="#ref-jungbluth2012life" role="doc-biblioref">2012</a>)</span> presents collected data on the albedo effects from various surfaces including PV panels. While the direct impact on global radiative forcing is considered minimal, local albedo changes induced by large PV installations could have minor implications for nearby ecosystems and microclimates.</p></li>
+<li><p><span class="citation" data-cites="bright2012climate">Bright et al. (<a href="#ref-bright2012climate" role="doc-biblioref">2012</a>)</span> examine two key dynamic factors affecting bioenergy’s climate impact: temporary changes in the terrestrial carbon cycle, and land surface albedo. The paper proposes ways to integrate these factors into LCA. Using a case study of transportation biofuel from managed boreal forests in northern Europe, the authors develop global warming potential (GWP) indices for different land management scenarios, highlighting the need for region-specific characterization factors and discussing related uncertainties.</p></li>
+<li><p><span class="citation" data-cites="cai2016consideration">Cai et al. (<a href="#ref-cai2016consideration" role="doc-biblioref">2016</a>)</span> quantified land use change (LUC) induced albedo effects from large-scale U.S. biofuel production and compared them with greenhouse gas emissions from traditional lifecycle analyses. Using over 1.4 million satellite albedo observations across six Agro-Ecological Zones, paired with high-resolution crop data, they modeled radiative forcing related impacts of LUC for seven crop types. Results show average albedo effects of −1.8 g CO₂-eq/MJ for corn ethanol (cooling), +2.7 g CO₂-eq/MJ for miscanthus, and +12.1 g CO₂-eq/MJ for switchgrass (warming). Strong spatial variability indicates that biofuel climate impacts depend heavily on local land and vegetation characteristics.</p></li>
+</ul>
+<p>One of the earliest studies examining the environmental impacts of photovoltaic (PV) installations is <span class="citation" data-cites="fthenakis2008emissions">Fthenakis et al. (<a href="#ref-fthenakis2008emissions" role="doc-biblioref">2008</a>)</span>, and since then, numerous scientific publications have investigated PV systems through LCA approaches. While most of them overlook the effects of surface albedo change, a limited number of studies have attempted to quantify the effect in a way that could be used as in input to an LCA:</p>
+<ul>
+<li><p><span class="citation" data-cites="nemet2009net">Nemet (<a href="#ref-nemet2009net" role="doc-biblioref">2009</a>)</span> estimated the effects of covering the earth with sunlight-absorbing panels on a large scale and therefore reducing surface albedo. They found that avoided emissions from PV generated energy were far greater than the observed warming effect from the related albedo reduction.</p></li>
+<li><p><span class="citation" data-cites="wei2024small">Wei et al. (<a href="#ref-wei2024small" role="doc-biblioref">2024</a>)</span> confirmed these results based on global satellite data, and also showed that albedo-induced positive radiative forcing can be offset by negative radiative forcing from clean solar generation in most PV farms within one year.</p></li>
+<li><p><span class="citation" data-cites="xu2024global">Xu et al. (<a href="#ref-xu2024global" role="doc-biblioref">2024</a>)</span> performed a global assessment of the effects of solar farms on albedo and vegetation for 116 large solar farms using MODIS data. They demonstrated that the installation of these farms decreased the annual mean surface shortwave albedo and reduced the enhanced vegetation index (EVI) relative to the surrounding areas. The greatest impacts on albedo were observed in barren land, followed by grassland and cropland, while the opposite order applied for vegetation impact. In terms of seasonal and latitudinal variations, the largest impact on albedo was observed at high latitudes in winter.</p></li>
+</ul>
+</section>
+<section id="spatially-explicit-lca-studies" class="level2">
+<h2 class="anchored" data-anchor-id="spatially-explicit-lca-studies">Spatially explicit LCA studies</h2>
+<p>A spatially explicit LCA is a refinement of a traditional LCA to incorporate geographical and location-specific information into the assessment of environmental impacts. The key difference is the use of location-specific inventory data for different purposes, such as road infrastructure planning as described by <span class="citation" data-cites="karlsson2017">Karlsson et al. (<a href="#ref-karlsson2017" role="doc-biblioref">2017</a>)</span>. Geographic Information Systems (GIS) and remote sensing are often used to map and quantify regional effects.</p>
+<p><span class="citation" data-cites="li2021spatializing">J. Li et al. (<a href="#ref-li2021spatializing" role="doc-biblioref">2021</a>)</span> provide a meta study of 105 publications on GIS-based LCA studies and propose a universal methodological framework to address the following issues: (1) setting up a geographically referenced system in the goal and scope definition phase; (2) spatializing lifecycle data and integrating and computing foreground and background data in the inventory analysis phase; (3) developing spatialized characterization factors with different requirements on resolution and data availability in the impact assessment phase; and (4) harmonizing the contribution analysis of different zones, unit processes, and elementary flows to visualize the spatialized environmental footprint in the interpretation phase.</p>
+<p><span class="citation" data-cites="itten2023remote">Itten et al. (<a href="#ref-itten2023remote" role="doc-biblioref">2023</a>)</span> explore how remote sensing data from satellites can support and partly replace company-provided data for scope 3 greenhouse gas reporting to improve transparency and enable comparisons. The interdisciplinary research group identified remote sensing data sources for agriculture, mining, and energy sectors. Commercial providers already offer relevant ESG-oriented remote sensing based data products based on processed satellite imagery. These datasets on land use change (most recently by <span class="citation" data-cites="jian2025highly">Jian et al. (<a href="#ref-jian2025highly" role="doc-biblioref">2025</a>)</span>), biodiversity, and biomass carbon can enable regionalized and consistent LCI models across larger areas and time periods.</p>
+<p><span class="citation" data-cites="reinhard2016regionalized">Reinhard et al. (<a href="#ref-reinhard2016regionalized" role="doc-biblioref">2016</a>)</span> provide a case study for integrating regionalized life cycle inventory modelling in an LCA for rapeseed cultivation in Germany based on rasterized inventory data with a resolution of one kilometer following the methodological guidelines for the life cycle inventory of agricultural products developed by <span class="citation" data-cites="nemecek2014">Nemecek et al. (<a href="#ref-nemecek2014" role="doc-biblioref">2014</a>)</span>.</p>
+<p><span class="citation" data-cites="dorber2018modeling">Dorber et al. (<a href="#ref-dorber2018modeling" role="doc-biblioref">2018</a>)</span> uses satellite data to estimate the environmental impact from land use and land use change for hydropower reservoirs for application in an LCA. The study calculated an average net land occupation for water storage reservoirs in Norway, with an adjustment to account for the natural lakes that were often part of the reservoirs’ area before impoundment, for a more comprehensive evaluation of the overall environmental footprint of hydroelectric power.</p>
+<p><span class="citation" data-cites="geyer2010coupling1">Geyer, Stoms, et al. (<a href="#ref-geyer2010coupling1" role="doc-biblioref">2010</a>)</span> present an inventory modelling proof-of-concept approach for coupling GIS and LCA for biodiversity assessments of land use and applies it to a case study of ethanol production from agricultural crops in California, and a follow up for impact assessment in <span class="citation" data-cites="geyer2010coupling2">Geyer, Lindner, et al. (<a href="#ref-geyer2010coupling2" role="doc-biblioref">2010</a>)</span>.</p>
+</section>
+<section id="relevant-satellite-derived-datasets-and-tools-for-surface-albedo" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-satellite-derived-datasets-and-tools-for-surface-albedo">Relevant satellite-derived datasets and tools for surface albedo</h2>
+<p><span class="citation" data-cites="roccetti2024hamster">Roccetti et al. (<a href="#ref-roccetti2024hamster" role="doc-biblioref">2024</a>)</span> provide a dataset for surface albedo based on the MODIS Surface Reflectance Black-Sky Albedo dataset (see <span class="citation" data-cites="schaaf2021modis">Schaaf and Wang (<a href="#ref-schaaf2021modis" role="doc-biblioref">2021</a>)</span>) and principal component analysis (PCA) as described by <span class="citation" data-cites="hotelling1933pca">Hotelling (<a href="#ref-hotelling1933pca" role="doc-biblioref">1933</a>)</span>.</p>
+<p><span class="citation" data-cites="riihela2024four">Riihelä et al. (<a href="#ref-riihela2024four" role="doc-biblioref">2024</a>)</span> present CLARA-A3 surface albedo data as the third edition of the CM SAF Cloud, Albedo and surface Radiation (CLARA) data record family. The temporal coverage of this edition is extended from 1979 until the near-present day. The core algorithms and data format remain unchanged from previous editions, but now white- and blue-sky albedo estimates are also available for the first time in CLARA data.</p>
+<p>Cloud cover constitutes a major challenge for surface albedo estimation. <span class="citation" data-cites="manninen2022cloud">Manninen et al. (<a href="#ref-manninen2022cloud" role="doc-biblioref">2022</a>)</span> describe a new method for cloud-correcting observations of black-sky surface albedo derived using Advanced Very High Resolution Radiometer (AVHRR) data for all possible conditions of cloud fraction and cloud type with any land cover type and solar zenith angle.</p>
+</section>
+<section id="sec-accuracy-satellite-data" class="level2">
+<h2 class="anchored" data-anchor-id="sec-accuracy-satellite-data">Accuracy of satellite-derived data</h2>
+<p>The accuracy of satellite-derived data is crucial for any use case depending on it. Many scientific publications are focused on assessing accuracy levels of satellite-derived data and understanding the reasons for any discrepancies:</p>
+<ul>
+<li><p><span class="citation" data-cites="gruber2020validation">Gruber et al. (<a href="#ref-gruber2020validation" role="doc-biblioref">2020</a>)</span> propose good practice guidelines for the validation of global coarse-scale satellite soil moisture datasets and practical recommendations on data preprocessing and presentation of statistical results together with a recommended validation protocol and an example validation.</p></li>
+<li><p><span class="citation" data-cites="langsdale2025challenges">Langsdale et al. (<a href="#ref-langsdale2025challenges" role="doc-biblioref">2025</a>)</span> review key challenges in validating satellite ECVs across terrestrial, oceanic, and atmospheric domains. They focus on issues with reference data, their use in validation, and comparison methods and provide recommendations for improving uncertainty modelling, transparency about data limitations, metadata management, and best practices for validation methodologies.</p></li>
+<li><p><span class="citation" data-cites="paris2023accuracy">Paris et al. (<a href="#ref-paris2023accuracy" role="doc-biblioref">2023</a>)</span> discuss issues caused by inconsistencies between the actual data and the information derived from satellite data that can be attributed to factors such as differences in viewpoint perspectives, i.e., aerial versus ground views, or spatial resolution of the satellite images versus the extent of the land cover present in the scene.</p></li>
+<li><p><span class="citation" data-cites="tran2023uncertainty">Tran et al. (<a href="#ref-tran2023uncertainty" role="doc-biblioref">2023</a>)</span> reviewed 676 papers written between 2011 and 2021 on uncertainty assessment of remote sensing-based evapotranspiration data (RS-ET), categorizing the approaches taken by methods, context, and reporting metrics. They found that assessments are inconsistent in methodology, reference data, geographic coverage, and uncertainty reporting. The study recommends that future work should clearly document validation context, reference data uncertainties, spatial and temporal mismatches, and report multiple performance metrics.</p></li>
+</ul>
+</section>
+</section>
+<section id="materials-and-methods" class="level1">
+<h1>Materials and methods</h1>
+<p><a href="#sec-remote-sensing" class="quarto-xref">Section&nbsp;3.1</a> describes how relevant satellite data can be retrieved and processed to determine the change in surface albedo (delta) caused by PV installations. <a href="#sec-albedo" class="quarto-xref">Section&nbsp;3.2</a> outlines the principles and methods used to measure surface albedo and describes its relationship with radiative forcing, which is needed to quantify the environmental impact of albedo changes. <a href="#sec-original-surface" class="quarto-xref">Section&nbsp;3.3</a> discusses the considerations arising from the original surface that was replaced by the PV panels, and the implications on surface albedo. <a href="#sec-lca-integration" class="quarto-xref">Section&nbsp;3.4</a> discusses how to translate the resulting data into an environmental impact assessment, and how to include these results in an LCA.</p>
+<section id="sec-remote-sensing" class="level2">
+<h2 class="anchored" data-anchor-id="sec-remote-sensing">Retrieving and processing remote sensing data</h2>
+<p>Satellite remote sensing provides a spatially continuous means of estimating surface albedo. The spatial areas of interest where the PV plant(s) are located will be defined based on the investigated use case. All the data points that (completely and/or partly) cover the relevant area will be selected. This process can be supported with image recognition techniques (e.g.&nbsp;a deep learning model for detecting solar panels), or it can be based on defined location data.</p>
+<p>Satellite-derived data inherently contains significant noise due to variable weather conditions, cloud cover, and operational factors. To quantify the change in albedo (delta), two comparison approaches can be used: (1) comparing the PV farm area with itself prior to installation, or (2) comparing it with a nearby reference area of the same size and surface characteristics as the original land replaced by the PV installation. The second approach is preferable, as the data points from both areas are subject to the same weather conditions and operational influences, whereas in the before-and-after scenario, the temporal conditions differ which would influence the results to a large extent.</p>
+<p>Many satellites provide relevant data (see <a href="#sec-satellite-data" class="quarto-xref">Section&nbsp;5.3</a> for a full overview). In this section, the most appropriate are identified. One of the main considerations is the data resolution (minimum square pixel size available) required, which depends on the use case. It’s also important to choose data that is in the public domain. Also relevant is the time frame for which the required data is available.</p>
+<p>Some satellites, such as MODIS and VIIRS, provide direct albedo monitoring (e.g., MODIS MCD43A3, VIIRS VNP43). However, since the resolution from these satellites is generally coarse with 500 to 750 meters, the resulting data can only be applied for very large PV farms.</p>
+<p>Other satellite types provide higher spatial resolution and therefore can also be used to assess smaller PV sites. They employ multi-spectral sensors to record surface reflectance across different wavelengths (e.g., shortwave, visible, or near-infrared). The albedo can then be derived by applying weighted linear combinations of these reflectance values. Examples for this category are Landsat and Sentinel-2. Their spatial resolution is between 10 and 60 meters. Sentinel-2 data is available from 2015 onwards, and Landsat data from 1984 onwards (for use cases where longer history is required).</p>
+<p>The selected data can then be downloaded for further processing and analysis. These datasets are typically very large and are continuously updated over time (e.g.&nbsp;every 10 minutes). Therefore, appropriate data management and downloading tools should be used to ensure efficiency and reliability.</p>
+</section>
+<section id="sec-albedo" class="level2">
+<h2 class="anchored" data-anchor-id="sec-albedo">Albedo measurement and radiative forcing</h2>
+<p>Albedo is defined as the ratio of reflected to incoming solar radiation: <span class="math inline">\(\alpha =\frac{R_{reflected}}{R_{incoming}}\)</span></p>
+<p>It is a unitless quantity that can range between 0 for complete absorption to 1 for complete reflection. The albedo value of any location depends on the surface material, texture, colour, and the angle of incoming solar radiation. Ground-based albedo can also be measured using pyranometers or albedometers (e.g., mounted on towers) recording incoming and reflected shortwave radiation over a defined area. Although they are highly accurate, the ground-based measurements are limited in spatial coverage and therefore the satellite-based approach is deemed preferable for LCA integration.</p>
+<p>Radiative forcing (RF) is generally measured in watts per square meter (<span class="math inline">\(W m^{−2}\)</span>) and quantifies the change in the earth’s energy balance resulting from modifications to the incoming or outgoing radiation. There are many factors that can cause such a modification: Emission of greenhouse gases such as CO₂ or CH₄, aerosols such as black carbon, land use changes and therefore albedo changes (focus of this work), and solar variability which are the natural fluctuations in the amount of solar radiation reaching the earth over time. The IPCC AR6 report by <span class="citation" data-cites="IPCC_AR6_WGI_Chapter7_2021">Forster et al. (<a href="#ref-IPCC_AR6_WGI_Chapter7_2021" role="doc-biblioref">2021</a>)</span> assessed the contributions as presented in <a href="#tbl-ipcc" class="quarto-xref">Table&nbsp;1</a> below:</p>
+<div id="tbl-ipcc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ipcc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Radiative Forcing contributions per category from IPCC AR6 report
+</figcaption>
+<div aria-describedby="tbl-ipcc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<caption>Radiative Forcing contributions per category from IPCC AR6 report</caption>
+<colgroup>
+<col style="width: 54%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Radiative Forcing (2019 vs.&nbsp;1750)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Carbon dioxide CO₂</td>
+<td>+2.16 W/m²</td>
+</tr>
+<tr class="even">
+<td>Methane CH₄</td>
+<td>+0.54 W/m²</td>
+</tr>
+<tr class="odd">
+<td>Nitrous oxide N₂O</td>
+<td>+0.21 W/m²</td>
+</tr>
+<tr class="even">
+<td>Halogenated gases</td>
+<td>+0.32 W/m²</td>
+</tr>
+<tr class="odd">
+<td>Ozone O₃</td>
+<td>+0.47 W/m²</td>
+</tr>
+<tr class="even">
+<td>Aerosols</td>
+<td>−1.10 W/m²</td>
+</tr>
+<tr class="odd">
+<td>Land use change related albedo change</td>
+<td>−0.15 W/m²</td>
+</tr>
+<tr class="even">
+<td>Contrails and aviation induced cirrus</td>
+<td>+0.05 W/m²</td>
+</tr>
+<tr class="odd">
+<td>Solar variability</td>
+<td>+0.01 W/m²</td>
+</tr>
+<tr class="even">
+<td>In total</td>
+<td>≈ +2.72 W/m²</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Positive RF is the initial driver of climate change. It causes temperature rise in the atmosphere and on the earth surface (sea and land). Temperature rise causes ice-covered regions such as ice sheets, glaciers, and sea ice to melt. This is a positive feedback loop for further albedo changes, since bright surfaces are replaced by darker ones. Changes in surface albedo directly modify the shortwave component of the radiative balance. A reduction in albedo (e.g., replacing bright desert surface with dark PV panels) increases the absorption of solar energy, leading to positive radiative forcing (surface warming). Conversely, an increase in albedo contributes to negative radiative forcing (surface cooling). <a href="#tbl-ipcc" class="quarto-xref">Table&nbsp;1</a> contextualizes the radiative forcing resulting from overall land-use-change-related albedo changes, showing that, when considering all land-use changes (not just PV-related), the net effect of these albedo changes is cooling.</p>
+<p>The radiative forcing impact <span class="math inline">\(\Delta F\)</span> caused by an albedo change <span class="math inline">\(\Delta \alpha\)</span> can be approximated as:</p>
+<p><span class="math display">\[\Delta F = -S \cdot (1 - A) \cdot \Delta \alpha / 4\]</span> where the solar constant <span class="math inline">\(S\)</span> is equal to ~<span class="math inline">\(1361 W m^{−2}\)</span> and the planetary albedo <span class="math inline">\(A\)</span> amounts to ~<span class="math inline">\(0.3\)</span> (this is an empirically derived value from satellite measurements for the entire earth). The factor of ¼ accounts for the ratio of the earth’s cross-sectional area to its total surface area, since only the planet’s disk intercepts sunlight. This means that the intercepted energy must be averaged over the entire surface area of the earth to express the impact per unit area globally. Negative values of <span class="math inline">\(\Delta F\)</span> represent cooling (because of increased reflectivity), while positive values indicate warming (because of decreased reflectivity).</p>
+</section>
+<section id="sec-original-surface" class="level2">
+<h2 class="anchored" data-anchor-id="sec-original-surface">Original surface detection and related albedo values</h2>
+<p>For identifying the original surface there are several relevant satellite-based datasets such as <span class="citation" data-cites="Zanaga2022_WorldCover2021v200">Zanaga et al. (<a href="#ref-Zanaga2022_WorldCover2021v200" role="doc-biblioref">2022</a>)</span>, which is based on aggregated Sentinel data from 2021. It provides the surface type for each 10x10 meter square globally. The surface categories provided are described in <a href="#tbl-esa" class="quarto-xref">Table&nbsp;2</a>. <a href="#tbl-albedo" class="quarto-xref">Table&nbsp;3</a> provides a list of aggregated albedo values per surface type derived from on satellite data (MODIS, Meteosat) together with a reference to the origin for each value.</p>
+<div id="tbl-esa" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-esa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: ESA WorldCover (10 m resolution global land cover map) categories from <span class="citation" data-cites="Zanaga2022_WorldCover2021v200">Zanaga et al. (<a href="#ref-Zanaga2022_WorldCover2021v200" role="doc-biblioref">2022</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-esa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<caption>ESA WorldCover (10 m resolution global land cover map) categories from <span class="citation" data-cites="Zanaga2022_WorldCover2021v200">Zanaga et al. (<a href="#ref-Zanaga2022_WorldCover2021v200" role="doc-biblioref">2022</a>)</span></caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 69%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tree cover</td>
+<td>Areas dominated by trees (≥10% cover), incl.&nbsp;plantations and flooded forests.</td>
+</tr>
+<tr class="even">
+<td>Shrubland</td>
+<td>Areas dominated by shrubs (&lt;5 m tall) with ≥10% shrub cover.</td>
+</tr>
+<tr class="odd">
+<td>Grassland</td>
+<td>Areas dominated by herbaceous plants (≥10% cover); woody plants &lt;10%.</td>
+</tr>
+<tr class="even">
+<td>Cropland</td>
+<td>Land where plants are sown or harvested at least once a year.</td>
+</tr>
+<tr class="odd">
+<td>Built-up</td>
+<td>Land covered by buildings, roads, and other man-made structures.</td>
+</tr>
+<tr class="even">
+<td>Bare and sparse vegetation</td>
+<td>Lands with exposed soil, sand, or rocks, and ≤10% vegetative cover.</td>
+</tr>
+<tr class="odd">
+<td>Snow and ice</td>
+<td>Areas persistently covered by snow or glaciers.</td>
+</tr>
+<tr class="even">
+<td>Permanent water bodies</td>
+<td>Lakes, reservoirs, and rivers mostly covered by water (&gt;9 months/year).</td>
+</tr>
+<tr class="odd">
+<td>Herbaceous wetland</td>
+<td>Land dominated by herbaceous vegetation, permanently or regularly flooded.</td>
+</tr>
+<tr class="even">
+<td>Mangroves</td>
+<td>Salt-tolerant trees and plants in intertidal tropical zones.</td>
+</tr>
+<tr class="odd">
+<td>Moss and lichen</td>
+<td>Land covered by mosses and/or lichens, often in polar or high-altitude regions.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="tbl-albedo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-albedo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Compiled list of typical albedo values per surface type
+</figcaption>
+<div aria-describedby="tbl-albedo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<caption>Compiled list of typical albedo values per surface type</caption>
+<colgroup>
+<col style="width: 41%">
+<col style="width: 30%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Surface type</th>
+<th>Mean yearly albedo</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deep water</td>
+<td>0.04–0.08</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Moist dark soils / ploughed fields</td>
+<td>0.05–0.15</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Water</td>
+<td>~ 0.1</td>
+<td><span class="citation" data-cites="oke1987boundary">Oke (<a href="#ref-oke1987boundary" role="doc-biblioref">1987</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Buildings (dark roof)</td>
+<td>~ 0.1</td>
+<td><span class="citation" data-cites="oke1987boundary">Oke (<a href="#ref-oke1987boundary" role="doc-biblioref">1987</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>PV panels</td>
+<td>~ 0.1</td>
+<td><span class="citation" data-cites="ArgonneSolarEIS2012">Argonne National Laboratory (<a href="#ref-ArgonneSolarEIS2012" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Asphalt</td>
+<td>~ 0.1</td>
+<td><span class="citation" data-cites="moretti2021effect">Moretti et al. (<a href="#ref-moretti2021effect" role="doc-biblioref">2021</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Evergreen needleleaf forest</td>
+<td>~ 0.11</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Evergreen broadleaf forest</td>
+<td>~ 0.13</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Mixed forest</td>
+<td>~ 0.13</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Coniferous forest</td>
+<td>0.10–0.15</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Grey soils or bare fields</td>
+<td>0.15–0.25</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Deciduous broadleaf forest</td>
+<td>~ 0.14</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Woody savanna</td>
+<td>~ 0.18</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Savanna</td>
+<td>~ 0.21</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Grass or short vegetation</td>
+<td>0.15–0.25</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Grassland</td>
+<td>~ 0.22</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Cropland</td>
+<td>~ 0.23</td>
+<td><span class="citation" data-cites="cescatti2012intercomparison">Cescatti et al. (<a href="#ref-cescatti2012intercomparison" role="doc-biblioref">2012</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Dry soils or desert</td>
+<td>0.20–0.35</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>White sand</td>
+<td>0.30–0.40</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Desert sand</td>
+<td>~ 0.4</td>
+<td><span class="citation" data-cites="tetzlaff1983albedo">Tetzlaff (<a href="#ref-tetzlaff1983albedo" role="doc-biblioref">1983</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Melting snow</td>
+<td>~ 0.4</td>
+<td><span class="citation" data-cites="van2020evaluation">Van Dalum et al. (<a href="#ref-van2020evaluation" role="doc-biblioref">2020</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Old or dirty snow</td>
+<td>0.35–0.65</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Clean snow</td>
+<td>0.60–0.75</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Older snow or firn</td>
+<td>~ 0.7</td>
+<td><span class="citation" data-cites="van2020evaluation">Van Dalum et al. (<a href="#ref-van2020evaluation" role="doc-biblioref">2020</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>White roof coating</td>
+<td>~ 0.75</td>
+<td><span class="citation" data-cites="epa2003coolroof">U.S. Environmental Protection Agency (<a href="#ref-epa2003coolroof" role="doc-biblioref">2003</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Fresh dry snow</td>
+<td>0.80–0.90</td>
+<td><span class="citation" data-cites="brutsaert1984">Brutsaert (<a href="#ref-brutsaert1984" role="doc-biblioref">1984</a>)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="sec-lca-integration" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lca-integration">LCA integration</h2>
+<p>This section describes how to incorporate satellite-derived surface albedo change data into an LCA in a methodologically sound manner for data methodology and impact metric assessment.</p>
+<section id="data-methodology" class="level3">
+<h3 class="anchored" data-anchor-id="data-methodology">Data methodology</h3>
+<p>Two potential approaches are described, for PV site specific data and for generalized data. These approaches may be combined within a hierarchical (stacked) framework, whereby the most appropriate method is applied depending on data availability and intended use case.</p>
+<section id="sec-lca-integration-pv-specific" class="level4">
+<h4 class="anchored" data-anchor-id="sec-lca-integration-pv-specific">PV site specific data</h4>
+<p><a href="#fig-methodology" class="quarto-xref">Figure&nbsp;1</a> provides an overview of the steps required for LCA integration for PV site specific data, which will be described in this section.</p>
+<div id="fig-methodology" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-methodology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PWRG%202%20methodology.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-methodology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Methodology for PV site specific data integration in LCA
+</figcaption>
+</figure>
+</div>
+<p>As the first step (1), the relevant data for the area of interest (AoI) and the reference area (RA) will be selected (see <a href="#sec-remote-sensing" class="quarto-xref">Section&nbsp;3.1</a>). After that in (2) the data will be retrieved, usually via download from the satellite provider. In the next step (3), faulty data points in the downloaded data need to be identified and filtered out. To ensure comparability of the AoI and RA data in the later steps, it is required that both data sets are filtered in the exact same way and that they have the exact same temporal coverage.</p>
+<p>These datasets then build the base for calculating albedo values in step (4) as described in <a href="#sec-albedo" class="quarto-xref">Section&nbsp;3.2</a>. There will be one result value for each minimally supported geographical location (square pixel) from the relevant satellite bands. This calculation is satellite specific, since it is based on the bands provided, and each satellite provides different band setups. Relevant satellite band specific formulas are provided in <span class="citation" data-cites="liang2001narrowband">Liang (<a href="#ref-liang2001narrowband" role="doc-biblioref">2001</a>)</span>. The next step is to aggregate all the per-pixel data for the same pixel to combine them to an average per-pixel result. From these individual numbers, an average result for the whole area (AoI or RA) can be determined. Aggregation steps reduce noise progressively the more data is combined. Consequently, the resulting estimates will be more stable the larger the PV plant, and the longer the observation period. Step 5 and 6 are described in <a href="#sec-impact-metric-assessment" class="quarto-xref">Section&nbsp;3.4.2</a>.</p>
+<p>While this approach uses the most specific data possible, there are two major limitations. Most importantly, note that the suggested approach is only applicable for PV farms that are already installed, because the relevant satellite data will not exist otherwise. In addition, since seasonal factors such as temporal snow cover and vegetation dynamics in the location will play a role for many spatial areas of interest, the temporal aggregation window must be at least one year. This means that only PV plants that already exist for longer than that period can be evaluated instantly.</p>
+</section>
+<section id="sec-lca-integration-generalized" class="level4">
+<h4 class="anchored" data-anchor-id="sec-lca-integration-generalized">Generalized data</h4>
+<p>Given the constraints described for PV site specific data, a more practical approach could be to provide generalized data rather than PV site specific values. LCA methodologies typically rely on aggregated impact factors, which can be globalized or regionalized. To enable its authoritative use in environmental impact assessments, any impact factor should best be published by independent bodies such as government agencies, research institutions, or expert panels.</p>
+<p>Although this approach cannot capture the high spatial variability inherent to the PV site’s environmental conditions (e.g., sun angle, climate, surrounding environment) or the PV system characteristics (e.g., panel tilt, orientation, colour, and coating), estimating the albedo change using general values for the albedo of PV panels and the original surface is expected to result in a reasonable estimate. It can be implemented in a globalized or regionalized way, depending on the extent of influence of environmental conditions and PV system characteristics on the impact factors. <a href="#fig-m-high" class="quarto-xref">Figure&nbsp;2</a> depicts how to implement this approach for the given use case.</p>
+<div id="fig-m-high" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-m-high-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PWRG%202%20methodology%20high%20level.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m-high-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Methodology for generalized data integration in LCA
+</figcaption>
+</figure>
+</div>
+<p>In this case, the original surface can either be specified by the user or identified using processed satellite data such as the ESA WorldCover from <span class="citation" data-cites="Zanaga2022_WorldCover2021v200">Zanaga et al. (<a href="#ref-Zanaga2022_WorldCover2021v200" role="doc-biblioref">2022</a>)</span>. The corresponding estimate for the surface albedo will be gathered from literature study as already compiled in <a href="#tbl-albedo" class="quarto-xref">Table&nbsp;3</a>.</p>
+</section>
+</section>
+<section id="sec-impact-metric-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="sec-impact-metric-assessment">Impact metric assessment</h3>
+<p>The final outcome of the aggregation steps described in the previous section are two average albedo values, one for the area of interest and one for the reference area. These two numeric numbers between 0 and 1 are the input to the delta calculation of the albedo change. The result is a very small scalar <span class="math inline">\(\Delta \alpha\)</span>, which will be converted into a radiative forcing (RF) value <span class="math inline">\(\Delta F\)</span> as described in <a href="#sec-albedo" class="quarto-xref">Section&nbsp;3.2</a>.</p>
+<p>The RF value will be translated into a comparable impact metric, enabling direct comparison with other climate impacts and integration into an LCA. The most relevant impact category for radiative forcing is its global warming potential (GWP) over time. To calculate it, the RF is time-integrated to account for the cumulative effect over a chosen time horizon (commonly 20, 50, or 100 years). This will result in an absolute number for the cumulative radiative energy change in the earth’s atmosphere system for the chosen time horizon. The absolute number will be normalized by comparing it to CO₂ to receive CO₂-equivalent emissions (CO₂-eq).</p>
+<p>For an LCA for a PV farm, the functional unit will typically be a certain amount of electric power such as a kilowatt-hour (kWh), and the most relevant impact metric will be climate change expressed in CO₂-eq per kWh of produced power. This allows for easy integration of the additional impact from the surface albedo change in the LCA by incorporating the associated CO₂-eq contribution per functional unit.</p>
+</section>
+</section>
+</section>
+<section id="discussion-and-conclusion" class="level1">
+<h1>Discussion and conclusion</h1>
+<p>In this paper, a methodology for integrating surface albedo changes in an LCA via satellite or generalized data has been presented. The site-specific approach utilizes a six-step framework that begins with selecting an area of interest and a reference area, followed by retrieving and filtering high-resolution satellite imagery to ensure identical temporal coverage. Albedo is then calculated at the pixel level and aggregated to determine the average delta (Δα) between the PV installation and the original land cover. Finally, the result is converted to an amount of radiative forcing, from which an impact factor can be derived. Alternatively, the generalized approach offers a simplified application by identifying the original surface through existing global datasets and applying albedo values derived from literature to estimate the change relative to dark coloured PV panels.</p>
+<p>The compiled surface albedo values in <a href="#tbl-albedo" class="quarto-xref">Table&nbsp;3</a> reveal substantial variation among different surface types. Because the albedo of PV panels is comparable to that of buildings with dark roofs, installing PV systems on such buildings results in only minor changes in surface albedo. Water surfaces have a slightly lower albedo than PV panels, meaning that floating PV installations will lead to a small increase in albedo. In contrast, desert sand exhibits a higher albedo than PV panels, therefore large-scale PV farms in desert environments are expected to induce a moderate reduction in albedo. When PV panels are installed on white-roofed buildings, such as those commonly found in regions of Greece or India, the resulting albedo change differs markedly from installations on dark roofs because the albedo of white roofs is a lot higher. Ice and snow have the highest albedo of all surfaces considered, and reflect a large fraction of incoming solar radiation. Consequently, alpine PV installations are associated with the most pronounced albedo changes, resulting in substantially lower reflectivity.</p>
+<p>While the albedo reduction introduced by PV installations may increase local heat absorption at the building scale, this effect must be evaluated in conjunction with the benefits of renewable electricity generation. Overall, the literature review (see <a href="#sec-pv-albedo" class="quarto-xref">Section&nbsp;2.2</a> in particular) indicates that although replacing natural surfaces with PV panels leads to a measurable albedo effect that can be quantified within an LCA, this effect represents a substantially smaller environmental impact compared to the benefits associated with the renewable energy produced by PV systems. This conclusion is expected to hold true across installations on all surface types including ice and snow where albedo changes are most pronounced. The only existing study about an alpine PV installation in Tibet (see <a href="#sec-pv-original" class="quarto-xref">Section&nbsp;2.3</a>) found that while surface albedo was reduced and net radiation was increased as expected, the PV panels also caused a multitude of other effects such as the soil frozen period to extend significantly and recommended more long-term monitoring and analysis. This data can build the base for a full LCA.</p>
+<section id="data-uncertainty-and-validation" class="level2">
+<h2 class="anchored" data-anchor-id="data-uncertainty-and-validation">Data uncertainty and validation</h2>
+<p>In an LCA, data quality indicators (DQIs) as defined in <span class="citation" data-cites="ISO14044">International Organization for Standardization (<a href="#ref-ISO14044" role="doc-biblioref">2006b</a>)</span> are criteria used to describe, assess, and document how reliable and representative the data feeding into a life cycle inventory can be considered to understand how much confidence can be placed in the LCA results. DQIs cover the following aspects:</p>
+<ol type="1">
+<li><p>Technological representativeness: the degree to which the data reflects the actual technology or process studied.</p></li>
+<li><p>Geographical representativeness: how closely the data matches the geographic location of the system (e.g., regional vs.&nbsp;global average conditions).</p></li>
+<li><p>Temporal representativeness: how current the data are relative to the reference year of the study.</p></li>
+<li><p>Completeness: whether all relevant inputs and outputs are included in the data.</p></li>
+<li><p>Reliability and precision: the quality of the given data sources and methods. Measured data is preferred over calculated data. If neither is available, a fallback to estimated or assumed data will be performed.</p></li>
+<li><p>Consistency and methodological coherence: whether the data was generated using consistent assumptions, system boundaries, and methods.</p></li>
+</ol>
+<p>Satellite-derived albedo products generally rank high on all DQI dimensions because they provide granular data that is representative on all the three given dimensions and also complete, reliable, and consistent. Also, they originate from authoritative bodies like NOAA and EUMETSAT and are therefore considered scientifically validated and reliable.</p>
+<p>However, satellite-derived albedo products are subject to uncertainties inherently arising from several sources (cf.&nbsp;literature study in <a href="#sec-accuracy-satellite-data" class="quarto-xref">Section&nbsp;2.8</a>):</p>
+<ul>
+<li><p>The first source of uncertainty originates from technical constraints. If the satellite’s pixel size is too coarse for the PV farm to be analysed, mixed pixels that only partly cover the area of interest will influence the results. Inconsistencies can also occur due to a difference between aerial and ground level viewpoints. Finally, sensor calibration is important to avoid introducing long-term drift in data quality in continuous monitoring setups which would affect temporal representativeness.</p></li>
+<li><p>Furthermore, operational issues such as temporary sensor malfunctions causing data gaps and/or faulty data are inevitable. This must be explicitly addressed within the suggested methodological framework.</p></li>
+<li><p>Another source of uncertainty are atmospheric and environmental variations. Cloud cover is a major challenge for surface albedo estimation, often requiring sophisticated probability-based correction methods. Similarly, snow cover and seasonal vegetation dynamics can drastically alter reflectivity, requiring temporal aggregation to obtain stable, meaningful results. Atmospheric correction is required since variations in aerosols and water vapour can lead to an emerging darkening or brightening in satellite observations, which makes the isolation of the albedo effect from other atmospheric signals complicated.</p></li>
+</ul>
+<p>The simplest approach to cross-validation is to perform it against the generalized data as described in <a href="#sec-lca-integration-generalized" class="quarto-xref">Section&nbsp;3.4.1.2</a>, or against other available datasets.</p>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<p>The surface albedo numbers compiled in <a href="#tbl-albedo" class="quarto-xref">Table&nbsp;3</a> have high coverage but do not constitute an exhaustive list. For some use cases, additional literature study might be necessary. Careful analysis is required since the values found in literature are not always of the same type. Sometimes they are yearly means, but they can also be individual data samples. For some surfaces this is not relevant, but for those where seasonal effects play a role it is important. For some use cases and/or land cover types, albedo ground measurements might be required.</p>
+<p>The exact approach chosen for the filtering and aggregation steps described in <a href="#sec-lca-integration-pv-specific" class="quarto-xref">Section&nbsp;3.4.1.1</a> has significant impact on the resulting numbers. Therefore, it needs to be carefully designed and documented, which was omitted in this work but is required for an accurate assessment of the impacts of land cover change in an LCA.</p>
+</section>
+</section>
+<section id="appendix" class="level1">
+<h1>Appendix</h1>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>Many thanks to Daija Angeli and René Itten for extremely valuable feedback and input to earlier versions of this paper, which improved its quality significantly.</p>
+</section>
+<section id="project-organization" class="level2">
+<h2 class="anchored" data-anchor-id="project-organization">Project organization</h2>
+<p>Meeting notes can be found in this <a href="https://docs.google.com/document/d/1VU0kbmwIUlZccU_cYHZRlxYZlabygCJDcqKL89btGjQ/edit?tab=t.0">document</a> (access upon request). The time plan for the project can be found in this <a href="https://docs.google.com/spreadsheets/d/1tMAxxHvsHJsqjUZ7jw08sTwZ_VDRYiV4cWMNbbDzMaw/edit?gid=1314943303#gid=1314943303">document</a> (access upon request)</p>
+</section>
+<section id="sec-satellite-data" class="level2">
+<h2 class="anchored" data-anchor-id="sec-satellite-data">Overview: Satellite data for earth observation</h2>
+<p>This chapter provides an introduction to satellites that provide observational data of the earth for environmental monitoring. The many other existing use cases for satellites in communication, broadcasting, navigation, and for military purposes will not be discussed.</p>
+<div id="tbl-methods" class="table quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Methods for sensing
 </figcaption>
 <div aria-describedby="tbl-methods-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
+<table class="table caption-top">
+<caption>Methods for sensing</caption>
 <colgroup>
-<col style="width: 42%">
-<col style="width: 23%">
-<col style="width: 15%">
-<col style="width: 18%">
+<col style="width: 37%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -147,28 +663,30 @@ Table&nbsp;1
 </div>
 </figure>
 </div>
+<p>There are several different types of methods to sense the data: optical, thermal, and radar based as summarized in <a href="#tbl-methods" class="quarto-xref">Table&nbsp;4</a>. Optical methods detect sunlight reflected by clouds, land, and oceans, e.g., for red and blue visible light reflectance. Near-infrared (NIR) and infrared (IR) is invisible to the human eye. NIR is strongly reflected by vegetation, and absorbed by water. Therefore, NIR based methods make land cover, plant health, and boundaries between land and water easy to detect. IR detects thermal radiation, i.e.&nbsp;heat, emitted from the earth and atmosphere at day and night. This is useful for observation of temperature and moisture or dryness as well as atmospheric gaseous water vapor. Synthetic Aperture Radar (SAR) is an active method that works at night and through clouds (unlike the other methods). It detects surface structure and moisture.</p>
 <p>At a high level, satellites can be categorized based on their orbital types, which determine their position and altitude, and consequently coverage and purpose:</p>
 <ol type="1">
-<li><p>Low Earth Orbit (LEO) satellites orbit at altitudes between 160 and 2.000 kilometers. They are known for their high resolution data. A subset of them, polar orbits, pass over the Earth’s poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the Earth under similar lighting conditions with each pass.</p></li>
+<li><p>Low Earth Orbit (LEO) satellites orbit at altitudes between 160 and 2.000 kilometers. They are known for their high resolution data. A subset of them, polar orbits, pass over the earth’s poles and provide global coverage as the planet rotates beneath them. Another subset is sun-synchronous orbits, which maintain a consistent position relative to the sun, allowing satellites to observe the earth under similar lighting conditions with each pass.</p></li>
 <li><p>Medium Earth Orbit (MEO) satellites operate at altitudes ranging above 2.000 and below 35.000 kilometers. They are typically used for navigation services such as devised based on Assisted Global Navigation Satellite Systems as defined in <span class="citation" data-cites="3gppagnss">(<a href="#ref-3gppagnss" role="doc-biblioref">3rd Generation Partnership Project (3GPP), 2019</a>)</span>, which rely on acquiring and decoding satellite signals to determine their position.</p></li>
-<li><p>Geostationary Earth Orbit (GEO) satellites are located above the equator at 35.786 kilometers, which matches the Earth’s rotation period, to provide continuous observation of a fixed region of the Earth. They are known for providing low resolution data with high update frequency. The data provided is often used for weather and broad climate monitoring.</p></li>
+<li><p>Geostationary Earth Orbit (GEO) satellites are located above the equator at 35.786 kilometers, which matches the earth’s rotation period, to provide continuous observation of a fixed region of the earth. They are known for providing low resolution data with high update frequency. The data provided is often used for weather and broad climate monitoring.</p></li>
 </ol>
 <p>Each of these orbital satellite types serves different purposes. The satellite orbital types most common for earth observation are LEO and GEO satellites. In the following, an overview of available public domain and commercial observational satellite data of these types that could potentially be relevant for LCA is provided.</p>
-<section id="geostationary-earth-orbit-geo-satellites" class="level2">
-<h2 class="anchored" data-anchor-id="geostationary-earth-orbit-geo-satellites">Geostationary Earth Orbit (GEO) satellites</h2>
-<p>Observational Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensated by providing high temporal resolution. <a href="#tbl-geo-satellites" class="quarto-xref">Table&nbsp;2</a> provides an overview of the existing GEO satellites, their operators, the regions covered, the type of access and, if relevant, the license that the data is available under.</p>
-<div id="tbl-geo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="GEO satellites overview">
+<section id="geostationary-earth-orbit-geo-satellites" class="level3">
+<h3 class="anchored" data-anchor-id="geostationary-earth-orbit-geo-satellites">Geostationary Earth Orbit (GEO) satellites</h3>
+<p>Observational Geostationary Earth Orbit satellites provide continuous, real-time monitoring of atmospheric conditions, cloud cover, sea surface temperatures, and solar radiation over large fixed regions. They have lower spatial resolution compared to LEO satellites, but this is being compensated by providing high temporal resolution. <a href="#tbl-geo-satellites" class="quarto-xref">Table&nbsp;5</a> provides an overview of the existing GEO satellites, their operators, the regions covered, the type of access and, if relevant, the license that the data is available under.</p>
+<div id="tbl-geo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-geo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-geo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: GEO satellites overview
 </figcaption>
 <div aria-describedby="tbl-geo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
+<table class="table caption-top">
+<caption>GEO satellites overview</caption>
 <colgroup>
-<col style="width: 32%">
-<col style="width: 14%">
+<col style="width: 28%">
 <col style="width: 21%">
-<col style="width: 32%">
+<col style="width: 21%">
+<col style="width: 28%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -222,23 +740,24 @@ Table&nbsp;2
 </div>
 <p>The three satellite series where data that is accessible under open licenses offer data delivery frequencies between 5 and 15 minutes for full images. They provide similar imaging capabilities: 16 spectral ranges of wavelengths, called bands or channels, collected by the satellite sensor as discrete portions of the electromagnetic spectrum. Each series provides comparable numbers of optical, near-infrared and infrared channels.</p>
 <p>They support rapid scan modes for their regions of focus with data delivery frequencies between 30 seconds and 5 minutes. These are used for detecting fast-changing weather and environmental events such as storms, tornadoes, wildfires and volcanic eruptions, and for short-term weather forecasting (called now-casting).</p>
-<p>To summarize, GEO satellites for Earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes.</p>
+<p>To summarize, GEO satellites for earth observation are most helpful for high-frequency monitoring of large-scale land and ocean processes.</p>
 </section>
-<section id="low-earth-orbit-leo-satellites" class="level2">
-<h2 class="anchored" data-anchor-id="low-earth-orbit-leo-satellites">Low Earth Orbit (LEO) satellites</h2>
-<p>Far more LEO satellites for Earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. <a href="#tbl-leo-satellites" class="quarto-xref">Table&nbsp;3</a> provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. Note that some providers have more than one satellite on offer. In these cases only the one with the highest resolution and revisit frequency is listed. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.</p>
-<div id="tbl-leo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored" data-caption="LEO satellites overview">
+<section id="low-earth-orbit-leo-satellites" class="level3">
+<h3 class="anchored" data-anchor-id="low-earth-orbit-leo-satellites">Low Earth Orbit (LEO) satellites</h3>
+<p>Far more LEO satellites for earth observation than GEO satellites exist: around 35 GEO satellites compared to around 1000 LEO satellites. <a href="#tbl-leo-satellites" class="quarto-xref">Table&nbsp;6</a> provides a non-exhaustive listing of the most relevant providers together with the resolution and revisit frequency of the data provided. Note that some providers have more than one satellite on offer. In these cases only the one with the highest resolution and revisit frequency is listed. The newest satellites are Biomass from ESA for forest biomass and carbon content monitoring, and FireSat and OroraTech for wildfire detection. The (*) sign indicates future plans.</p>
+<div id="tbl-leo-satellites" class="table quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-leo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-leo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: LEO satellites overview
 </figcaption>
 <div aria-describedby="tbl-leo-satellites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
+<table class="table caption-top">
+<caption>LEO satellites overview</caption>
 <colgroup>
-<col style="width: 29%">
-<col style="width: 11%">
-<col style="width: 31%">
+<col style="width: 26%">
+<col style="width: 21%">
 <col style="width: 27%">
+<col style="width: 24%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -274,54 +793,60 @@ Table&nbsp;3
 <td>Daily</td>
 </tr>
 <tr class="odd">
+<td>VIIRS</td>
+<td>open</td>
+<td>375 m – 750 m multispectral</td>
+<td>Daily</td>
+</tr>
+<tr class="even">
 <td>Biomass</td>
 <td>open (*)</td>
 <td>10 m P-band SAR</td>
 <td>Up to 16 orbits/day</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Planet Labs</td>
 <td>commercial</td>
 <td>3 – 5 m optical</td>
 <td>Daily</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Maxar WorldView</td>
 <td>commercial</td>
 <td>30 – 50 cm optical</td>
 <td>Up to 15 orbits/day</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Airbus</td>
 <td>commercial</td>
 <td>30 cm optical</td>
 <td>1–3 days</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Iceye</td>
 <td>commercial</td>
 <td>0.5 m SAR</td>
 <td>Daily to sub-daily</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Capella Space</td>
 <td>commercial</td>
 <td>0.5 m SAR</td>
 <td>Daily to sub-daily</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>GHGSat</td>
 <td>commercial</td>
 <td>25 m</td>
 <td>Variable</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>FireSat</td>
 <td>commercial</td>
 <td>5 m thermal IR</td>
 <td>30 minutes (*)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>OroraTech</td>
 <td>commercial</td>
 <td>Variable thermal IR</td>
@@ -338,76 +863,13 @@ Table&nbsp;3
 | Satellogic                  | commercial | <1 m multispectral            | Daily                      | medium-resolution multispectral                             |
 | BlackSky                    | commercial | \~90 cm optical               | Multiple times daily       | rapid revisit, analytics platform                           |
 -->
-<p>To summarize, LEO satellites play a crucial role in Earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems.</p>
+<p>To summarize, LEO satellites play a crucial role in earth observation, particularly for high-resolution and frequent monitoring. The revisit frequency is primarily determined by the size of the satellite constellation. Larger constellations, such as those with over 100 satellites, can achieve revisit frequencies approaching those of geostationary systems.</p>
 </section>
-<section id="data-availability-for-research-purposes" class="level2">
-<h2 class="anchored" data-anchor-id="data-availability-for-research-purposes">Data availability for research purposes</h2>
-<p>While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist. The NASA-led Commercial Satellite Data Acquisition Program <span class="citation" data-cites="csda_nasa">NASA Earth Science Division (<a href="#ref-csda_nasa" role="doc-biblioref">2024</a>)</span> provides access to some of the data for research purposes, most notably for the Maxar WorldView data. It has been used in a number of scientific articles as assessed by <span class="citation" data-cites="zhao2022overview">Zhao et al. (<a href="#ref-zhao2022overview" role="doc-biblioref">2022</a>)</span> who conducted a literature study of scientific articles referencing EO satellite missions and found that their number is exponentially growing, and while some cite commercial sources, most of the work is based on the freely available data. In this project, the focus will be on data that is available for research purposes.</p>
-</section>
-</section>
-<section id="literature-study-satellite-data-for-lca" class="level1">
-<h1>Literature study: Satellite data for LCA</h1>
-<ol start="2014" type="1">
-<li><p>Assessing biodiversity loss due to land use with Life Cycle Assessment: are we there yet? https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.12709 LCA mainly introduces biodiversity as an endpoint category modeled as a loss in species richness due to the conversion and use of land over time and space. The functional and population effects on biodiversity are mostly absent due to the emphasis on species accumulation with limited geographic and taxonomical reach. Current land-use modeling activities that use biodiversity indicators tend to oversimplify the real dynamics and complexity of the interactions of species among each other and with their habitats.</p></li>
-<li><p>Life-cycle assessment to guide solutions for the triple planetary crisis https://www.nature.com/articles/s43017-023-00449-2</p></li>
-<li><p>Monitoring of Land Use Change Using Satellite Remote Sensing for Sustainable Resource Management https://www.jstage.jst.go.jp/article/lca/18/4/18_213/_article/-char/en</p></li>
-<li><p>Life cycle assessment in road infrastructure planning using spatial geological data https://link.springer.com/article/10.1007/s11367-016-1241-3</p></li>
-<li><p>Coupling GIS and LCA for biodiversity assessments of land use https://link.springer.com/article/10.1007/s11367-010-0199-9</p></li>
-</ol>
-<p>Groups: https://en.wikipedia.org/wiki/Space_for_Climate_Observatory</p>
-<p>Journals: International Journal of Applied Earth Observation and Geoinformation</p>
-<p>People: Remote sensing agriculture: Bruno Basso https://scholar.google.com/citations?user=EItklH0AAAAJ&amp;hl=en</p>
-<p>Problems: Amazon often full with clouds, gets exploited by loggers</p>
-<p>Open questions: Which aggregation levels are in use?</p>
-<p>Use cases: forest https://scholar.google.com/scholar?hl=en&amp;as_sdt=0,5&amp;qsp=2&amp;q=forest+loss+life+cycle+assessment&amp;qst=bl water (?) contrails (??)</p>
-<section id="environmental-impact-of-satellites" class="level2">
-<h2 class="anchored" data-anchor-id="environmental-impact-of-satellites">Environmental impact of satellites</h2>
-<p>Quantifying the Environmental Impacts of Manufacturing Low Earth Orbit (LEO) Satellite Constellations https://www.mdpi.com/2071-1050/16/21/9431</p>
-<p>Estimates for environmental impact of satellites: https://pre-sustainability.com/customer-cases/environmental-impacts-satellite-mission/</p>
+<section id="data-availability-for-research-purposes" class="level3">
+<h3 class="anchored" data-anchor-id="data-availability-for-research-purposes">Data availability for research purposes</h3>
+<p>While a few public providers offer open-access data with comparatively low resolution, many different commercial options for very high resolution data are on the market. The pricing models of the commercial options depend on the amount of data required and the use case, and are available upon request. Limited opportunities to access the commercial data under a research license exist. The NASA-led Commercial Satellite Data Acquisition Program <span class="citation" data-cites="csda_nasa">NASA Earth Science Division (<a href="#ref-csda_nasa" role="doc-biblioref">2024</a>)</span> provides access to some of the data for research purposes, most notably for the Maxar WorldView data. It has been used in a number of scientific articles as assessed by <span class="citation" data-cites="zhao2022overview">Q. Zhao et al. (<a href="#ref-zhao2022overview" role="doc-biblioref">2022</a>)</span> who conducted a literature study of scientific articles referencing EO satellite missions and found that their number is exponentially growing, and while some cite commercial sources, most of the work is based on the freely available data. In this project, the focus will be on data that is available for research purposes.</p>
 </section>
 </section>
-<section id="tools-and-datasets" class="level1">
-<h1>Tools and datasets</h1>
-<p>In the following, datasets and tools that could be valuable as input for LCAs are assessed.</p>
-<section id="alphaearth-foundations" class="level2">
-<h2 class="anchored" data-anchor-id="alphaearth-foundations">AlphaEarth Foundations</h2>
-<p>An embedding field model for accurate and efficient global mapping from sparse label data</p>
-<p>https://deepmind.google/discover/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/</p>
-<p><span class="citation" data-cites="brown2025alphaearthfoundationsembeddingfield">Brown et al. (<a href="#ref-brown2025alphaearthfoundationsembeddingfield" role="doc-biblioref">2025</a>)</span></p>
-<p>Unprecedented volumes of Earth observation data are continually collected around the world, but high-quality labels remain scarce given the effort required to make physical measurements and observations. This has led to considerable investment in bespoke modeling efforts translating sparse labels into maps. Here we introduce AlphaEarth Foundations, an embedding field model yielding a highly general, geospatial representation that assimilates spatial, temporal, and measurement contexts across multiple sources, enabling accurate and efficient production of maps and monitoring systems from local to global scales. The embeddings generated by AlphaEarth Foundations are the only to consistently outperform all previous featurization approaches tested on a diverse set of mapping evaluations without re-training. We will release a dataset of global, annual, analysis-ready embedding field layers from 2017 through 2024.</p>
-<p>https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_SATELLITE_EMBEDDING_V1_ANNUAL?hl=de#description</p>
-</section>
-<section id="planetary-computer" class="level2">
-<h2 class="anchored" data-anchor-id="planetary-computer">Planetary Computer</h2>
-<p>The Planetary Computer combines a multi-petabyte catalog of global environmental data with intuitive APIs, a flexible scientific environment that allows users to answer global questions about that data, and applications that put those answers in the hands of conservation stakeholders.</p>
-<p>https://planetarycomputer.microsoft.com/</p>
-</section>
-<section id="globalbuildingatlas" class="level2">
-<h2 class="anchored" data-anchor-id="globalbuildingatlas">GlobalBuildingAtlas</h2>
-<p>https://github.com/zhu-xlab/GlobalBuildingAtlas?tab=readme-ov-file</p>
-</section>
-<section id="cropland-data-layer" class="level2">
-<h2 class="anchored" data-anchor-id="cropland-data-layer">Cropland Data Layer</h2>
-<p>Agriculture: The Cropland Data Layer (CDL) is a dataset provided by the U.S. Department of Agriculture’s National Agricultural Statistics Service (NASS) that provides information about crop types across the United States.</p>
-</section>
-<section id="forest-baseline" class="level2">
-<h2 class="anchored" data-anchor-id="forest-baseline">Forest baseline</h2>
-<ol start="2025" type="1">
-<li>Natural forests of the world-a 2020 baseline for deforestation and degradation monitoring <span class="citation" data-cites="neumann2025natural">Neumann et al. (<a href="#ref-neumann2025natural" role="doc-biblioref">2025</a>)</span> Forest stuff PhD student: https://github.com/SherryJYC</li>
-</ol>
-</section>
-</section>
-<section id="project-proposal" class="level1">
-<h1>Project proposal</h1>
-<p>Ideas:</p>
-<ul>
-<li><p>Plan a project to use ESA Biomass satellite for LCA for forest loss (data not yet in the public domain)</p></li>
-<li><p>Plan some kind of LCA project based on AlphaEarth Foundations (could use data within Google Earth Engine for analysis and visualization for research or educational use. Downloading, redistributing, or incorporating the data into other software is not permitted.)</p></li>
-<li><p>LCA to assess the environmental impact of satellites in comparison to their benefits (How to assess the environmental impact of a large wildfire? How to assess the total benefits of all the use cases for a satellite?)</p></li>
-</ul>
-</section>
-<section id="project-plan" class="level1">
-<h1>Project plan</h1>
 </section>
 <section id="references" class="level1 unnumbered">
 
@@ -418,8 +880,68 @@ Table&nbsp;3
 <div id="ref-3gppagnss" class="csl-entry" role="listitem">
 3rd Generation Partnership Project (3GPP). (2019). <em><span>3GPP TS 36.355 V15.3.0 - LTE Positioning Protocol A (LPPa)</span></em>. 3GPP.
 </div>
-<div id="ref-brown2025alphaearthfoundationsembeddingfield" class="csl-entry" role="listitem">
-Brown, C. F., Kazmierski, M. R., Pasquarella, V. J., Rucklidge, W. J., Samsikova, M., Zhang, C., Shelhamer, E., Lahera, E., Wiles, O., Ilyushchenko, S., Gorelick, N., Zhang, L. L., Alj, S., Schechter, E., Askay, S., Guinan, O., Moore, R., Boukouvalas, A., and Kohli, P. (2025). <em>AlphaEarth foundations: An embedding field model for accurate and efficient global mapping from sparse label data</em>. <a href="https://arxiv.org/abs/2507.22291">https://arxiv.org/abs/2507.22291</a>
+<div id="ref-ArgonneSolarEIS2012" class="csl-entry" role="listitem">
+Argonne National Laboratory. (2012). <em>Solar energy development programmatic environmental impact statement</em>. U.S. Department of Energy.
+</div>
+<div id="ref-barron2016photovoltaic" class="csl-entry" role="listitem">
+Barron-Gafford, G. A., Minor, R. L., Allen, N. A., Cronin, A. D., Brooks, A. E., and Pavao-Zuckerman, M. A. (2016). The photovoltaic heat island effect: Larger solar power plants increase local temperatures. <em>Scientific Reports</em>, <em>6</em>(1), 35070.
+</div>
+<div id="ref-bright2012climate" class="csl-entry" role="listitem">
+Bright, R. M., Cherubini, F., and Strømman, A. H. (2012). Climate impacts of bioenergy: Inclusion of carbon cycle and albedo dynamics in life cycle impact assessment. <em>Environmental Impact Assessment Review</em>, <em>37</em>, 2–11.
+</div>
+<div id="ref-brutsaert1984" class="csl-entry" role="listitem">
+Brutsaert, W. (1984). <em>Hydrology: An introduction</em>. Cambridge University Press.
+</div>
+<div id="ref-cai2016consideration" class="csl-entry" role="listitem">
+Cai, H., Wang, J., Feng, Y., Wang, M., Qin, Z., and Dunn, J. (2016). Consideration of land use change-induced surface albedo effects in life-cycle analysis of biofuels. <em>Energy &amp; Environmental Science</em>, <em>9</em>(9), 2855–2867.
+</div>
+<div id="ref-cescatti2012intercomparison" class="csl-entry" role="listitem">
+Cescatti, A., Marcolla, B., Vannan, S. K. S., Pan, J. Y., Román, M. O., Yang, X., Ciais, P., Cook, R. B., Law, B. E., Matteucci, G., et al. (2012). Intercomparison of MODIS albedo retrievals and in situ measurements across the global FLUXNET network. <em>Remote Sensing of Environment</em>, <em>121</em>, 323–334.
+</div>
+<div id="ref-coimbra2025energy" class="csl-entry" role="listitem">
+Coimbra, C. F. (2025). Energy meteorology for the evaluation of solar farm thermal impacts on desert habitats. <em>Advances in Atmospheric Sciences</em>, <em>42</em>(2), 313–326.
+</div>
+<div id="ref-cosgun2024investigating" class="csl-entry" role="listitem">
+Cosgun, A. E., and Demir, H. (2024). Investigating the effect of albedo in simulation-based floating photovoltaic system: 1 MW bifacial floating photovoltaic system design. <em>Energies</em>, <em>17</em>(4), 959.
+</div>
+<div id="ref-datseris2021earth" class="csl-entry" role="listitem">
+Datseris, G., and Stevens, B. (2021). Earth’s albedo and its symmetry. <em>AGU Advances</em>, <em>2</em>(3), e2021AV000440.
+</div>
+<div id="ref-david2025" class="csl-entry" role="listitem">
+David, M., Loog, K., Bortoli, A. de, and Saunier, F. (2025). Nature-based solutions toward net-zero: Surface albedo matters! Demonstration on the case of carbon credits. <em>Proceedings of the 12th International Conference on Life Cycle Management</em>.
+</div>
+<div id="ref-diamond2024testing" class="csl-entry" role="listitem">
+Diamond, M. S., Gristey, J. J., and Feingold, G. (2024). Testing cloud adjustment hypotheses for the maintenance of earth’s hemispheric albedo symmetry with natural experiments. <em>Geophysical Research Letters</em>, <em>51</em>(20), e2024GL111733.
+</div>
+<div id="ref-dorber2018modeling" class="csl-entry" role="listitem">
+Dorber, M., May, R., and Verones, F. (2018). Modeling net land occupation of hydropower reservoirs in norway for use in life cycle assessment. <em>Environmental Science &amp; Technology</em>, <em>52</em>(4), 2375–2384.
+</div>
+<div id="ref-ecoinvent2023" class="csl-entry" role="listitem">
+ecoinvent Centre. (2023). <em>Ecoinvent database (version 3.x)</em>. Swiss Centre for Life Cycle Inventories, St.&nbsp;Gallen, Switzerland.
+</div>
+<div id="ref-IPCC_AR6_WGI_Chapter7_2021" class="csl-entry" role="listitem">
+Forster, P., Storelvmo, T., Armour, K., Collins, W., Dufresne, J.-L., Frame, D., Lunt, D. J., Mauritsen, T., Palmer, M. D., Watanabe, M., Wild, M., and Zhang, H. (2021). The earth’s energy budget, climate feedbacks, and climate sensitivity. In V. Masson-Delmotte, P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and B. Zhou (Eds.), <em>Climate change 2021: The physical science basis</em> (pp. 923–1054). Cambridge University Press. <a href="https://doi.org/10.1017/9781009157896.009">https://doi.org/10.1017/9781009157896.009</a>
+</div>
+<div id="ref-fthenakis2008emissions" class="csl-entry" role="listitem">
+Fthenakis, V. M., Kim, H. C., and Alsema, E. (2008). Emissions from photovoltaic life cycles. <em>Environmental Science &amp; Technology</em>, <em>42</em>(6), 2168–2174.
+</div>
+<div id="ref-geyer2010coupling2" class="csl-entry" role="listitem">
+Geyer, R., Lindner, J. P., Stoms, D. M., Davis, F. W., and Wittstock, B. (2010). Coupling GIS and LCA for biodiversity assessments of land use: Part 2: Impact assessment. <em>The International Journal of Life Cycle Assessment</em>, <em>15</em>(7), 692–703.
+</div>
+<div id="ref-geyer2010coupling1" class="csl-entry" role="listitem">
+Geyer, R., Stoms, D. M., Lindner, J. P., Davis, F. W., and Wittstock, B. (2010). Coupling GIS and LCA for biodiversity assessments of land use: Part 1: Inventory modeling. <em>The International Journal of Life Cycle Assessment</em>, <em>15</em>(5), 454–467.
+</div>
+<div id="ref-gruber2020validation" class="csl-entry" role="listitem">
+Gruber, A., De Lannoy, G., Albergel, C., Al-Yaari, A., Brocca, L., Calvet, J.-C., Colliander, A., Cosh, M., Crow, W., Dorigo, W., et al. (2020). Validation practices for satellite soil moisture retrievals: What are (the) errors? <em>Remote Sensing of Environment</em>, <em>244</em>, 111806.
+</div>
+<div id="ref-gul2018enhancement" class="csl-entry" role="listitem">
+Gul, M., Kotak, Y., Muneer, T., and Ivanova, S. (2018). Enhancement of albedo for solar energy gain with particular emphasis on overcast skies. <em>Energies</em>, <em>11</em>(11), 2881.
+</div>
+<div id="ref-hasler2024accounting" class="csl-entry" role="listitem">
+Hasler, N., Williams, C. A., Denney, V. C., Ellis, P. W., Shrestha, S., Terasaki Hart, D. E., Wolff, N. H., Yeo, S., Crowther, T. W., Werden, L. K., et al. (2024). Accounting for albedo change to identify climate-positive tree cover restoration. <em>Nature Communications</em>, <em>15</em>(1), 2275.
+</div>
+<div id="ref-hotelling1933pca" class="csl-entry" role="listitem">
+Hotelling, H. (1933). Analysis of a complex of statistical variables into principal components. <em>Journal of Educational Psychology</em>, <em>24</em>(6), 417–441. <a href="https://doi.org/10.1037/h0071325">https://doi.org/10.1037/h0071325</a>
 </div>
 <div id="ref-ISO14040" class="csl-entry" role="listitem">
 International Organization for Standardization. (2006a). <em><span class="nocase">ISO 14040:2006 Environmental management – Life cycle assessment – Principles and framework</span></em>. International Organization for Standardization.
@@ -427,14 +949,125 @@ International Organization for Standardization. (2006a). <em><span class="nocase
 <div id="ref-ISO14044" class="csl-entry" role="listitem">
 International Organization for Standardization. (2006b). <em><span class="nocase">ISO 14044:2006 Environmental management – Life cycle assessment – Requirements and guidelines</span></em>. International Organization for Standardization.
 </div>
+<div id="ref-itten2023remote" class="csl-entry" role="listitem">
+Itten, R., Götz, M., and Kröhnert, H. (2023). Remote sensing based data products for large scale life cycle inventory models. <em>11th International Conference on Life Cycle Management (LCM), Lille, France, 6-8 September 2023</em>.
+</div>
+<div id="ref-ji2019vivid" class="csl-entry" role="listitem">
+Ji, C., Zhang, Z., Masuda, T., Kudo, Y., and Guo, L. J. (2019). Vivid-colored silicon solar panels with high efficiency and non-iridescent appearance. <em>Nanoscale Horizons</em>, <em>4</em>(4), 874–880.
+</div>
+<div id="ref-jian2025highly" class="csl-entry" role="listitem">
+Jian, X., Zhang, X., Liu, X., Chen, K., Huang, T., Tao, S., Liu, J., Gao, H., Zhao, Y., Zhugu, R., et al. (2025). Highly resolved satellite-remote-sensing-based land-use-change inventory yields weaker surface-albedo-induced global cooling. <em>Atmospheric Chemistry and Physics</em>, <em>25</em>(7), 4251–4268.
+</div>
+<div id="ref-jungbluth2012life" class="csl-entry" role="listitem">
+Jungbluth, N., Stucki, M., Flury, K., Frischknecht, R., and Büsser, S. (2012). Life cycle inventories of photovoltaics. <em>ESU-Services Ltd.: Uster, Switzerland</em>, <em>250</em>.
+</div>
+<div id="ref-karlsson2017" class="csl-entry" role="listitem">
+Karlsson, C., Miliutenko, S., Björklund, A., Mörtberg, U., Olofsson, B., and Toller, S. (2017). Life cycle assessment in road infrastructure planning using spatial geological data. <em>The International Journal of Life Cycle Assessment</em>, <em>22</em>. <a href="https://doi.org/10.1007/s11367-016-1241-3">https://doi.org/10.1007/s11367-016-1241-3</a>
+</div>
+<div id="ref-langsdale2025challenges" class="csl-entry" role="listitem">
+Langsdale, M., Verhoelst, T., Povey, A., Schutgens, N., Dowling, T., Lambert, J.-C., Compernolle, S., and Kern, S. (2025). The challenges and limitations of validating satellite-derived datasets using independent measurements: Lessons learned from essential climate variables. <em>Surveys in Geophysics</em>, 1–38.
+</div>
+<div id="ref-lavaert2023influence" class="csl-entry" role="listitem">
+Lavaert, C., Willockx, B., Cappelle, J., and Jung, J. (2023). Influence of the albedo on agrivoltaics electricity production. <em>AGRIVOLTAICS WORLD CONFERENCE 2023</em>, <em>2</em>.
+</div>
+<div id="ref-li2021spatializing" class="csl-entry" role="listitem">
+Li, J., Tian, Y., Zhang, Y., and Xie, K. (2021). Spatializing environmental footprint by integrating geographic information system into life cycle assessment: A review and practice recommendations. <em>Journal of Cleaner Production</em>, <em>323</em>, 129113.
+</div>
+<div id="ref-li2022physical" class="csl-entry" role="listitem">
+Li, P., Gao, X., Li, Z., and Zhou, X. (2022). Physical analysis of the environmental impacts of fishery complementary photovoltaic power plant. <em>Environmental Science and Pollution Research</em>, <em>29</em>(30), 46108–46117.
+</div>
+<div id="ref-li2022comparative" class="csl-entry" role="listitem">
+Li, Z., Zhao, Y., Luo, Y., Yang, L., Li, P., Jin, X., Jiang, J., Liu, R., and Gao, X. (2022). A comparative study on the surface radiation characteristics of photovoltaic power plant in the gobi desert. <em>Renewable Energy</em>, <em>182</em>, 764–771.
+</div>
+<div id="ref-liang2001narrowband" class="csl-entry" role="listitem">
+Liang, S. (2001). Narrowband to broadband conversions of land surface albedo i: algorithms. <em>Remote Sensing of Environment</em>, <em>76</em>(2), 213–238.
+</div>
+<div id="ref-loeb2025emerging" class="csl-entry" role="listitem">
+Loeb, N. G., Thorsen, T. J., Kato, S., Rose, F. G., Hodnebrog, Ø., and Myhre, G. (2025). Emerging hemispheric asymmetry of earth’s radiation. <em>Proceedings of the National Academy of Sciences</em>, <em>122</em>(40), e2511595122.
+</div>
+<div id="ref-manninen2022cloud" class="csl-entry" role="listitem">
+Manninen, T., Jääskeläinen, E., Siljamo, N., Riihelä, A., and Karlsson, K.-G. (2022). Cloud-probability-based estimation of black-sky surface albedo from AVHRR data. <em>Atmospheric Measurement Techniques</em>, <em>15</em>(4), 879–893.
+</div>
+<div id="ref-moretti2021effect" class="csl-entry" role="listitem">
+Moretti, L., Cantisani, G., Carpiceci, M., D’Andrea, A., Del Serrone, G., Di Mascio, P., and Loprencipe, G. (2021). Effect of sampietrini pavers on urban heat islands. <em>International Journal of Environmental Research and Public Health</em>, <em>18</em>(24), 13108.
+</div>
 <div id="ref-csda_nasa" class="csl-entry" role="listitem">
 NASA Earth Science Division. (2024). <em>Commercial smallsat data acquisition (CSDA) program</em>. <a href="https://www.earthdata.nasa.gov/esds/csdap" class="uri">https://www.earthdata.nasa.gov/esds/csdap</a>.
 </div>
-<div id="ref-neumann2025natural" class="csl-entry" role="listitem">
-Neumann, M., Raichuk, A., Stanimirova, R., Sims, M., Carter, S., Goldman, E., Rey, M., Jiang, Y., Anderson, K., Poklukar, P., et al. (2025). <em>Natural forests of the world-a 2020 baseline for deforestation and degradation monitoring</em>.
+<div id="ref-nemecek2014" class="csl-entry" role="listitem">
+Nemecek, T., Bengoa, X., Lansche, J., Mouron, P., Rossi, V., and Humbert, S. (2014). <em>World food LCA database methodological guidelines for the life cycle inventory of agricultural products</em>. <a href="https://link.ira.agroscope.ch/en-US/publication/34029">https://link.ira.agroscope.ch/en-US/publication/34029</a>
+</div>
+<div id="ref-nemet2009net" class="csl-entry" role="listitem">
+Nemet, G. F. (2009). Net radiative forcing from widespread deployment of photovoltaics. <em>Environmental Science &amp; Technology</em>, <em>43</em>(6), 2173–2178.
+</div>
+<div id="ref-oke1987boundary" class="csl-entry" role="listitem">
+Oke, T. R. (1987). <em>Boundary layer climates</em> (2nd ed.). Routledge.
+</div>
+<div id="ref-paris2023accuracy" class="csl-entry" role="listitem">
+Paris, C., Martinez-Sanchez, L., Velde, M. van der, Sharma, S., Sedona, R., and Cavallaro, G. (2023). Accuracy assessment of land-use-land-cover maps: The semantic gap between in situ and satellite data. <em>Image and Signal Processing for Remote Sensing XXIX</em>, <em>12733</em>, 187–200.
+</div>
+<div id="ref-reinhard2016regionalized" class="csl-entry" role="listitem">
+Reinhard, J., Zah, R., and Hilty, L. M. (2016). Regionalized LCI modeling: A framework for the integration of spatial data in life cycle assessment. In <em>Advances and new trends in environmental informatics: Stability, continuity, innovation</em> (pp. 223–235). Springer.
+</div>
+<div id="ref-richardson2023earth" class="csl-entry" role="listitem">
+Richardson, K., Steffen, W., Lucht, W., Bendtsen, J., Cornell, S. E., Donges, J. F., Drüke, M., Fetzer, I., Bala, G., Von Bloh, W., et al. (2023). Earth beyond six of nine planetary boundaries. <em>Science Advances</em>, <em>9</em>(37), eadh2458.
+</div>
+<div id="ref-riihela2024four" class="csl-entry" role="listitem">
+Riihelä, A., Jääskeläinen, E., and Kallio-Myers, V. (2024). Four decades of global surface albedo estimates in the third edition of the CM SAF cLoud, albedo and surface radiation (CLARA) climate data record. <em>Earth System Science Data</em>, <em>16</em>(2), 1007–1028.
+</div>
+<div id="ref-roccetti2024hamster" class="csl-entry" role="listitem">
+Roccetti, G., Bugliaro, L., Gödde, F., Emde, C., Hamann, U., Manev, M., Sterzik, M. F., and Wehrum, C. (2024). HAMSTER: Hyperspectral albedo maps dataset with high spatial and TEmporal resolution. <em>Atmospheric Measurement Techniques</em>, <em>17</em>(20), 6025–6046.
+</div>
+<div id="ref-schaaf2021modis" class="csl-entry" role="listitem">
+Schaaf, C., and Wang, Z. (2021). <em>MODIS/terra+aqua BRDF/albedo black sky albedo shortwave daily L3 global 30ArcSec CMG V061</em> [Dataset]. NASA Land Processes Distributed Active Archive Center (LP DAAC). <a href="https://doi.org/10.5067/MODIS/MCD43D51.061">https://doi.org/10.5067/MODIS/MCD43D51.061</a>
+</div>
+<div id="ref-usgs_landsat_sr" class="csl-entry" role="listitem">
+Survey, U. S. G. (2020). <em>Landsat surface reflectance product</em> [Dataset]. U.S. Geological Survey. <a href="https://www.usgs.gov/landsat-missions/landsat-surface-reflectance">https://www.usgs.gov/landsat-missions/landsat-surface-reflectance</a>
+</div>
+<div id="ref-susca2012enhancement" class="csl-entry" role="listitem">
+Susca, T. (2012). Enhancement of life cycle assessment (LCA) methodology to include the effect of surface albedo on climate change: Comparing black and white roofs. <em>Environmental Pollution</em>, <em>163</em>, 48–54.
+</div>
+<div id="ref-tetzlaff1983albedo" class="csl-entry" role="listitem">
+Tetzlaff, G. (1983). Albedo of the sahara. In <em>Cologne university satellite measurement of radiation budget parameters</em> (pp. 60–63). University of Cologne.
+</div>
+<div id="ref-tran2023uncertainty" class="csl-entry" role="listitem">
+Tran, B. N., Van Der Kwast, J., Seyoum, S., Uijlenhoet, R., Jewitt, G., and Mul, M. (2023). Uncertainty assessment of satellite remote-sensing-based evapotranspiration estimates: A systematic review of methods and gaps. <em>Hydrology and Earth System Sciences</em>, <em>27</em>(24), 4505–4528.
+</div>
+<div id="ref-epa2003coolroof" class="csl-entry" role="listitem">
+U.S. Environmental Protection Agency. (2003). <em>Heat island reduction initiative: Cool roofs</em>. U.S. EPA. <a href="https://www.epa.gov/sites/default/files/2014-06/documents/hiribrochure.pdf">https://www.epa.gov/sites/default/files/2014-06/documents/hiribrochure.pdf</a>
+</div>
+<div id="ref-van2020evaluation" class="csl-entry" role="listitem">
+Van Dalum, C. T., Van De Berg, W. J., Lhermitte, S., and Van Den Broeke, M. R. (2020). Evaluation of a new snow albedo scheme for the greenland ice sheet in the regional atmospheric climate model (RACMO2). <em>The Cryosphere</em>, <em>14</em>(11), 3645–3662.
+</div>
+<div id="ref-wang2025environmental" class="csl-entry" role="listitem">
+Wang, S., Meng, X., Li, Q., Li, Z., Yang, P., Niu, W., and Shang, L. (2025). Environmental impacts of pastoral-integrated photovoltaic power plant in an alpine meadow on the eastern tibetan plateau. <em>Atmospheric Chemistry and Physics</em>, <em>25</em>(18), 11301–11315.
+</div>
+<div id="ref-wei2024small" class="csl-entry" role="listitem">
+Wei, S., Ziegler, A. D., Qin, Y., Wang, D., Chen, Y., Yan, J., and Zeng, Z. (2024). Small reduction in land surface albedo due to solar panel expansion worldwide. <em>Communications Earth &amp; Environment</em>, <em>5</em>(1), 474.
+</div>
+<div id="ref-wu2024satellite" class="csl-entry" role="listitem">
+Wu, S., Lin, X., Bian, Z., Lipson, M., Lafortezza, R., Liu, Q., Grimmond, S., Velasco, E., Christen, A., Masson, V., et al. (2024). Satellite observations reveal a decreasing albedo trend of global cities over the past 35 years. <em>Remote Sensing of Environment</em>, <em>303</em>, 114003.
+</div>
+<div id="ref-xu2024global" class="csl-entry" role="listitem">
+Xu, Z., Li, Y., Qin, Y., and Bach, E. (2024). A global assessment of the effects of solar farms on albedo, vegetation, and land surface temperature using remote sensing. <em>Solar Energy</em>, <em>268</em>, 112198.
+</div>
+<div id="ref-Zanaga2022_WorldCover2021v200" class="csl-entry" role="listitem">
+Zanaga,  Daniele., Van De Kerchove,  Ruben., Daems,  Dirk., De Keersmaecker,  Wanda., Brockmann,  Carsten., Kirches,  Grit., Wevers,  Jan., Cartus,  Oliver., Santoro,  Maurizio., Fritz,  Steffen., Lesiv,  Myroslava., Herold,  Martin., Tsendbazar,  N.-E., Xu,  Panpan., Ramoino,  Fabrizio., and Arino,  Olivier. (2022). <em>ESA WorldCover 10 m 2021 v200</em> (Version v200) [Dataset]. Zenodo. <a href="https://doi.org/10.5281/zenodo.7254221">https://doi.org/10.5281/zenodo.7254221</a>
+</div>
+<div id="ref-zhang2020assessing" class="csl-entry" role="listitem">
+Zhang, X., and Xu, M. (2020). Assessing the effects of photovoltaic powerplants on surface temperature using remote sensing techniques. <em>Remote Sensing</em>, <em>12</em>(11), 1825.
 </div>
 <div id="ref-zhao2022overview" class="csl-entry" role="listitem">
 Zhao, Q., Yu, L., Du, Z., Peng, D., Hao, P., Zhang, Y., and Gong, P. (2022). An overview of the applications of earth observation satellite data: Impacts and future trends. <em>Remote Sensing</em>, <em>14</em>(8), 1863.
+</div>
+<div id="ref-zhao2025comparative" class="csl-entry" role="listitem">
+Zhao, S., Zhang, X., and Jin, X. (2025). Comparative evaluation of cool roofs and photovoltaic roofs in sustainable buildings within the scope of the 3-e static payback period framework. <em>Buildings</em>, <em>15</em>(19), 3500.
+</div>
+<div id="ref-zhou2025assessing" class="csl-entry" role="listitem">
+Zhou, Y., Marathe, S., Zeman, M., Isabella, O., and Ziar, H. (2025). Assessing the dual radiative consequences of urban PV integration: Albedo change and radiative forcing dynamics. <em>Applied Energy</em>, <em>401</em>, 126544.
+</div>
+<div id="ref-zhu2024changes" class="csl-entry" role="listitem">
+Zhu, Q., Chen, J., Wu, L., Huang, Y., Shao, C., Dong, G., Xu, Z., and Li, X. (2024). Changes in albedo and its radiative forcing of grasslands in east asia drylands. <em>Ecological Processes</em>, <em>13</em>(1), 1–15.
 </div>
 </div></section></div></main>
 <!-- /main column -->
